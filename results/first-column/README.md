@@ -6,7 +6,7 @@ For the type-B q-Stirling polynomial of the second kind with column index k = 1,
 
 **Theorem.** For n ≥ 2, all interior coefficients satisfy a(d)² > a(d−1)a(d+1) exactly when n ≥ 6. At n = 5 there is exactly one equality, at degree 1. At n = 2, 3, 4 the inequality fails at degree 1. The row n = 1 is constant and has no interior degrees.
 
-Sagan and Swanson ask for weak log-concavity within each parity class for both type-B families and all columns. This result classifies the stronger adjacent-coefficient property in one column of one family. The wider conjecture remains outside this proof. The earlier VPS proof established the weak first-column classification. This note adds the strict threshold and determines the equality case. Priority in the literature is unestablished. [Sagan and Swanson, Definition 1.5 and Conjecture 7.5](https://users.math.msu.edu/users/bsagan/Papers/Old/qStB-pub.pdf)
+Sagan and Swanson ask for weak log-concavity within each parity class for both type-B families and all columns. This result classifies the stronger adjacent-coefficient property in one column of one family. The wider conjecture remains outside this proof. Priority in the literature is unestablished. [Sagan and Swanson, Definition 1.5 and Conjecture 7.5](https://users.math.msu.edu/users/bsagan/Papers/Old/qStB-pub.pdf)
 
 ## Proof
 

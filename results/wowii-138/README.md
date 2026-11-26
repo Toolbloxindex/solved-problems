@@ -31,4 +31,4 @@ Run `python3 verify.py` from this directory. The standard-library checker builds
 
 ## Status and attribution
 
-The catalogue snapshot lists this entry as open. A targeted search by catalogue name, entry number, statement and graph construction found no earlier disproof. Priority is undetermined. This note gives a direct argument and an executable check. It has not received external review.
+EvanDashRust previously published the same 19-vertex construction and a formal verification. [Earlier proof](https://github.com/EvanDashRust/Conjecture-Killers/tree/5ea46d1651c936693b8332082de8b45f9c670fab/Results/Graffiti138)
