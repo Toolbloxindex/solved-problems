@@ -7,5 +7,14 @@
     "title": "Strict log-concavity in the first type-B q-Stirling column",
     "summary": "For k = 1 and n ≥ 2, every interior coefficient gap is strictly positive exactly when n ≥ 6. At n = 5, equality occurs only at degree 1.",
     "verification": "Lean proof for all n. Python replay through 256 rows."
+  },
+  {
+    "id": "wowii-138-v1",
+    "result": "wowii-138",
+    "date": "2026-11-26",
+    "version": "v1.1.0",
+    "title": "A 19-vertex counterexample to Graffiti.pc Conjecture 138",
+    "summary": "A tree has a longest induced path on 17 vertices. Its unique maximum independent set and the distance between the square graph’s two maximum-degree vertices give a conjectured lower bound of 18. The construction extends to an infinite family.",
+    "verification": "Direct proof for the family and exhaustive Python verification of the 19-vertex witness. External review and priority remain open."
   }
 ]
