@@ -1,0 +1,11 @@
+[
+  {
+    "id": "first-column-v1",
+    "date": "2026-11-26",
+    "version": "v1.0.0",
+    "result": "first-column",
+    "title": "Strict log-concavity in the first type-B q-Stirling column",
+    "summary": "For k = 1 and n ≥ 2, every interior coefficient gap is strictly positive exactly when n ≥ 6. At n = 5, equality occurs only at degree 1.",
+    "verification": "Lean proof for all n. Python replay through 256 rows."
+  }
+]

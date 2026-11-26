@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the title and pinned version of the result you use."
+title: "Solved Problems: Strict log-concavity in the first type-B q-Stirling column"
+authors:
+  - name: "Solved Problems project"
+version: "1.0.0"
+date-released: 2026-11-26
+repository-code: "https://github.com/Toolbloxindex/solved-problems"
+license: MIT
