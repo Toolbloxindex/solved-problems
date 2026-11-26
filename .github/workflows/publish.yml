@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - publications.json
+      - release-notes/*.md
       - .github/workflows/publish.yml
   workflow_dispatch:
 permissions:
@@ -32,7 +33,15 @@ jobs:
             tag=$(jq -r .version <<< "$record")
             slug=$(jq -r .result <<< "$record")
             [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ && "$slug" =~ ^[a-z0-9-]+$ ]]
-            if gh release view "$tag" --repo "$REPO" >/dev/null 2>&1; then continue; fi
+            if gh release view "$tag" --repo "$REPO" >/dev/null 2>&1; then
+              if gh api -H 'Accept: application/vnd.github.raw+json' "repos/$REPO/contents/release-notes/$tag.md?ref=$REVISION" > notes.md; then
+                gh release view "$tag" --repo "$REPO" --json body | jq -j '.body' > current.md
+                if ! cmp -s current.md notes.md; then
+                  gh release edit "$tag" --repo "$REPO" --notes-file notes.md
+                fi
+              fi
+              continue
+            fi
             fetch_manifest "$tag" | jq -e --argjson record "$record" 'index($record) != null' >/dev/null
             jq -r '.summary, "", .verification' <<< "$record" > notes.md
             echo >> notes.md
