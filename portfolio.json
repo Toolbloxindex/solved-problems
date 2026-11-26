@@ -1,0 +1,27 @@
+[
+  {
+    "version": "v1.0.0",
+    "result": "first-column",
+    "date": "2026-11-26",
+    "title": "Strict log-concavity in the first type-B q-Stirling column",
+    "summary": "In the first column of the second-kind array, strict log-concavity begins at row six.",
+    "verification": "The classification was formally checked in Lean."
+  },
+  {
+    "version": "v1.1.0",
+    "result": "wowii-138",
+    "date": "2026-11-26",
+    "title": "A 19-vertex counterexample to Graffiti.pc 138",
+    "summary": "A tree whose longest path has 17 vertices, one fewer than the conjecture requires.",
+    "verification": "Direct proof and an exhaustive check of the 19-vertex tree."
+  },
+  {
+    "version": "v1.2.0",
+    "result": "graffiti-pc-392b-two-domination",
+    "date": "2026-11-26",
+    "title": "Graffiti.pc 392b on 2-domination and matchings",
+    "summary": "A matching bound on the number of vertices needed to give every unmarked vertex two marked neighbors.",
+    "verification": "The full theorem was formally checked in Lean.",
+    "doi": "10.5281/zenodo.24571980"
+  }
+]
