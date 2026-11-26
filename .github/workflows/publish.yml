@@ -1,0 +1,41 @@
+name: Publish verified releases
+on:
+  push:
+    branches: [main]
+    paths:
+      - publications.json
+      - .github/workflows/publish.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publish-verified-results
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Publish entries that match their tagged manifest
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          REVISION: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          fetch_manifest() {
+            gh api -H 'Accept: application/vnd.github.raw+json' "repos/$REPO/contents/publications.json?ref=$1"
+          }
+          fetch_manifest "$REVISION" > manifest.json
+          jq -c '.[]' manifest.json | while IFS= read -r record; do
+            tag=$(jq -r .version <<< "$record")
+            slug=$(jq -r .result <<< "$record")
+            [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ && "$slug" =~ ^[a-z0-9-]+$ ]]
+            if gh release view "$tag" --repo "$REPO" >/dev/null 2>&1; then continue; fi
+            fetch_manifest "$tag" | jq -e --argjson record "$record" 'index($record) != null' >/dev/null
+            jq -r '.summary, "", .verification' <<< "$record" > notes.md
+            echo >> notes.md
+            echo "[Read the proof](https://github.com/$REPO/tree/$tag/results/$slug) · [Public research note](https://solved-problems.178-62-4-68.sslip.io/releases/$tag/$slug/)" >> notes.md
+            gh release create "$tag" --repo "$REPO" --verify-tag --title "$(jq -r .title <<< "$record")" --notes-file notes.md
+          done
