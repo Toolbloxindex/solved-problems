@@ -1,0 +1,53 @@
+version: "v0.4"
+project:
+  name: "Graffiti.pc 392b on 2-domination and matchings"
+  description: "A matching bound for the minimum size of a 2-dominating set in every finite simple connected graph with at least three vertices."
+  authors: ["Tomás Correia"]
+  license: MIT
+  responsible_maintainers: ["Tomás Correia"]
+classification:
+  arxiv: [math.CO]
+  msc2020: [05C69, 05C70]
+sources:
+  - title: "Written on the Wall II, Conjecture 392b"
+    authors: ["Ermelinda DeLaViña"]
+    location: "https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/conjectures.json"
+    relationship: independently-proves
+    note: "Source of the conjectured inequality and its hypotheses."
+  - title: "Earlier bound on 2-domination using matchings (Theorem 3)"
+    location: "https://doi.org/10.1016/j.aml.2011.01.013"
+    relationship: background
+related_formalizations:
+  - id: "https://github.com/Toolbloxindex/solved-problems/tree/5545bf0a91a008903ab7e1e4c0806992db4ac836/results/graffiti-pc-392b-two-domination"
+    relationship: adapts
+    note: "Module-format port of our archived proof. This snapshot includes its complete development."
+status:
+  scope: "The general 392b inequality. The example families and priority claims are outside the theorem."
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound]
+automation:
+  methods:
+    - method: agent
+      framework: "Codex"
+      models: []
+      tool_setup: "Lean 4, Mathlib, and proof and literature checks on a VPS."
+      cost: {wall_time: "not tracked", spend_usd: "subscription-based", hardware: "VPS"}
+      prompting_notes: "Find and verify a proof of the original catalogue statement."
+  spend_usd: "subscription-based"
+  notes: "Tomás Correia directed the project. Codex performed the mathematical development, Lean formalization and port."
+fidelity:
+  divergences: "A finite graph is encoded on Fin n. Relabeling preserves the simple connected graphs and invariants quantified over in 392b."
+review:
+  status: "self-assessed"
+  reviewers: []
+  notes: "Original release kernel-replayed and independently typechecked with Nanoda. No external human peer review or priority determination."
+alignment:
+  namespace: "Graffiti392"
+  statements:
+    - source: "Written on the Wall II, 392b"
+      lean: "Graffiti392.Graph.conjecture392b"
+      module: Solution
+      status: proved
+      note: "Deleting minimum-degree vertices gives the graph used for the matching term."
+acknowledgements: "Graffiti.pc, Ermelinda DeLaViña, the earlier 392a authors, Lean and Mathlib."
