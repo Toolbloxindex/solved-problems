@@ -1,0 +1,4 @@
+{
+  "modules": ["Graph392", "Cut392", "Color392", "Cover392", "Conjecture392b"],
+  "theorems": ["Graffiti392.Graph.conjecture392b"]
+}

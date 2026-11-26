@@ -1,0 +1,10 @@
+{
+  "creators": [
+    {
+      "name": "Correia, Tomás"
+    }
+  ],
+  "license": "mit",
+  "significance": "Proves the complete 2010 catalogue inequality, including graphs with leaves.",
+  "prior_work": "The 2011 matching method (doi:10.1016/j.aml.2011.01.013) covers minimum degree at least two. The proof supplies a constrained cut for the remaining graphs. No claim of priority."
+}

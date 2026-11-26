@@ -16,5 +16,17 @@
     "title": "A 19-vertex counterexample to Graffiti.pc Conjecture 138",
     "summary": "A tree has a longest induced path on 17 vertices. Its unique maximum independent set and the distance between the square graph’s two maximum-degree vertices give a conjectured lower bound of 18. The construction extends to an infinite family.",
     "verification": "Direct proof for the family and exhaustive Python verification of the 19-vertex witness. External review and priority remain open."
+  },
+  {
+    "id": "graffiti-392b-v1",
+    "date": "2026-11-26",
+    "version": "v1.2.0",
+    "result": "graffiti-pc-392b-two-domination",
+    "title": "A proof of Graffiti.pc 392b on 2-domination and matchings",
+    "summary": "Proves the proposed upper bound for the 2-domination number of every finite simple connected graph with more than two vertices, including graphs with leaves.",
+    "verification": "Five Lean modules and a final theorem checked by the Lean kernel. No earlier full resolution was found in the literature search. Priority remains undetermined.",
+    "subject": "Graph theory",
+    "kind": "Theorem",
+    "keywords": "Graffiti.pc, Written on the Wall II, 392b, 2-domination, matchings, Ermelinda DeLaViña"
   }
 ]
