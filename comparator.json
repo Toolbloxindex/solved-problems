@@ -2,13 +2,13 @@
   "challenge_module": "Challenge",
   "solution_module": "Solution",
   "theorem_names": [
-    "StirlingBoxes.OmissionCenter.column_one_rising_gap",
-    "StirlingBoxes.OmissionCenter.column_one_lower_parity",
-    "StirlingBoxes.OmissionCenter.column_one_unimodal",
-    "StirlingRecurrence.recurrence_support",
-    "StirlingRecurrence.recurrence_second_parity",
-    "FirstColumn.original_column_strict_iff",
-    "FirstColumn.original_column_five_equality_iff"
+    "PalomarStirling.StirlingBoxes.OmissionCenter.column_one_rising_gap",
+    "PalomarStirling.StirlingBoxes.OmissionCenter.column_one_lower_parity",
+    "PalomarStirling.StirlingBoxes.OmissionCenter.column_one_unimodal",
+    "PalomarStirling.StirlingRecurrence.recurrence_support",
+    "PalomarStirling.StirlingRecurrence.recurrence_second_parity",
+    "PalomarStirling.FirstColumn.original_column_strict_iff",
+    "PalomarStirling.FirstColumn.original_column_five_equality_iff"
   ],
   "definition_names": [],
   "permitted_axioms": [

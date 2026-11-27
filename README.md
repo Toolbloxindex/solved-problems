@@ -7,4 +7,4 @@ Tomás Correia directed the AI-assisted development with Codex. The two tagged r
 - https://github.com/Toolbloxindex/solved-problems/tree/v1.0.0/results/first-column
 - https://github.com/Toolbloxindex/solved-problems/tree/v1.3.0/results/sagan-swanson-column-one
 
-Build with `lake build`. Challenge.lean states the seven results with their defining recurrences. Solution.lean imports the proofs. Run `lake comparator` with the pinned toolchain and comparator.json.
+Build with `lake build`. Challenge.lean states the seven results with their defining recurrences. Solution.lean identifies those recurrences with the published coefficients and applies the proofs from the two releases. Run `lake comparator` with the pinned toolchain and comparator.json.

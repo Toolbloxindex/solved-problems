@@ -77,31 +77,31 @@ review:
 alignment:
   statements:
   - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.3.0/results/sagan-swanson-column-one
-    lean: StirlingBoxes.OmissionCenter.column_one_rising_gap
+    lean: PalomarStirling.StirlingBoxes.OmissionCenter.column_one_rising_gap
     module: Solution
     status: proved
   - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.3.0/results/sagan-swanson-column-one
-    lean: StirlingBoxes.OmissionCenter.column_one_lower_parity
+    lean: PalomarStirling.StirlingBoxes.OmissionCenter.column_one_lower_parity
     module: Solution
     status: proved
   - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.3.0/results/sagan-swanson-column-one
-    lean: StirlingBoxes.OmissionCenter.column_one_unimodal
+    lean: PalomarStirling.StirlingBoxes.OmissionCenter.column_one_unimodal
     module: Solution
     status: proved
   - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.3.0/results/sagan-swanson-column-one
-    lean: StirlingRecurrence.recurrence_support
+    lean: PalomarStirling.StirlingRecurrence.recurrence_support
     module: Solution
     status: proved
   - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.3.0/results/sagan-swanson-column-one
-    lean: StirlingRecurrence.recurrence_second_parity
+    lean: PalomarStirling.StirlingRecurrence.recurrence_second_parity
     module: Solution
     status: proved
   - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.0.0/results/first-column
-    lean: FirstColumn.original_column_strict_iff
+    lean: PalomarStirling.FirstColumn.original_column_strict_iff
     module: Solution
     status: proved
   - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.0.0/results/first-column
-    lean: FirstColumn.original_column_five_equality_iff
+    lean: PalomarStirling.FirstColumn.original_column_five_equality_iff
     module: Solution
     status: proved
 acknowledgements: Bruce E. Sagan and Joshua P. Swanson for the type B q-Stirling recurrences

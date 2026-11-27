@@ -1,8 +1,15 @@
 module
 
+public import Mathlib.Algebra.BigOperators.Group.Finset.Sigma
 public import Mathlib.Algebra.BigOperators.Intervals
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Ring
 
 @[expose] public section
+
+namespace PalomarStirling
 
 namespace FirstColumn
 
@@ -28,7 +35,7 @@ theorem original_column_five_equality_iff (d : Int) (hl : 0 < d) (hr : d < 8) :
 end FirstColumn
 
 namespace StirlingRecurrence
-open FirstColumn (qmul sb)
+open _root_.PalomarStirling.FirstColumn (qmul sb)
 
 def cb : Nat → Nat → Int → Int
   | 0, k, d => if k = 0 ∧ d = 0 then 1 else 0
@@ -53,7 +60,7 @@ theorem recurrence_second_parity (first : Bool) (n : Nat) (hn : 2 ≤ n) (d : In
 end StirlingRecurrence
 
 namespace StirlingBoxes.OmissionCenter
-open StirlingRecurrence
+open _root_.PalomarStirling.StirlingRecurrence
 
 def center : ℕ → ℤ
   | 0 => 0
@@ -75,3 +82,5 @@ theorem column_one_unimodal (r : ℕ) :
       (∀ x : ℤ, p≤x → cb (r+1) 1 (x+1)≤cb (r+1) 1 x) := by
   sorry
 end StirlingBoxes.OmissionCenter
+
+end PalomarStirling
