@@ -8,7 +8,7 @@ namespace StirlingBoxes.OmissionCenter
 open Finset StirlingRecurrence
 
 /-- The sign can change from positive to negative only. Zeros are unrestricted. -/
-private def NoUp (f : Seq) := ∀ x y : ℤ, x≤y → f x<0 → f y≤0
+def NoUp (f : Seq) := ∀ x y : ℤ, x≤y → f x<0 → f y≤0
 
 private theorem noUp_box {f : Seq} (hf : NoUp f) (k : ℕ) : NoUp (box k f) := by
   intro x y xy neg
@@ -39,7 +39,7 @@ private theorem noUp_box {f : Seq} (hf : NoUp f) (k : ℕ) : NoUp (box k f) := b
   omega
 
 /-- The product of the common windows, acting by convolution. -/
-private def common (i j : ℕ) : ℕ → Seq → Seq
+def common (i j : ℕ) : ℕ → Seq → Seq
   | 0, f => f
   | n+1, f => if n=i ∨ n=j then common i j n f else box n (common i j n f)
 
@@ -75,7 +75,7 @@ private theorem common_sym (i j n : ℕ) (f : Seq) :
   | zero => rfl
   | succ n ih => simp only [common,or_comm,ih]
 
-private def tilt (s a b : ℤ) (f : Seq) : Seq := fun t => a*f (t+s)-b*f t
+def tilt (s a b : ℤ) (f : Seq) : Seq := fun t => a*f (t+s)-b*f t
 
 private theorem tilt_box (s a b : ℤ) (f : Seq) (k : ℕ) :
     tilt s a b (box k f)=box k (tilt s a b f) := by
@@ -87,7 +87,7 @@ private theorem tilt_box (s a b : ℤ) (f : Seq) (k : ℕ) :
   congr 1
   omega
 
-private def kernel (k : ℕ) : Seq := fun t => if 0≤t ∧ t≤2*k then 1 else 0
+def kernel (k : ℕ) : Seq := fun t => if 0≤t ∧ t≤2*k then 1 else 0
 
 private theorem box_unit_kernel (k : ℕ) : box k unit=kernel k := by
   funext t

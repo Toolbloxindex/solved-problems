@@ -14,7 +14,7 @@ def center : ℕ → ℤ
   | 0 => 0
   | n+1 => center n+n
 
-private structure Radial (c : ℤ) (f : Seq) : Prop where
+structure Radial (c : ℤ) (f : Seq) : Prop where
   mirror : ∀ x, f (2*c-x)=f x
   rise : ∀ x, x<c → f x≤f (x+1)
 
@@ -57,7 +57,7 @@ private theorem radial_box {c : ℤ} {f : Seq} (h : Radial c f) (i : ℕ) :
     have := slide i f x
     omega
 
-private inductive Band (a b : ℤ) : Seq → Prop
+inductive Band (a b : ℤ) : Seq → Prop
   | one {c f} : a≤c → c≤b → Radial c f → Band a b f
   | add {f g} : Band a b f → Band a b g → Band a b (fun z => f z+g z)
 

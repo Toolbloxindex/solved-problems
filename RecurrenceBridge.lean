@@ -22,7 +22,7 @@ def cb : Nat → Nat → Int → Int
 /-- True selects (14); false selects the previously defined recurrence (12). -/
 def coeff (first : Bool) := if first then cb else sb
 
-private def unitCoeff (d : Int) : Int := if d=0 then 1 else 0
+def unitCoeff (d : Int) : Int := if d=0 then 1 else 0
 
 private theorem step (e : Bool) (n k : Nat) (d : Int) :
     coeff e (n+1) (k+1) d = coeff e n k d +
@@ -79,7 +79,7 @@ private theorem mul_unit (w : Nat) (d : Int) :
       have hc : (0 ≤ d ∧ d < (w:Int)+1) ↔ (0 ≤ d ∧ d < (w:Int)) := by omega
       simp [hz, hc]
 
-private def singles (m : Nat) (d : Int) : Int :=
+def singles (m : Nat) (d : Int) : Int :=
   ((List.range m).map (fun i => oddInteger i d)).sum
 
 private theorem singles_step (m : Nat) (d : Int) :
@@ -201,7 +201,7 @@ def degree (first : Bool) (n k : Nat) : Int :=
   if first then (n:Int)*((n:Int)-1) - (k:Int)*((k:Int)-1)
   else 2*(k:Int)*((n:Int)-(k:Int))
 
-private def IntervalSupport (f : Int → Int) (D : Int) : Prop :=
+def IntervalSupport (f : Int → Int) (D : Int) : Prop :=
   (∀ d, 0 ≤ f d) ∧ (∀ d, 0 ≤ d → d ≤ D → 0 < f d) ∧
     (∀ d, d < 0 ∨ D < d → f d = 0)
 

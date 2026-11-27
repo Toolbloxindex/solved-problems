@@ -10,8 +10,8 @@ factor index identifies those counts with the explicit coefficient formula. -/
 namespace SecondDiagonal
 set_option linter.unusedSimpArgs false
 set_option linter.unusedVariables false
-private def F (d : Int) : Int := max (d+1) 0
-private def L (d : Int) : Int := if d < 0 then 0 else (d/2+1)*(d+1-d/2)
+def F (d : Int) : Int := max (d+1) 0
+def L (d : Int) : Int := if d < 0 then 0 else (d/2+1)*(d+1-d/2)
 private theorem Lstep (d : Int) : L d - L (d-2) = F d := by
   by_cases hn : d < 0
   · simp only [L,hn,show d-2 < 0 by omega,ite_true,F]; omega
@@ -33,11 +33,11 @@ private theorem rect_as_ramps (d i j : Int) (hi : 0 ≤ i) (hj : 0 ≤ j) :
   omega
 
 /-- Sum W_i W_j for all i below M at degree d. -/
-private def batch : Nat → Int → Int → Int
+def batch : Nat → Int → Int → Int
   | 0, _, _ => 0
   | M+1, j, d => batch M j d + rect d M j
 
-private def increment (M j d : Int) :=
+def increment (M j d : Int) :=
   M * (F d - F (d-2*j-1)) - (L (d-1)-L (d-1-2*M)) +
     (L (d-2*j-2)-L (d-2*j-2-2*M))
 
@@ -62,11 +62,11 @@ def pairCoeff (elem : Bool) : Nat → Int → Int
   | 0, _ => 0
   | j+1, d => pairCoeff elem j d + batch (if elem then j else j+1) j d
 
-private def clipped (e p : Bool) (m t : Int) :=
+def clipped (e p : Bool) (m t : Int) :=
   if 0 ≤ 2*t+(if p then 1 else 0) ∧ 2*t+(if p then 1 else 0) ≤ 4*m-4-(if e then 2 else 0)
   then coeff24 e p m t else 0
 
-private def bit (p : Bool) : Int := if p then 1 else 0
+def bit (p : Bool) : Int := if p then 1 else 0
 
 private theorem Lodd (p : Bool) (z : Int) : L (2*z+bit p-1) =
     (if 0 ≤ z then (z+bit p)*(z+1) else 0) := by
@@ -651,7 +651,7 @@ def oddInteger (j : Nat) (v : Int) : Int := if 0 ≤ v ∧ v ≤ 2*(j:Int) then 
 
 /-- Partial convolution with the odd-width q-integer. The exponents assigned
 to the first factor are 0,...,a−1. -/
-private def splitSum : Nat → Nat → Int → Int
+def splitSum : Nat → Nat → Int → Int
   | 0, _, _ => 0
   | a+1, j, d => splitSum a j d + oddInteger j (d-(a:Int))
 
@@ -673,7 +673,7 @@ theorem product_eq_rect (i j : Nat) (d : Int) :
   rw [split_eq]
   omega
 
-private def productSum : Nat → Nat → Int → Int
+def productSum : Nat → Nat → Int → Int
   | 0, _, _ => 0
   | m+1, j, d => productSum m j d + productCoeff m j d
 
