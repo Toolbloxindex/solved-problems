@@ -7,7 +7,6 @@ public import Mathlib.Data.Fintype.Prod
 
 @[expose] public section
 
-
 namespace Graffiti392
 open Finset Classical
 noncomputable section
@@ -24,7 +23,6 @@ variable (G : Graph n)
 open Classical in
 def nbr (x : V n) : Finset (V n) := univ.filter (G.adj x)
 
-@[simp] theorem mem_nbr {x y : V n} : y ∈ G.nbr x ↔ G.adj x y := by classical simp [nbr]
 
 def degree (x : V n) := (G.nbr x).card
 def Connected := ∀ S : Finset (V n), S.Nonempty → (∃ y, y ∉ S) →
@@ -34,22 +32,6 @@ def minimum := univ.filter (fun x => decide (∀ y, G.degree x ≤ G.degree y))
 def two := univ.filter (fun x => G.degree x = 2)
 def twoNbr (x : V n) := G.nbr x ∩ G.two
 def exceptional := univ.filter (fun x => (G.twoNbr x).card = 1)
-def paid := G.minimum ∪ G.exceptional
-def inside := G.two.filter (fun x => (G.twoNbr x).card = 2 ∧ x ∉ G.paid)
-def fixed (x : V n) := G.degree x = 2 ∨ 0 < (G.twoNbr x).card
-
-@[simp] theorem mem_minimum {x : V n} : x ∈ G.minimum ↔ ∀ y, G.degree x ≤ G.degree y := by
-  classical simp [minimum]
-@[simp] theorem mem_two {x : V n} : x ∈ G.two ↔ G.degree x = 2 := by simp [two]
-@[simp] theorem mem_twoNbr {x y : V n} : y ∈ G.twoNbr x ↔ G.adj x y ∧ G.degree y = 2 := by
-  simp [twoNbr]
-@[simp] theorem mem_exceptional {x : V n} : x ∈ G.exceptional ↔ (G.twoNbr x).card = 1 := by
-  simp [exceptional]
-@[simp] theorem mem_paid {x : V n} : x ∈ G.paid ↔ x ∈ G.minimum ∨ x ∈ G.exceptional := by
-  simp [paid]
-@[simp] theorem mem_inside {x : V n} : x ∈ G.inside ↔ G.degree x = 2 ∧ (G.twoNbr x).card = 2 ∧ x ∉ G.paid := by
-  simp [inside]
-
 def TwoDominates (D : Finset (V n)) := ∀ x ∉ D, 2 ≤ (G.nbr x ∩ D).card
 
 /-- Distinct representatives for vertex-disjoint edges. Each edge goes from its
@@ -65,6 +47,25 @@ theorem matchingCandidates (U : Finset (V n)) :
   ⟨_, ∅, by exact ⟨empty_subset _, fun i => i.val, Subtype.val_injective, by simp⟩, rfl⟩
 
 def matching (U : Finset (V n)) := n - Nat.find (G.matchingCandidates U)
+
+
+@[simp] theorem mem_nbr {x y : V n} : y ∈ G.nbr x ↔ G.adj x y := by classical simp [nbr]
+
+def paid := G.minimum ∪ G.exceptional
+def inside := G.two.filter (fun x => (G.twoNbr x).card = 2 ∧ x ∉ G.paid)
+def fixed (x : V n) := G.degree x = 2 ∨ 0 < (G.twoNbr x).card
+
+@[simp] theorem mem_minimum {x : V n} : x ∈ G.minimum ↔ ∀ y, G.degree x ≤ G.degree y := by
+  classical simp [minimum]
+@[simp] theorem mem_two {x : V n} : x ∈ G.two ↔ G.degree x = 2 := by simp [two]
+@[simp] theorem mem_twoNbr {x y : V n} : y ∈ G.twoNbr x ↔ G.adj x y ∧ G.degree y = 2 := by
+  simp [twoNbr]
+@[simp] theorem mem_exceptional {x : V n} : x ∈ G.exceptional ↔ (G.twoNbr x).card = 1 := by
+  simp [exceptional]
+@[simp] theorem mem_paid {x : V n} : x ∈ G.paid ↔ x ∈ G.minimum ∨ x ∈ G.exceptional := by
+  simp [paid]
+@[simp] theorem mem_inside {x : V n} : x ∈ G.inside ↔ G.degree x = 2 ∧ (G.twoNbr x).card = 2 ∧ x ∉ G.paid := by
+  simp [inside]
 
 theorem gammaTwo_le {D : Finset (V n)} (h : G.TwoDominates D) : G.gammaTwo ≤ D.card :=
   Nat.find_min' _ ⟨D,h,rfl⟩

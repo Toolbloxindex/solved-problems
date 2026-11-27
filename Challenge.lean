@@ -1,5 +1,6 @@
 module
 
+public import Mathlib.Combinatorics.Hall.Finite
 public import Mathlib.Data.Finset.Card
 public import Mathlib.Data.Fintype.Card
 public import Mathlib.Data.Fintype.Prod
