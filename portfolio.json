@@ -31,5 +31,13 @@
     "title": "One-sided log-concavity for a column of the type B q-Stirling numbers",
     "summary": "Proves the parity inequality on the rising side of first-kind column one at every rank, and on the second diagonal of both families. The unrestricted conjecture remains open.",
     "verification": "The formal proof was checked in Lean."
+  },
+  {
+    "version": "v1.4.0",
+    "result": "type-b-q-stirling-coefficients",
+    "date": "2026-11-27",
+    "title": "Coefficient inequalities for the type B q-Stirling numbers",
+    "summary": "A combined technical note on seven Lean-verified results. Strict adjacent log-concavity in second-kind column one begins at rank six for ranks at least two. The note also proves a rising-side inequality in first-kind column one and parity log-concavity on the second diagonal of both families.",
+    "verification": "The formal proof was checked in Lean."
   }
 ]

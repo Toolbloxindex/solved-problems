@@ -13,3 +13,5 @@ Read the [public results archive](https://www.tomdco.com/proofs). To discuss a p
 - [A proof of Graffiti.pc 392b on 2-domination and matchings](results/graffiti-pc-392b-two-domination/README.md) · v1.2.0
 
 - [One-sided log-concavity for a column of the type B q-Stirling numbers](results/sagan-swanson-column-one/README.md) · v1.3.0
+
+- [Coefficient inequalities for the type B q-Stirling numbers](results/type-b-q-stirling-coefficients/README.md) · v1.4.0

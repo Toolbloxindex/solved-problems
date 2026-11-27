@@ -40,5 +40,17 @@
     "subject": "Algebraic combinatorics",
     "kind": "Partial result",
     "keywords": "Sagan, Swanson, type B, q-Stirling numbers, log-concavity, unimodality"
+  },
+  {
+    "id": "type-b-q-stirling-coefficients-v1",
+    "result": "type-b-q-stirling-coefficients",
+    "version": "v1.4.0",
+    "date": "2026-11-27",
+    "title": "Coefficient inequalities for the type B q-Stirling numbers",
+    "summary": "A combined technical note on seven Lean-verified results. Strict adjacent log-concavity in second-kind column one begins at rank six for ranks at least two. The note also proves a rising-side inequality in first-kind column one and parity log-concavity on the second diagonal of both families.",
+    "verification": "Seven final declarations across eight proof modules replayed with a three-axiom allowlist.",
+    "subject": "Algebraic combinatorics",
+    "kind": "Technical note",
+    "keywords": "Sagan, Swanson, type B, q-Stirling numbers, log-concavity, unimodality"
   }
 ]

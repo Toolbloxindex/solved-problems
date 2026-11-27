@@ -1,0 +1,10 @@
+{
+  "creators": [
+    {
+      "name": "Correia, Tomás"
+    }
+  ],
+  "license": "mit",
+  "significance": "Provides an all-rank strictness classification and equality case for one column and reproducible proofs of restricted cases of the type B parity log-concavity conjecture.",
+  "prior_work": "Sagan and Swanson, q-Stirling numbers in type B (doi:10.1016/j.ejc.2023.103899), give the recurrences in Definition 1.5, symmetric-function formulas in Theorem 2.1, and the parity question in Conjecture 7.5. Their Theorem 7.2 and Corollary 7.3 compare polynomials across columns. The inequalities here compare coefficients within a fixed polynomial. Bottom-heaviness (Conjecture 7.6) compares reflected degrees, and asymptotic normality (Conjecture 7.8) describes a limiting distribution. This note consolidates the project’s proofs from GitHub releases v1.0.0 and v1.3.0 and makes no claim of discovery priority."
+}
