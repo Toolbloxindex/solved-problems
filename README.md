@@ -11,3 +11,5 @@ Read the [public results archive](https://www.tomdco.com/proofs). To discuss a p
 - [A 19-vertex counterexample to Graffiti.pc Conjecture 138](results/wowii-138/README.md) · v1.1.0
 
 - [A proof of Graffiti.pc 392b on 2-domination and matchings](results/graffiti-pc-392b-two-domination/README.md) · v1.2.0
+
+- [One-sided log-concavity for a column of the type B q-Stirling numbers](results/sagan-swanson-column-one/README.md) · v1.3.0
