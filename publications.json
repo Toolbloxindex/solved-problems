@@ -52,5 +52,17 @@
     "subject": "Algebraic combinatorics",
     "kind": "Technical note",
     "keywords": "Sagan, Swanson, type B, q-Stirling numbers, log-concavity, unimodality"
+  },
+  {
+    "id": "graph-grabbing-partial-results-v1",
+    "result": "graph-grabbing-partial-results",
+    "date": "2026-11-27",
+    "version": "v1.5.0",
+    "title": "Two partial results on the Seacrest–Seacrest graph-grabbing conjecture",
+    "summary": "On even connected bipartite graphs with no induced once-subdivided claw, Alice can secure half the weight if adjacent positive weights agree. A second result compares opposite choices of the last vertex on a path with attached leaves. The general conjecture remains open.",
+    "verification": "Three final theorems checked in Lean 4.37.0-rc1 with an axiom audit.",
+    "subject": "Graph theory",
+    "kind": "Partial result",
+    "keywords": "Seacrest, graph grabbing, bipartite graphs, rooted game, claw, weighted graphs"
   }
 ]

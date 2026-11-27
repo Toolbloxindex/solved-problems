@@ -39,5 +39,13 @@
     "title": "Coefficient inequalities for the type B q-Stirling numbers",
     "summary": "A combined technical note on seven Lean-verified results. Strict adjacent log-concavity in second-kind column one begins at rank six for ranks at least two. The note also proves a rising-side inequality in first-kind column one and parity log-concavity on the second diagonal of both families.",
     "verification": "The formal proof was checked in Lean."
+  },
+  {
+    "version": "v1.5.0",
+    "result": "graph-grabbing-partial-results",
+    "date": "2026-11-27",
+    "title": "Two partial results on the Seacrest–Seacrest graph-grabbing conjecture",
+    "summary": "On even connected bipartite graphs with no induced once-subdivided claw, Alice can secure half the weight if adjacent positive weights agree. A second result compares opposite choices of the last vertex on a path with attached leaves. The general conjecture remains open.",
+    "verification": "The formal proof was checked in Lean."
   }
 ]

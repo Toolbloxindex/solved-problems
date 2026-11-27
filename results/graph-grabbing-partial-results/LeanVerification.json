@@ -1,0 +1,14 @@
+{
+  "modules": [
+    "GrabbingGraph",
+    "GrabbingClaw",
+    "GrabbingCapture",
+    "GrabbingComb",
+    "GrabbingCombGraph"
+  ],
+  "theorems": [
+    "GraphGrabbing.capture_color",
+    "GraphGrabbing.win_equal_positive_edges",
+    "GraphGrabbing.Comb.opposite_rooted_values"
+  ]
+}

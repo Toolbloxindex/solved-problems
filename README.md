@@ -15,3 +15,5 @@ Read the [public results archive](https://www.tomdco.com/proofs). To discuss a p
 - [One-sided log-concavity for a column of the type B q-Stirling numbers](results/sagan-swanson-column-one/README.md) · v1.3.0
 
 - [Coefficient inequalities for the type B q-Stirling numbers](results/type-b-q-stirling-coefficients/README.md) · v1.4.0
+
+- [Two partial results on the Seacrest–Seacrest graph-grabbing conjecture](results/graph-grabbing-partial-results/README.md) · v1.5.0
