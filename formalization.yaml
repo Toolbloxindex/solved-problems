@@ -26,6 +26,14 @@ sources:
   relationship: background
   note: Definition 1.5 gives the coefficient recurrences. Conjecture 7.5 asks about
     both parity subsequences in every column.
+- title: Strict log-concavity in the first type-B q-Stirling column
+  location: https://github.com/Toolbloxindex/solved-problems/tree/v1.0.0/results/first-column
+  relationship: adapts
+  note: Source of the restricted statements and their proofs.
+- title: One-sided log-concavity for a column of the type B q-Stirling numbers
+  location: https://github.com/Toolbloxindex/solved-problems/tree/v1.3.0/results/sagan-swanson-column-one
+  relationship: adapts
+  note: Source of the restricted statements and their proofs.
 related_formalizations:
 - id: https://github.com/Toolbloxindex/solved-problems/tree/v1.0.0/results/first-column
   relationship: adapts
