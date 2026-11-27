@@ -1,58 +1,77 @@
 module
 
-public import Mathlib.Combinatorics.Hall.Finite
-public import Mathlib.Data.Finset.Card
-public import Mathlib.Data.Fintype.Card
-public import Mathlib.Data.Fintype.Prod
+public import Mathlib.Algebra.BigOperators.Intervals
 
 @[expose] public section
 
-namespace Graffiti392
-open Finset Classical
-noncomputable section
-variable {n : Nat}
-abbrev V (n : Nat) := Fin n
+namespace FirstColumn
 
-structure Graph (n : Nat) where
-  adj : V n → V n → Prop
-  symm : ∀ {x y}, adj x y → adj y x
-  loopless : ∀ x, ¬adj x x
+def qmul (a : Int → Int) (d : Int) : Nat → Int
+  | 0 => 0
+  | w+1 => qmul a d w + a (d-(w:Int))
 
-namespace Graph
-variable (G : Graph n)
-open Classical in
-def nbr (x : V n) : Finset (V n) := univ.filter (G.adj x)
+def sb : Nat → Nat → Int → Int
+  | 0,k,d => if k=0 ∧ d=0 then 1 else 0
+  | n+1,0,d => qmul (sb n 0) d 1
+  | n+1,k+1,d => sb n k d + qmul (sb n (k+1)) d (2*(k+1)+1)
 
+def StrictInterior (n : Nat) (a : Int → Int) :=
+  ∀ d : Int, 0 < d → d < 2*(n : Int)-2 → a (d-1) * a (d+1) < a d ^ 2
 
-def degree (x : V n) := (G.nbr x).card
-def Connected := ∀ S : Finset (V n), S.Nonempty → (∃ y, y ∉ S) →
-  ∃ x ∈ S, ∃ y ∉ S, G.adj x y
-
-def minimum := univ.filter (fun x => decide (∀ y, G.degree x ≤ G.degree y))
-def two := univ.filter (fun x => G.degree x = 2)
-def twoNbr (x : V n) := G.nbr x ∩ G.two
-def exceptional := univ.filter (fun x => (G.twoNbr x).card = 1)
-def TwoDominates (D : Finset (V n)) := ∀ x ∉ D, 2 ≤ (G.nbr x ∩ D).card
-
-/-- Distinct representatives for vertex-disjoint edges. Each edge goes from its
-unique representative in s to its distinct partner outside s. -/
-def Matches (U s : Finset (V n)) := s ⊆ U ∧ ∃ f : s → V n, Function.Injective f ∧
-  ∀ i, f i ∈ U ∧ f i ∉ s ∧ G.adj i (f i)
-
-def gammaTwo := Nat.find (show ∃ k, ∃ D : Finset (V n), G.TwoDominates D ∧ D.card = k from
-  ⟨_, univ, by simp [TwoDominates], rfl⟩)
-
-theorem matchingCandidates (U : Finset (V n)) :
-    ∃ k, ∃ s : Finset (V n), G.Matches U s ∧ n - s.card = k :=
-  ⟨_, ∅, by exact ⟨empty_subset _, fun i => i.val, Subtype.val_injective, by simp⟩, rfl⟩
-
-def matching (U : Finset (V n)) := n - Nat.find (G.matchingCandidates U)
-
-
-/-- The bound in Graffiti.pc 392b for all finite connected simple graphs of order greater than two. -/
-theorem conjecture392b (hn : 2 < n) (hc : G.Connected) :
-    G.gammaTwo ≤ G.matching (univ \ G.minimum) + G.minimum.card + G.exceptional.card := by
+theorem original_column_strict_iff (n : Nat) :
+    StrictInterior n (sb n 1) ↔ n ≤ 1 ∨ 6 ≤ n := by
   sorry
-end Graph
-end
-end Graffiti392
+
+theorem original_column_five_equality_iff (d : Int) (hl : 0 < d) (hr : d < 8) :
+    sb 5 1 (d-1) * sb 5 1 (d+1) = sb 5 1 d ^ 2 ↔ d = 1 := by
+  sorry
+end FirstColumn
+
+namespace StirlingRecurrence
+open FirstColumn (qmul sb)
+
+def cb : Nat → Nat → Int → Int
+  | 0, k, d => if k = 0 ∧ d = 0 then 1 else 0
+  | n+1, 0, d => qmul (cb n 0) d (2*n+1)
+  | n+1, k+1, d => cb n k d + qmul (cb n (k+1)) d (2*n+1)
+
+def coeff (first : Bool) := if first then cb else sb
+
+def degree (first : Bool) (n k : Nat) : Int :=
+  if first then (n:Int)*((n:Int)-1) - (k:Int)*((k:Int)-1)
+  else 2*(k:Int)*((n:Int)-(k:Int))
+
+theorem recurrence_support (first : Bool) (n k : Nat) (hk : k ≤ n) (d : Int) :
+    (0 < coeff first n k d ↔ 0 ≤ d ∧ d ≤ degree first n k) ∧
+    (coeff first n k d = 0 ↔ d < 0 ∨ degree first n k < d) := by
+  sorry
+
+theorem recurrence_second_parity (first : Bool) (n : Nat) (hn : 2 ≤ n) (d : Int) :
+    coeff first n (n-2) d * coeff first n (n-2) (d+4) ≤
+      coeff first n (n-2) (d+2)^2 := by
+  sorry
+end StirlingRecurrence
+
+namespace StirlingBoxes.OmissionCenter
+open StirlingRecurrence
+
+def center : ℕ → ℤ
+  | 0 => 0
+  | n+1 => center n+n
+
+theorem column_one_rising_gap (r : ℕ) (d s : ℤ) (hs : 0≤s)
+    (rise : cb (r+1) 1 (d-s)≤cb (r+1) 1 (d+s)) :
+    cb (r+1) 1 (d-s)*cb (r+1) 1 (d+s)≤cb (r+1) 1 d^2 := by
+  sorry
+
+theorem column_one_lower_parity (r : ℕ) (d : ℤ)
+    (low : d≤center r ∨ d+1<center (r+1)) :
+    cb (r+1) 1 (d-2)*cb (r+1) 1 (d+2)≤cb (r+1) 1 d^2 := by
+  sorry
+
+theorem column_one_unimodal (r : ℕ) :
+    ∃ p : ℤ, center r≤p ∧ p≤center (r+1) ∧
+      (∀ x : ℤ, x<p → cb (r+1) 1 x≤cb (r+1) 1 (x+1)) ∧
+      (∀ x : ℤ, p≤x → cb (r+1) 1 (x+1)≤cb (r+1) 1 x) := by
+  sorry
+end StirlingBoxes.OmissionCenter

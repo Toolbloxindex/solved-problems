@@ -1,7 +1,7 @@
-name: Palomar preflight for 392b
+name: Palomar preflight for type B q-Stirling results
 on:
   push:
-    branches: [palomar/graffiti-392b]
+    branches: [palomar/stirling]
 permissions:
   contents: read
 jobs:
@@ -11,7 +11,7 @@ jobs:
       repository: ${{ github.repository }}
       commit: ${{ github.sha }}
       pipeline_commit: 046554302064b2c83c2b924bea6db87fc5900c68
-      request_id: preflight392
+      request_id: preflightqst
       mode: full
       execution_profile: palomar-standard-v1
       options: '{"comparator_config_path":"comparator.json","authorization_relationship":"I have approval from a responsible author or maintainer"}'

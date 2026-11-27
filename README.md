@@ -1,9 +1,10 @@
-# Graffiti.pc 392b on 2-domination and matchings
+# Log-concavity in the first columns and second diagonal of the type B q-Stirling arrays
 
-Tomás Correia · AI-assisted proof and formalization with Codex.
+Strict adjacent log-concavity in second-kind column one has threshold rank six for ranks at least two. The first-kind rising-side midpoint inequality holds in column one, and both families satisfy the parity inequality on the second diagonal. At rank five the only interior equality in second-kind column one is at degree one. The all-column conjecture remains open.
 
-Choose vertices in a network so that every unchosen vertex has two chosen neighbors. Conjecture 392b gives an upper bound on how many vertices suffice. Delete all vertices of minimum degree and count a largest matching in the remaining graph. Add the number of deleted vertices and the number of original vertices with exactly one neighbor of degree two. The theorem proves this bound for every connected finite simple graph with more than two vertices, including graphs with leaves.
+Tomás Correia directed the AI-assisted development with Codex. The two tagged releases contain the proofs, examples, and original statements.
 
-Challenge.lean specifies the graph, the invariants, and the inequality. Solution.lean contains the complete proof. Build the two targets separately with Lake. The deliberate placeholder in Challenge.lean represents the statement supplied to Comparator. The proof in Solution.lean has no placeholders.
+- https://github.com/Toolbloxindex/solved-problems/tree/v1.0.0/results/first-column
+- https://github.com/Toolbloxindex/solved-problems/tree/v1.3.0/results/sagan-swanson-column-one
 
-[Published proof, examples, and prior work](https://doi.org/10.5281/zenodo.24571980)
+Build with `lake build`. Challenge.lean states the seven results with their defining recurrences. Solution.lean imports the proofs. Run `lake comparator` with the pinned toolchain and comparator.json.

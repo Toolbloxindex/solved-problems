@@ -1,4 +1,4 @@
-name = "graffiti392b"
+name = "stirlingcolumns"
 version = "1.0.0"
 defaultTargets = ["Challenge","Solution"]
 
@@ -12,3 +12,27 @@ name = "Challenge"
 
 [[lean_lib]]
 name = "Solution"
+
+[[lean_lib]]
+name = "FirstColumn"
+
+[[lean_lib]]
+name = "SecondDiagonal"
+
+[[lean_lib]]
+name = "PairBridge"
+
+[[lean_lib]]
+name = "StirlingDiagonal"
+
+[[lean_lib]]
+name = "RecurrenceBridge"
+
+[[lean_lib]]
+name = "MarkedAlphabet"
+
+[[lean_lib]]
+name = "OmissionCenter"
+
+[[lean_lib]]
+name = "OmissionRising"
