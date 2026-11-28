@@ -149,7 +149,7 @@ theorem rootLegal_iff {h L} (fit : Fits h L) (x : Token) :
       exact (move_choice (Move.hub free)).1
   · exact fun hx => legal_of_move fit (choice_move hx)
 
-private def decode (z : ℕ) : Token := if z%2=0 then .hub (z/2) else .leaf (z/2)
+def decode (z : ℕ) : Token := if z%2=0 then .hub (z/2) else .leaf (z/2)
 
 private theorem encode_decode (z : ℕ) : encode (decode z)=z := by
   unfold decode

@@ -223,11 +223,11 @@ theorem paired_threshold {w v : ℕ → ℝ} {n L R xs ys}
   · have all := count_full (fun i hi => (not_lt.mp low).trans (minimum i hi))
     omega
 
-private def hubPart (u : ℕ → ℝ) : Token → ℝ
+def hubPart (u : ℕ → ℝ) : Token → ℝ
   | .hub i => u i
   | .leaf _ => 0
 
-private def leafPart (w : ℕ → ℝ) : Token → ℝ
+def leafPart (w : ℕ → ℝ) : Token → ℝ
   | .leaf i => w i
   | .hub _ => 0
 

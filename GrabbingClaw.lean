@@ -15,7 +15,7 @@ namespace GraphGrabbing
 open Finset
 
 /-- A side of the cut at b, with no exit except through b. -/
-private def Side (E : Edge) (S : Vertices) (b : ℕ) (W : Vertices) :=
+def Side (E : Edge) (S : Vertices) (b : ℕ) (W : Vertices) :=
   ∀ u∈W, ∀ v∈S, v∉W → E u v → v=b
 
 private theorem cut_side {E : Edge} (sym : Undirected E) {S : Vertices} {x b : ℕ}
@@ -222,7 +222,7 @@ private theorem stuck_degree {E : Edge} (sym : Undirected E) {col : ℕ → Bool
   have high := bypass sym irr conn cd xs sub bd cc xb xc cb cut
   omega
 
-private noncomputable def crossEdges (E : Edge) (R B : Vertices) := by
+noncomputable def crossEdges (E : Edge) (R B : Vertices) := by
   classical
   exact (R ×ˢ B).filter (fun p => E p.1 p.2)
 
@@ -242,7 +242,7 @@ private theorem cross_swap {E : Edge} (sym : Undirected E) (R B : Vertices) :
   intro r _
   rw [show E r b ↔ E b r from ⟨fun h => sym h, fun h => sym h⟩]
 
-private noncomputable def coloredEdges (E : Edge) (col : ℕ → Bool) (k : Bool)
+noncomputable def coloredEdges (E : Edge) (col : ℕ → Bool) (k : Bool)
     (S : Vertices) := crossEdges E (S.filter (fun z => col z=k)) (S.filter (fun z => col z≠k))
 
 private theorem colored_mem (E : Edge) (col : ℕ → Bool) (k : Bool) (S : Vertices) (p : ℕ×ℕ) :

@@ -62,7 +62,7 @@ theorem wins_mono {E : Edge} {w : ℕ → ℝ} {m : ℕ} {S : Vertices} {a b : �
     obtain ⟨x,lx,rest⟩ := win
     exact ⟨x,lx,fun y ly => ih (by linarith : a-w x+w y≤b-w x+w y) (rest y ly)⟩
 
-private def tally (w : ℕ → ℝ) (T S : Vertices) := ∑ v∈S, if v∈T then w v else -w v
+def tally (w : ℕ → ℝ) (T S : Vertices) := ∑ v∈S, if v∈T then w v else -w v
 
 theorem capture_margin {E : Edge} {w : ℕ → ℝ} (nn : ∀ x,0≤w x)
     {T : Vertices} {m : ℕ} {S : Vertices} (size : S.card=2*m) (cap : Captures E T m S) :
