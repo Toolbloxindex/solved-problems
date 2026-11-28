@@ -1,0 +1,59 @@
+name = "songsuwankayles"
+version = "1.0.0"
+defaultTargets = ["Challenge","Solution"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "31ce06eaadf4a200c0e1407c5f10953cf606b8f8"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"
+
+[[lean_lib]]
+name = "GameValue"
+
+[[lean_lib]]
+name = "LeafIdentities"
+
+[[lean_lib]]
+name = "BoardMap"
+
+[[lean_lib]]
+name = "RayMoves"
+
+[[lean_lib]]
+name = "MixedPaths"
+
+[[lean_lib]]
+name = "RayCounts"
+
+[[lean_lib]]
+name = "Window"
+
+[[lean_lib]]
+name = "PeriodFourTable"
+
+[[lean_lib]]
+name = "PeriodFourTarget"
+
+[[lean_lib]]
+name = "PathMenus"
+
+[[lean_lib]]
+name = "PeriodFourMenus"
+
+[[lean_lib]]
+name = "PeriodFourLiteral"
+
+[[lean_lib]]
+name = "PeriodFourCoreOptions"
+
+[[lean_lib]]
+name = "PeriodFourRealization"
+
+[[lean_lib]]
+name = "PeriodFourProof"

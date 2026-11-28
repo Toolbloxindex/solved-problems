@@ -1,0 +1,78 @@
+version: v0.4
+project:
+  name: A counterexample to Songsuwan’s Conjecture 2 in Node-Kayles
+  description: A fixed connected 291-vertex host with repeated endpoint-rooted five-vertex
+    paths has game values 8 and 9 at counts 4j+5 and 4j+7 for every natural j. Hence
+    no eventual lag-two equality holds on this host.
+  authors:
+  - Tomás Correia
+  license: MIT
+  responsible_maintainers:
+  - Tomás Correia
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05C57
+  - 91A46
+sources:
+- title: Grundy Values of Node-Kayles on Level-Regular Trees
+  authors:
+  - Nuttanon Songsuwan
+  location: https://arxiv.org/html/2512.24221v2#S4
+  relationship: background
+  note: Conjecture 2, Section 4, revision 2.
+- title: A counterexample to Songsuwan’s Conjecture 2 in Node-Kayles
+  relationship: adapts
+  location: https://github.com/Toolbloxindex/solved-problems/tree/v1.6.0/results/songsuwan-node-kayles-counterexample
+  note: Tagged proof of the fixed-host counterexample.
+related_formalizations:
+- id: https://github.com/Toolbloxindex/solved-problems/tree/v1.6.0/results/songsuwan-node-kayles-counterexample
+  relationship: adapts
+  note: Tagged release of the counterexample.
+status:
+  scope: A fixed connected 291-vertex host with repeated endpoint-rooted five-vertex
+    paths has game values 8 and 9 at counts 4j+5 and 4j+7 for every natural j. Hence
+    no eventual lag-two equality holds on this host.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    framework: Codex
+    models: []
+    tool_setup: Lean 4, Mathlib, and proof and literature checks on a VPS.
+    cost:
+      wall_time: not tracked
+      spend_usd: subscription-based
+      hardware: VPS
+    prompting_notes: Investigate and disprove or prove Songsuwan’s second conjecture,
+      check the game semantics and compare prior results.
+  spend_usd: subscription-based
+  notes: Tomás Correia directed the project. Codex performed the mathematical development,
+    Lean formalization and port.
+fidelity:
+  divergences: The universal claim is refuted at the explicit fixed host and P5 branch.
+    The challenge includes the finite board, adjacency and the recursion for the exact
+    Grundy value.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: Self-assessment with agent-assisted independent mathematical and computational
+    checks. External peer review is pending.
+alignment:
+  statements:
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.6.0/results/songsuwan-node-kayles-counterexample
+    lean: PalomarSongsuwan.values
+    module: Solution
+    status: proved
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.6.0/results/songsuwan-node-kayles-counterexample
+    lean: PalomarSongsuwan.no_period_two
+    module: Solution
+    status: proved
+acknowledgements: Nuttanon Songsuwan for posing the conjecture, and the Lean and Mathlib
+  communities.
