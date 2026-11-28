@@ -28,7 +28,7 @@ For `cabcba`, local positions 1 and 6 force any cover to start with `c` and end 
 
 ## Prior work and attribution
 
-Charalampopoulos, Pissis, Radoszewski, Rytter, Waleń and Zuba already established the answer computationally. Their question asks for a paper proof. The result here is the positional argument and its formalization. Priority for the argument remains undetermined. [Original question](https://doi.org/10.1016/j.tcs.2025.115216)
+Charalampopoulos, Pissis, Radoszewski, Rytter, Waleń and Zuba already established the answer computationally. Their question asks for a paper proof. The written proof answers that question by tracking the positions of the letters. The Lean proof establishes the same conclusion. It uses the positional decomposition, then exhaustively checks the candidates in the `fewD` list and the sublists of the first three blocks by kernel reduction. Priority for the argument remains undetermined. [Original question](https://doi.org/10.1016/j.tcs.2025.115216)
 
 AI assistance was used in developing and checking this proof.
 
