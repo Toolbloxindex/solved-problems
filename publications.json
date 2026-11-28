@@ -76,5 +76,17 @@
     "subject": "Combinatorial game theory",
     "kind": "Counterexample",
     "keywords": "Node-Kayles, Sprague-Grundy value, graph games, periodicity, Songsuwan"
+  },
+  {
+    "id": "consecutive-231-stack-delay-v1",
+    "result": "consecutive-231-stack-delay",
+    "date": "2026-11-28",
+    "version": "v1.7.0",
+    "title": "A uniform lower bound on the transient length of the consecutive-231 stack map",
+    "summary": "For every n ≥ 8, some permutation of length n takes at least n + 3 passes of the consecutive-231 stack map to reach a periodic point.",
+    "verification": "Lean checks the construction for every n ≥ 8 and every pass before n + 3.",
+    "subject": "Enumerative combinatorics",
+    "kind": "Partial proof",
+    "keywords": "stack sorting, consecutive pattern, Seidel, Sun, Yi, transient length"
   }
 ]

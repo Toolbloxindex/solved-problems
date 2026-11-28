@@ -25,3 +25,5 @@ python3 results/songsuwan-node-kayles-counterexample/verify.py
 | v1.0.0 | [Type B q-Stirling numbers, second-kind column one](results/first-column/README.md) · Among ranks $n \geq 2$, all interior coefficient gaps are strictly positive exactly when $n \geq 6$. | Lean classification for all ranks and a Python replay through row 256. |
 
 To cite a result, use its title and DOI where available, or give the release tag and the exact theorem you used. Corrections, earlier references and independent replays are welcome. [Open an issue](https://github.com/Toolbloxindex/solved-problems/issues)
+
+- [A uniform lower bound on the transient length of the consecutive-231 stack map](results/consecutive-231-stack-delay/README.md) · v1.7.0

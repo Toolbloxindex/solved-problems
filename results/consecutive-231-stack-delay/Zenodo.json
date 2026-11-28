@@ -1,0 +1,10 @@
+{
+  "creators": [
+    {
+      "name": "Correia, Tomás"
+    }
+  ],
+  "license": "mit",
+  "significance": "For every n ≥ 8, some permutation of length n takes at least n + 3 passes of the consecutive-231 stack map to reach a periodic point.",
+  "prior_work": "Seidel and Sun ask about the maximal transient length. Kai Yi gives a uniform lower bound of n − 1 and asks whether the maximum divided by n diverges. The bound here leaves that growth question open. Priority beyond the cited comparison remains undetermined."
+}
