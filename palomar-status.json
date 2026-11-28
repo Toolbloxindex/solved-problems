@@ -23,6 +23,9 @@
   "v1.14.0/jacobi-stirling-diagonal-root-threshold": {
     "status": "No public registration confirmed"
   },
+  "v1.15.0/jacobi-stirling-negative-interval": {
+    "status": "No public registration confirmed"
+  },
   "v1.2.0/graffiti-pc-392b-two-domination": {
     "status": "Preflight passed",
     "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099954054"
