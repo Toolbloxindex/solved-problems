@@ -177,6 +177,11 @@ noncomputable def rootedValue (w : ℕ → ℝ) : ℕ → Vertices → ℝ :=
       (rootMoves S).sup' ne fun z => w z - previous (S.erase z)
     else 0
 
+private theorem rootedValue_succ (w : ℕ → ℝ) (f : ℕ) (S : Vertices) :
+    rootedValue w (f+1) S = (if ne : (rootMoves S).Nonempty then
+      (rootMoves S).sup' ne fun z => w z - rootedValue w f (S.erase z)
+    else 0) := rfl
+
 private theorem eval_eq (u w : ℕ → ℝ) (fuel : ℕ) {h L} (fit : Fits h L)
     (size : h+L.card=fuel) : rootedValue (weight u w) fuel (board h L) =
       2*score u w fuel h L-mass u w h L := by
@@ -207,7 +212,7 @@ private theorem eval_eq (u w : ℕ → ℝ) (fuel : ℕ) {h L} (fit : Fits h L)
           simp only [mass,loot]
           linarith only [sum_erase_add _ w mem]
       linarith
-    rw [rootedValue,dite_eq_left rg,score,dite_eq_left ⟨_,ha⟩]
+    rw [rootedValue_succ,dite_eq_left rg,score,dite_eq_left ⟨_,ha⟩]
     apply le_antisymm
     · apply sup'_le
       intro z hz
