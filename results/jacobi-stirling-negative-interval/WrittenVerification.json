@@ -1,0 +1,8 @@
+{
+  "method": "Written proof",
+  "source": "https://arxiv.org/html/1309.4237v2#S2",
+  "independent_review": "passed",
+  "reviewed_sha256": {
+    "PROOF.md": "412086808f6d69bf3cd31c5ec7823a1a4ba39e70760bff2d8540288758732e61"
+  }
+}

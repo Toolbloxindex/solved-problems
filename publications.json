@@ -172,5 +172,17 @@
     "subject": "Enumerative combinatorics",
     "kind": "Proof",
     "keywords": "Jacobi–Stirling numbers, diagonal generating functions, real-rootedness, Rolle theorem, cubic discriminant"
+  },
+  {
+    "id": "jacobi-stirling-negative-interval-v1",
+    "date": "2026-11-28",
+    "version": "v1.15.0",
+    "result": "jacobi-stirling-negative-interval",
+    "title": "The sharp negative parameter range for Jacobi–Stirling diagonal numerators",
+    "summary": "Determines the sharp negative parameter range for simultaneous real-rootedness of all second-kind Jacobi–Stirling diagonal numerators and gives the root locations and endpoint multiplicities.",
+    "verification": "Written proof · independent AI mathematical review",
+    "subject": "Enumerative combinatorics",
+    "kind": "Proof",
+    "keywords": "Jacobi–Stirling numbers, diagonal generating functions, real-rootedness, cubic discriminant, Pólya frequency"
   }
 ]

@@ -173,5 +173,18 @@
     "explainer": "The Jacobi–Stirling numbers form a triangular array controlled by a parameter \\(u\\). Each fixed diagonal has a generating series with a polynomial numerator. Lin and Zeng studied when the zeros are all nonpositive. Here the question is when every numerator has real zeros, allowing either sign.\n\nThe first diagonal already has a positive zero when \\(u>1\\). At \\(u=2\\) the second numerator still has only real zeros. As the parameter increases beyond \\(2\\), two positive zeros meet at \\(\\rho\\) and then become a nonreal pair. The second diagonal determines the exact threshold. Below and at that threshold, a weighted derivative argument accounts for every zero on the two real intervals outside \\([0,1]\\) at each later step.\n\nFor nonnegative \\(u\\), the range is the closed interval from zero to the threshold \\(\\rho\\), which lies between \\(41/20\\) and \\(33/16\\). The proof also supplies the exact degree at every real parameter and an example where a diagonal numerator has no positive zero despite \\(u>1\\).",
     "significance": "Substantial advance",
     "why_it_matters": "This extends the known range for real zeros beyond the nonpositive-root range of Lin and Zeng and shows that checking the first two diagonals completely decides the all-diagonal question for nonnegative parameters."
+  },
+  {
+    "version": "v1.15.0",
+    "result": "jacobi-stirling-negative-interval",
+    "date": "2026-11-28",
+    "title": "The sharp negative parameter range for Jacobi–Stirling diagonal numerators",
+    "summary": "Determines the sharp negative parameter range for simultaneous real-rootedness of all second-kind Jacobi–Stirling diagonal numerators and gives the root locations and endpoint multiplicities.",
+    "verification": "Written proof · independent AI mathematical review",
+    "what_this_settles": "For every real \\(u<0\\), all second-kind Jacobi–Stirling diagonal numerators of index \\(k\\ge1\\) are real-rooted exactly when \\(u\\ge-1-\\sigma\\), including the endpoint where \\(\\sigma\\) is the unique nonnegative zero of the polynomial in the proof.",
+    "verification_method": "Written proof",
+    "explainer": "The second-kind Jacobi–Stirling numbers form a triangular array that depends on a real parameter \\(u\\). Each diagonal has a generating function whose numerator is a polynomial. The question is how far below zero \\(u\\) can go while every one of those polynomials still has only real zeros.\n\nAt \\(u=-6/5\\), all the diagonal numerators have real zeros. Apart from the factor \\(x\\), the second numerator has three negative zeros, one in each of the intervals cut out by \\(-2,-1,-1/20,0\\). The odd diagonals each have one positive zero. The proof uses the first three generating-series coefficients to control where two negative zeros appear at each odd-to-even step.\n\nThere is an exact cutoff between \\(-121/100\\) and \\(-6/5\\). The cutoff is included, even though two roots of the second numerator coincide there. At every more negative parameter the second numerator has a nonreal pair.",
+    "significance": "Substantial advance",
+    "why_it_matters": "The result extends Lin and Zeng's nonpositive-root range to the exact negative cutoff for real zeros and shows that the second diagonal decides the question for the whole family."
   }
 ]
