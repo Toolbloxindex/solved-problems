@@ -1,0 +1,18 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "WordSPrimitivityReplay.exact_claim",
+    "WordSPrimitivityReplay.no_shorter_cover"
+  ],
+  "definition_names": [
+    "WordSPrimitivityReplay.target",
+    "WordSPrimitivityReplay.CoversByIndices"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

@@ -1,0 +1,77 @@
+version: v0.4
+project:
+  name: A positional proof for a 19-letter subsequence cover
+  description: The only subsequence that can cover every marked position of abacadbabdcabcbadac
+    by possibly different order-preserving occurrences is the original word. In particular
+    no shorter word covers it.
+  authors:
+  - Tomás Correia
+  license: MIT
+  responsible_maintainers:
+  - Tomás Correia
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 68R15
+sources:
+- title: Original question on a computer-free proof of s-primitivity
+  location: https://doi.org/10.1016/j.tcs.2025.115216
+  relationship: background
+  authors:
+  - Charalampopoulos
+  - Pissis
+  - Radoszewski
+  - Rytter
+  - Waleń
+  - Zuba
+- title: A positional proof for a 19-letter subsequence cover
+  location: https://github.com/Toolbloxindex/solved-problems/tree/v1.9.0/results/nineteen-letter-subsequence-cover
+  relationship: adapts
+related_formalizations:
+- id: https://github.com/Toolbloxindex/solved-problems/tree/v1.9.0/results/nineteen-letter-subsequence-cover
+  relationship: adapts
+  note: Tagged development with reproducible proof and computational check.
+status:
+  scope: The only subsequence that can cover every marked position of abacadbabdcabcbadac
+    by possibly different order-preserving occurrences is the original word. In particular
+    no shorter word covers it.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    framework: Codex
+    models: []
+    tool_setup: Lean 4 and Mathlib.
+    cost:
+      wall_time: not tracked
+      spend_usd: subscription-based
+      hardware: Windows/WSL and VPS
+    prompting_notes: Develop and check a positional proof for the authors’ fixed word.
+  spend_usd: subscription-based
+  notes: Tomás Correia directed the project. Codex performed the mathematical development,
+    Lean formalization and port.
+fidelity:
+  divergences: Restricted to one fixed word. Earlier work already established its
+    s-primitivity computationally. Priority for the positional proof is undetermined.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: Self-assessment with agent-assisted independent mathematical and computational
+    checks. External peer review is pending.
+alignment:
+  statements:
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.9.0/results/nineteen-letter-subsequence-cover
+    lean: WordSPrimitivityReplay.exact_claim
+    module: Solution
+    status: proved
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.9.0/results/nineteen-letter-subsequence-cover
+    lean: WordSPrimitivityReplay.no_shorter_cover
+    module: Solution
+    status: proved
+acknowledgements: The authors of the original question and the Lean and Mathlib communities.
