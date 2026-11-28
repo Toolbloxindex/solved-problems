@@ -1,0 +1,80 @@
+version: v0.4
+project:
+  name: Two partial results on the Seacrest–Seacrest graph-grabbing conjecture
+  description: Alice and Bob alternately remove a vertex from a finite connected graph,
+    keeping the remaining graph connected until it is empty. Each collects the weight
+    of each vertex they remove. Alice moves first. Seacrest and Seacrest ask whether
+    she can always collect at least half the total nonnegative weight when the graph
+    is bipartite and has an even number of vertices. The unrestricted conjecture remains
+    open.
+  authors:
+  - Tomás Correia
+  license: MIT
+  responsible_maintainers:
+  - Tomás Correia
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05C57
+sources:
+- title: Rooted graph grabbing games
+  location: https://arxiv.org/abs/2007.11805
+  relationship: background
+- title: Two partial results on the Seacrest–Seacrest graph-grabbing conjecture
+  location: https://github.com/Toolbloxindex/solved-problems/tree/v1.5.0/results/graph-grabbing-partial-results
+  relationship: adapts
+related_formalizations:
+- id: https://github.com/Toolbloxindex/solved-problems/tree/v1.5.0/results/graph-grabbing-partial-results
+  relationship: adapts
+  note: Tagged development with reproducible proof and computational check.
+status:
+  scope: Alice and Bob alternately remove a vertex from a finite connected graph,
+    keeping the remaining graph connected until it is empty. Each collects the weight
+    of each vertex they remove. Alice moves first. Seacrest and Seacrest ask whether
+    she can always collect at least half the total nonnegative weight when the graph
+    is bipartite and has an even number of vertices. The unrestricted conjecture remains
+    open.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    framework: Codex
+    models: []
+    tool_setup: Lean 4 and Mathlib.
+    cost:
+      wall_time: not tracked
+      spend_usd: subscription-based
+      hardware: Windows/WSL and VPS
+    prompting_notes: Develop and verify the specific graph results in the tagged release.
+  spend_usd: subscription-based
+  notes: Tomás Correia directed the project. Codex performed the mathematical development,
+    Lean formalization and port.
+fidelity:
+  divergences: Conclusions apply under the exact weight, graph and rooting hypotheses
+    in the three compared statements.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: Self-assessment with agent-assisted independent mathematical and computational
+    checks. External peer review is pending.
+alignment:
+  statements:
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.5.0/results/graph-grabbing-partial-results
+    lean: GraphGrabbing.capture_color
+    module: Solution
+    status: proved
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.5.0/results/graph-grabbing-partial-results
+    lean: GraphGrabbing.win_equal_positive_edges
+    module: Solution
+    status: proved
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.5.0/results/graph-grabbing-partial-results
+    lean: GraphGrabbing.Comb.opposite_rooted_values
+    module: Solution
+    status: proved
+acknowledgements: The authors of the original question and the Lean and Mathlib communities.

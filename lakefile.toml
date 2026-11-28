@@ -1,0 +1,30 @@
+name = "grabbing"
+version = "1.0.0"
+defaultTargets = ["Challenge","Solution"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "31ce06eaadf4a200c0e1407c5f10953cf606b8f8"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"
+
+[[lean_lib]]
+name = "GrabbingGraph"
+
+[[lean_lib]]
+name = "GrabbingClaw"
+
+[[lean_lib]]
+name = "GrabbingCapture"
+
+[[lean_lib]]
+name = "GrabbingComb"
+
+[[lean_lib]]
+name = "GrabbingCombGraph"
+
