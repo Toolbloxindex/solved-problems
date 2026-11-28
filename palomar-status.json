@@ -1,24 +1,26 @@
 {
   "v1.0.0/first-column": {
     "status": "Preflight passed",
-    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099956872"
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46149164496"
   },
   "v1.1.0/wowii-138": {
     "status": "No public registration confirmed"
   },
   "v1.10.0/unicyclic-independence-breaks": {
     "status": "Preflight passed",
-    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099963289"
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46149167293"
   },
   "v1.11.0/sparsity-of-integral-arctangent-sums": {
     "status": "Preflight passed",
     "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46100364212"
   },
   "v1.12.0/moll-signed-real-periods": {
-    "status": "No public registration confirmed"
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46149306902"
   },
   "v1.13.0/armstrong-odd-two-ribbons": {
-    "status": "No public registration confirmed"
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46149301188"
   },
   "v1.14.0/jacobi-stirling-diagonal-root-threshold": {
     "status": "No public registration confirmed"
@@ -29,29 +31,33 @@
   "v1.16.0/grid-cube-seven-perpendicular-86": {
     "status": "No public registration confirmed"
   },
+  "v1.17.0/jacobi-stirling-diagonal-root-threshold": {
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46150298828"
+  },
   "v1.2.0/graffiti-pc-392b-two-domination": {
     "status": "Preflight passed",
     "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099954054"
   },
   "v1.3.0/sagan-swanson-column-one": {
     "status": "Preflight passed",
-    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099956872"
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46149164496"
   },
   "v1.4.0/type-b-q-stirling-coefficients": {
     "status": "Preflight passed",
-    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099956872"
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46149164496"
   },
   "v1.5.0/graph-grabbing-partial-results": {
-    "status": "Preflight needs repair",
-    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46100405547"
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46149584243"
   },
   "v1.6.0/songsuwan-node-kayles-counterexample": {
     "status": "Preflight passed",
-    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46088028046"
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46149170480"
   },
   "v1.7.0/consecutive-231-stack-delay": {
-    "status": "Preflight needs repair",
-    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46100306685"
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46149633457"
   },
   "v1.8.0/armstrong-six-ribbons": {
     "id": "PALOMAR-2026-11-28-000047",
