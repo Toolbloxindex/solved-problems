@@ -1,0 +1,49 @@
+version: v0.4
+project:
+  name: Ribbons in Armstrong's sum-two slice for odd parameters
+  description: A uniform partition of the sum-two slice of the tilted box into saturated chains of the original prescribed length.
+  authors:
+  - Tomás Correia
+  license: MIT
+  responsible_maintainers:
+  - Tomás Correia
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05E10
+  - 06A07
+sources:
+- title: Lattice Points and Rational q-Catalan Numbers
+  authors:
+  - Drew Armstrong
+  location: https://doi.org/10.1007/s00026-026-00819-9
+  relationship: independently-proves
+  note: Definition 10.1 and Conjecture 10.2 give the order, length, and source slice.
+status:
+  scope: The cut c=2 with predecessor c'=1 in Conjecture 10.2 for every odd a=2n+1 with n>0.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    framework: Codex
+    models: []
+    tool_setup: Lean 4 and Mathlib with exact tests of the source coordinates and the rank-index inverse.
+  notes: Tomás Correia directed the project. Codex developed the construction, the finite controls and the Lean proof.
+fidelity:
+  divergences: The exact slice is expressed in tilted coordinates, indexed from zero. Weight coordinates are recovered by differences; successive rows differ by at most two, so the original box bounds hold.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: A separate AI mathematical reviewer derived the row-and-gap construction and checked the exact source mapping and standard-axiom replay. External peer review and Palomar registration are pending.
+alignment:
+  statements:
+  - source: https://doi.org/10.1007/s00026-026-00819-9
+    lean: PalomarArmstrong.c2_ribbon_partition
+    module: Solution
+    status: proved
