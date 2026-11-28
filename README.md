@@ -16,6 +16,7 @@ python3 results/songsuwan-node-kayles-counterexample/verify.py
 
 | Release | Problem and result | Verification |
 | --- | --- | --- |
+| v1.12.0 | [Least periods of Moll’s signed arctangent companion sequence](results/moll-signed-real-periods/README.md) · Gives the least eventual period of Moll’s signed real sequence modulo every positive integer and characterizes periods from index zero. | Four proof modules rebuilt with pinned Lean and standard axioms. An independent prime-power review and finite state checks on 168 moduli agree. |
 | v1.11.0 | [A sublogarithmic bound for integral arctangent-sum values](results/sparsity-of-integral-arctangent-sums/README.md) · Through N, the number of indices n ≥ 5 at which the arctangent-sum tangent is an integer is O((log N)^(3/4)). | Lean checks the asymptotic bound for the literal Gaussian divisibility predicate. |
 | v1.10.0 | [One-edge closures with consecutive breaks in log-concavity](results/unicyclic-independence-breaks/README.md) · Three explicit one-edge closures answer Levit and Kadrawi’s Problem 6.6 for both named tree constructions. | Pinned Lean replay of UnicyclicClosure.problem_6_6 and an independent exact computation. |
 | v1.9.0 | [A positional proof for a 19-letter subsequence cover](results/nineteen-letter-subsequence-cover/README.md) · Only the full word can cover every position of abacadbabdcabcbadac by subsequence occurrences. | Pinned Lean replay of WordSPrimitivityReplay.exact_claim and an independent exact computation. |

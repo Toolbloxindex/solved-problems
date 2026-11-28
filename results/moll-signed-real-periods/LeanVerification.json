@@ -1,0 +1,12 @@
+{
+  "modules": [
+    "MollRigidity",
+    "MollPrime",
+    "MollLift",
+    "MollEventual"
+  ],
+  "theorems": [
+    "MollRigidity.least_eventual_period",
+    "MollRigidity.pure_period_iff"
+  ]
+}

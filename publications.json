@@ -136,5 +136,17 @@
     "keywords": "arctangent, Amdeberhan, Medina, Moll, Gaussian integers, sparsity",
     "verification": "Lean checks the asymptotic bound for the literal Gaussian divisibility predicate.",
     "summary": "Through N, the number of indices n ≥ 5 at which the arctangent-sum tangent is an integer is O((log N)^(3/4))."
+  },
+  {
+    "id": "moll-signed-real-periods-v1",
+    "date": "2026-11-28",
+    "version": "v1.12.0",
+    "result": "moll-signed-real-periods",
+    "title": "Least periods of Moll’s signed arctangent companion sequence",
+    "summary": "Gives the least eventual period of Moll’s signed real sequence modulo every positive integer and characterizes periods from index zero.",
+    "verification": "Four proof modules rebuilt with pinned Lean and standard axioms. An independent prime-power review and finite state checks on 168 moduli agree.",
+    "subject": "Number theory",
+    "kind": "Theorem",
+    "keywords": "Victor Moll, Gaussian integers, modular period, arctangent sums, multiplicative order"
   }
 ]

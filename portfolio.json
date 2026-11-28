@@ -99,5 +99,14 @@
     "summary": "Through N, the number of indices n ≥ 5 at which the arctangent-sum tangent is an integer is O((log N)^(3/4)).",
     "verification": "Lean checks the asymptotic bound for the literal Gaussian divisibility predicate.",
     "explainer": "Add the angles whose tangents are the integers from 1 to n, then take the tangent of the sum. Can the answer be an integer once n reaches five? Amdeberhan, Medina and Moll conjectured that it never is. This result limits how often an exception could occur. Among the first N indices, the count grows at most like the three-quarters power of the logarithm of N. The estimate still allows isolated exceptions."
+  },
+  {
+    "version": "v1.12.0",
+    "result": "moll-signed-real-periods",
+    "date": "2026-11-28",
+    "title": "Least periods of Moll’s signed arctangent companion sequence",
+    "summary": "Gives the least eventual period of Moll’s signed real sequence modulo every positive integer and characterizes periods from index zero.",
+    "verification": "Four proof modules rebuilt with pinned Lean and standard axioms. An independent prime-power review and finite state checks on 168 moduli agree.",
+    "explainer": "Victor Moll studied the real part of the running product $(1+i)(1+2i)\\cdots(1+ni)$ with an alternating sign. His paper gives several periods modulo primes and proposes a formula based on the prime’s residue modulo eight. The exact period depends on the multiplicative order of $-2$ instead. For example, modulo 31 that order is 10, and the least period is 310 rather than the 930 proposed by the residue-class formula.\n\nThe proof compares a handful of terms near the initial index with the same terms one period later. For odd moduli, these comparisons recover the index modulo the modulus and both coordinates of the running Gaussian product. A full block then acts by a scalar. The result gives the least eventual period modulo every positive integer, and determines exactly when the pattern repeats from the start. The conjecture that the original tangent sums are nonintegral for every $n\\ge5$ remains open."
   }
 ]

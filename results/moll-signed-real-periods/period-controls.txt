@@ -1,0 +1,14 @@
+1: 1, from zero; state cutoff 0, cycle 1
+2: 1, eventual only; state cutoff 3, cycle 2
+3: 3, from zero; state cutoff 0, cycle 3
+19: 171, from zero; state cutoff 0, cycle 171
+31: 310, from zero; state cutoff 0, cycle 310
+43: 301, from zero; state cutoff 0, cycle 301
+76: 171, eventual only; state cutoff 7, cycle 684
+93: 930, from zero; state cutoff 0, cycle 930
+155: 310, eventual only; state cutoff 3, cycle 310
+186: 930, eventual only; state cutoff 3, cycle 930
+361: 3249, from zero; state cutoff 0, cycle 3249
+961: 9610, from zero; state cutoff 0, cycle 9610
+6561: 6561, from zero; state cutoff 0, cycle 6561
+Agreed on 168 moduli.
