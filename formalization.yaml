@@ -1,0 +1,84 @@
+version: v0.4
+project:
+  name: A sublogarithmic bound for integral arctangent-sum values
+  description: Add the angles whose tangents are the integers from 1 to n, then take
+    the tangent of the sum. Can the answer be an integer once n reaches five? Amdeberhan,
+    Medina and Moll conjectured that it never is. This result limits how often an
+    exception could occur. Among the first N indices, the count grows at most like
+    the three-quarters power of the logarithm of N. The estimate still allows isolated
+    exceptions.
+  authors:
+  - Tomás Correia
+  license: MIT
+  responsible_maintainers:
+  - Tomás Correia
+classification:
+  arxiv:
+  - math.NT
+  msc2020:
+  - 11A07
+sources:
+- title: Original arctangent-sum conjecture
+  authors:
+  - Amdeberhan
+  - Medina
+  - Moll
+  location: https://doi.org/10.1016/j.jnt.2007.05.008
+  relationship: background
+- title: Logarithmic bound
+  authors:
+  - Ken Ono
+  location: https://arxiv.org/abs/2607.05739
+  relationship: background
+- title: Public arithmetic reduction
+  location: https://github.com/GuillaumeBAUD-coder/open-math-agents/tree/9e0e56b951b4126cd190fc6dc8216deb9bdbd112/reductions
+  relationship: background
+- title: A sublogarithmic bound for integral arctangent-sum values
+  location: https://github.com/Toolbloxindex/solved-problems/tree/v1.11.0/results/sparsity-of-integral-arctangent-sums
+  relationship: adapts
+related_formalizations:
+- id: https://github.com/Toolbloxindex/solved-problems/tree/v1.11.0/results/sparsity-of-integral-arctangent-sums
+  relationship: adapts
+  note: Tagged development with reproducible proof and computational check.
+status:
+  scope: Add the angles whose tangents are the integers from 1 to n, then take the
+    tangent of the sum. Can the answer be an integer once n reaches five? Amdeberhan,
+    Medina and Moll conjectured that it never is. This result limits how often an
+    exception could occur. Among the first N indices, the count grows at most like
+    the three-quarters power of the logarithm of N. The estimate still allows isolated
+    exceptions.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    framework: Codex
+    models: []
+    tool_setup: Lean 4 and Mathlib.
+    cost:
+      wall_time: not tracked
+      spend_usd: subscription-based
+      hardware: Windows/WSL and VPS
+    prompting_notes: Prove a counting bound for the arctangent-sum integrality predicate.
+  spend_usd: subscription-based
+  notes: Tomás Correia directed the project. Codex performed the mathematical development,
+    Lean formalization and port.
+fidelity:
+  divergences: The sublogarithmic upper bound allows individual exceptions. The all-index
+    conjecture remains open.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: Self-assessment with agent-assisted independent mathematical and computational
+    checks. External peer review is pending.
+alignment:
+  statements:
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.11.0/results/sparsity-of-integral-arctangent-sums
+    lean: ArctanPole.integral_count_isBigO
+    module: Solution
+    status: proved
+acknowledgements: The authors of the original question and the Lean and Mathlib communities.

@@ -1,0 +1,66 @@
+name = "arctancount"
+version = "1.0.0"
+defaultTargets = ["Challenge","Solution"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "31ce06eaadf4a200c0e1407c5f10953cf606b8f8"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"
+
+[[lean_lib]]
+name = "MollRigidity"
+
+[[lean_lib]]
+name = "GaussianContent"
+
+[[lean_lib]]
+name = "InertBlock"
+
+[[lean_lib]]
+name = "MidpointDerivative"
+
+[[lean_lib]]
+name = "MidpointPhase"
+
+[[lean_lib]]
+name = "PoleAlgebra"
+
+[[lean_lib]]
+name = "PoleCube"
+
+[[lean_lib]]
+name = "PoleInverse"
+
+[[lean_lib]]
+name = "PoleCount"
+
+[[lean_lib]]
+name = "PoleBlock"
+
+[[lean_lib]]
+name = "TangentBlocks"
+
+[[lean_lib]]
+name = "GaussianAngle"
+
+[[lean_lib]]
+name = "SlopeGrowth"
+
+[[lean_lib]]
+name = "SlopeFactorial"
+
+[[lean_lib]]
+name = "TangentCount"
+
+[[lean_lib]]
+name = "IntegralCount"
+
+[[lean_lib]]
+name = "IntegralAsymptotic"
+
