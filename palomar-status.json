@@ -44,6 +44,9 @@
     "status": "Registered",
     "url": "https://palomar-registry.org/"
   },
+  "v1.20.0/gessel-lin-zeng-four-deletions-endpoints": {
+    "status": "No public registration confirmed"
+  },
   "v1.3.0/sagan-swanson-column-one": {
     "status": "Preflight passed",
     "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46149164496"
