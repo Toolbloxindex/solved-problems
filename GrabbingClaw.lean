@@ -222,7 +222,7 @@ private theorem stuck_degree {E : Edge} (sym : Undirected E) {col : ℕ → Bool
   have high := bypass sym irr conn cd xs sub bd cc xb xc cb cut
   omega
 
-noncomputable def crossEdges (E : Edge) (R B : Vertices) := by
+noncomputable def crossEdges (E : Edge) (R B : Vertices) : Finset (ℕ × ℕ) := by
   classical
   exact (R ×ˢ B).filter (fun p => E p.1 p.2)
 
