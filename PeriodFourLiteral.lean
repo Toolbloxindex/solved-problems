@@ -167,7 +167,7 @@ private theorem fixed_index : ∀ i : Fin 11, (fixedSite i).1 < 5 := by decide +
 private theorem fixed_inj : ∀ a b : Fin 11, fixedSite a = fixedSite b → a=b := by
   decide +kernel
 
-private theorem vertexSite_inj : Function.Injective vertexSite := by
+theorem vertexSite_inj : Function.Injective vertexSite := by
   intro a b h
   cases a with
   | old a =>
