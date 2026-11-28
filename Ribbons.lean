@@ -7,7 +7,7 @@ public import RibbonsChecks
 namespace ArmstrongRibbons
 
 /-- Coordinatewise complement in the fundamental box. -/
-private def reflectPoint (x : Point) : Point :=
+def reflectPoint (x : Point) : Point :=
   let ⟨a, b, c, d, e⟩ := x
   (⟨5 - a.val, by omega⟩, ⟨5 - b.val, by omega⟩, ⟨5 - c.val, by omega⟩,
     ⟨5 - d.val, by omega⟩, ⟨5 - e.val, by omega⟩)
@@ -109,7 +109,7 @@ private theorem coprime_residue (z : ℤ) : z.gcd 6 = 1 ↔ z % 6 = 1 ∨ z % 6 
     omega
   rcases h with h | h | h | h | h | h <;> rw [h] <;> decide
 
-private def cutoffs : List ℤ := [1, 5, 7, 11, 13, 17, 19, 23, 25]
+def cutoffs : List ℤ := [1, 5, 7, 11, 13, 17, 19, 23, 25]
 
 private theorem mem_cutoffs (c : ℤ) (hlo : 1 ≤ c) (hhi : c ≤ 25) (hc : c.gcd 6 = 1) :
     c ∈ cutoffs := by

@@ -30,7 +30,7 @@ def covers (S : Set Weight) (x y : Weight) : Prop :=
   x ∈ S ∧ y ∈ S ∧ x ≠ y ∧ tilted x y ∧
     ∀ z, tilted x z → tilted z y → z = x ∨ z = y
 
-private def rank (x : Weight) : ℤ :=
+def rank (x : Weight) : ℤ :=
   let ⟨a, b, c, d, e⟩ := x
   a + 2 * b + 3 * c + 4 * d + 5 * e
 
@@ -47,7 +47,7 @@ private theorem equal_of_equal_rank {x y : Weight} (h : tilted x y) (he : rank x
   simp only [rank, tilted, Prod.mk.injEq] at *
   omega
 
-private def toWeight (x : Point) : Weight :=
+def toWeight (x : Point) : Weight :=
   let ⟨a, b, c, d, e⟩ := x
   (a.val, b.val, c.val, d.val, e.val)
 

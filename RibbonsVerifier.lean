@@ -71,11 +71,11 @@ theorem cover_of_step {S : Set Point} {x y : Point} (hx : x ∈ S) (hy : y ∈ S
 
 def Slice (lo hi : ℤ) : Set Point := {x | lo ≤ (total x : ℤ) ∧ (total x : ℤ) ≤ hi}
 
-private def decode (n : ℕ) : Point :=
+def decode (n : ℕ) : Point :=
   (⟨n / 1296 % 6, by omega⟩, ⟨n / 216 % 6, by omega⟩,
    ⟨n / 36 % 6, by omega⟩, ⟨n / 6 % 6, by omega⟩, ⟨n % 6, by omega⟩)
 
-private def encode (x : Point) : ℕ :=
+def encode (x : Point) : ℕ :=
   let ⟨a, b, c, d, e⟩ := x
   1296 * a.val + 216 * b.val + 36 * c.val + 6 * d.val + e.val
 
@@ -128,7 +128,7 @@ private theorem selected_exact {lo hi : ℕ} {x : Point} :
 
 abbrev step (x y : Point) : Prop := suffixLE x y ∧ height y = height x + 1
 
-private def chainCheck : List Point → Bool
+def chainCheck : List Point → Bool
   | x :: y :: rest => decide (suffixLE x y ∧ height y = height x + 1) && chainCheck (y :: rest)
   | _ => true
 
@@ -143,7 +143,7 @@ def rowCheck (row : List ℕ) : Bool :=
   (row.length == 6) && chainCheck (row.map decode)
 
 /-- Bit `n` records whether code `n` has appeared. Reject repeated codes. -/
-private def addCode (acc : Option ℕ) (n : ℕ) : Option ℕ :=
+def addCode (acc : Option ℕ) (n : ℕ) : Option ℕ :=
   match acc with
   | none => none
   | some mask => if mask.testBit n then none else some (mask ||| (1 <<< n))

@@ -14,4 +14,4 @@ jobs:
       request_id: armstrong006
       mode: full
       execution_profile: palomar-standard-v1
-      options: '{"comparator_config_path":"comparator.json","authorization_relationship":"I have approval from a responsible author or maintainer"}'
+      options: '{"comparator_config_path":"comparator-armstrong-six-ribbons.json","authorization_relationship":"I have approval from a responsible author or maintainer"}'
