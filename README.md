@@ -16,6 +16,7 @@ python3 results/songsuwan-node-kayles-counterexample/verify.py
 
 | Release | Problem and result | Verification |
 | --- | --- | --- |
+| v1.11.0 | [A sublogarithmic bound for integral arctangent-sum values](results/sparsity-of-integral-arctangent-sums/README.md) · Through N, the number of indices n ≥ 5 at which the arctangent-sum tangent is an integer is O((log N)^(3/4)). | Lean checks the asymptotic bound for the literal Gaussian divisibility predicate. |
 | v1.10.0 | [One-edge closures with consecutive breaks in log-concavity](results/unicyclic-independence-breaks/README.md) · Three explicit one-edge closures answer Levit and Kadrawi’s Problem 6.6 for both named tree constructions. | Pinned Lean replay of UnicyclicClosure.problem_6_6 and an independent exact computation. |
 | v1.9.0 | [A positional proof for a 19-letter subsequence cover](results/nineteen-letter-subsequence-cover/README.md) · Only the full word can cover every position of abacadbabdcabcbadac by subsequence occurrences. | Pinned Lean replay of WordSPrimitivityReplay.exact_claim and an independent exact computation. |
 | v1.8.0 | [Armstrong’s Catalan ribbon partition conjecture at a = 6](results/armstrong-six-ribbons/README.md) · At a = 6, all nine slices of the fundamental box admit partitions into six-point saturated chains. The 1,296 ribbons cover all 7,776 points. | Lean checks the integer-coordinate theorem and all slice certificates. A separate Python checker verifies coverage and cover relations. |
@@ -29,5 +30,3 @@ python3 results/songsuwan-node-kayles-counterexample/verify.py
 | v1.0.0 | [Type B q-Stirling numbers, second-kind column one](results/first-column/README.md) · Among ranks $n \geq 2$, all interior coefficient gaps are strictly positive exactly when $n \geq 6$. | Lean classification for all ranks and a Python replay through row 256. |
 
 To cite a result, use its title and DOI where available, or give the release tag and the exact theorem you used. Corrections, earlier references and independent replays are welcome. [Open an issue](https://github.com/Toolbloxindex/solved-problems/issues)
-
-- [A sublogarithmic bound for integral arctangent-sum values](results/sparsity-of-integral-arctangent-sums/README.md) · v1.11.0
