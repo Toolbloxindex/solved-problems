@@ -6,16 +6,16 @@ public import OptionalProjection
 
 namespace SC231
 
-private abbrev ScanState := Word × Word
+abbrev ScanState := Word × Word
 
-private def advance (state : ScanState) (c : Nat) : ScanState :=
+def advance (state : ScanState) (c : Nat) : ScanState :=
   match state with
   | (b :: a :: tail, log) =>
       if a < c ∧ c < b then (c :: a :: tail, b :: log)
       else (c :: b :: a :: tail, log)
   | (stack, log) => (c :: stack, log)
 
-private def read (input : Word) (state : ScanState) : ScanState :=
+def read (input : Word) (state : ScanState) : ScanState :=
   input.foldl advance state
 
 private theorem read_cons (c : Nat) (input : Word) (state : ScanState) :
@@ -55,9 +55,9 @@ private theorem scan_eq_read (input stack log : Word) :
         · simpa only [deterministicScan, advance, ite_eq_left h] using ih (c :: a :: tail) (b :: log)
         · simpa only [deterministicScan, advance, ite_eq_right h] using ih (c :: b :: a :: tail) log
 
-private def High (word : Word) : Prop := ∀ x ∈ word, 8 < x
+def High (word : Word) : Prop := ∀ x ∈ word, 8 < x
 
-private def StartsLow : Word → Prop
+def StartsLow : Word → Prop
   | [] => True
   | x :: _ => x ≤ 8
 
@@ -123,7 +123,7 @@ private theorem read_high {input front tail log : Word}
       ih (fun x hx => hi x (by simp [hx])) hf' hl'
     exact ⟨front'', log'', hf'', hl'', by rw [read_cons, hstep, hread]⟩
 
-private def anchor (side : Bool) : Word :=
+def anchor (side : Bool) : Word :=
   if side then [8, 6, 3, 1] else [7, 4, 2, 5]
 
 /-- A flank is stored from the summit outward, with its four low letters last. -/
@@ -234,11 +234,11 @@ private structure Gap where
   top : Nat
   right : Word
 
-private def Gap.word (g : Gap) : Word := g.left.reverse ++ g.top :: g.right
+def Gap.word (g : Gap) : Word := g.left.reverse ++ g.top :: g.right
 
-private def Gap.flip (g : Gap) : Gap := ⟨g.right, g.top, g.left⟩
+def Gap.flip (g : Gap) : Gap := ⟨g.right, g.top, g.left⟩
 
-private def Gap.grow (g : Gap) : Gap := ⟨g.right, g.top + 1, g.top :: g.left⟩
+def Gap.grow (g : Gap) : Gap := ⟨g.right, g.top + 1, g.top :: g.left⟩
 
 private theorem Gap.flip_flip (g : Gap) : g.flip.flip = g := by
   cases g
@@ -271,11 +271,11 @@ private theorem GapShape.right_le {g : Gap} {side : Bool} (h : GapShape g side) 
     g.right.headD 0 < g.top :=
   h.topBound _ (List.mem_append_right _ (flank_head_mem h.right))
 
-private def gap : Nat → Gap
+def gap : Nat → Gap
   | 0 => ⟨anchor false, 9, anchor true⟩
   | r + 1 => (gap r).grow
 
-private def orientation : Nat → Bool
+def orientation : Nat → Bool
   | 0 => false
   | r + 1 => !(orientation r)
 
@@ -381,7 +381,7 @@ private theorem Gap.reverse_ne_nil (g : Gap) : g.word.reverse ≠ [] := by
   rw [← g.word_flip]
   simp [Gap.word, Gap.flip]
 
-private def Framed (g : Gap) (word : Word) : Prop :=
+def Framed (g : Gap) (word : Word) : Prop :=
   ∃ front back, High front ∧ High back ∧ word = front ++ g.word ++ back
 
 private theorem start_gap (r : Nat) :
