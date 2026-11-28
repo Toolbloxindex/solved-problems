@@ -1,0 +1,67 @@
+version: v0.4
+project:
+  name: A uniform lower bound on the transient length of the consecutive-231 stack
+    map
+  description: For every n ≥ 8, some permutation of length n takes at least n + 3
+    passes of the consecutive-231 stack map to reach a periodic point.
+  authors:
+  - Tomás Correia
+  license: MIT
+  responsible_maintainers:
+  - Tomás Correia
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05A05
+sources:
+- title: Seidel and Sun, Question 4.3
+  location: https://arxiv.org/abs/2308.05868
+  relationship: background
+- title: A uniform lower bound on the transient length of the consecutive-231 stack
+    map
+  location: https://github.com/Toolbloxindex/solved-problems/tree/v1.7.0/results/consecutive-231-stack-delay
+  relationship: adapts
+related_formalizations:
+- id: https://github.com/Toolbloxindex/solved-problems/tree/v1.7.0/results/consecutive-231-stack-delay
+  relationship: adapts
+  note: Tagged development with reproducible proof and computational check.
+status:
+  scope: For every n ≥ 8, some permutation of length n takes at least n + 3 passes
+    of the consecutive-231 stack map to reach a periodic point.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    framework: Codex
+    models: []
+    tool_setup: Lean 4 and Mathlib.
+    cost:
+      wall_time: not tracked
+      spend_usd: subscription-based
+      hardware: Windows/WSL and VPS
+    prompting_notes: Develop and verify the specific case or bound described in the
+      tagged release.
+  spend_usd: subscription-based
+  notes: Tomás Correia directed the project. Codex performed the mathematical development,
+    Lean formalization and port.
+fidelity:
+  divergences: A lower bound for n ≥ 8. The exact maximum and asymptotic divergence
+    remain open.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: Self-assessment with agent-assisted independent mathematical and computational
+    checks. External peer review is pending.
+alignment:
+  statements:
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.7.0/results/consecutive-231-stack-delay
+    lean: SC231.consecutive231_max_delay_lower_bound
+    module: Solution
+    status: proved
+acknowledgements: The authors of the original question and the Lean and Mathlib communities.
