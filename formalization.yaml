@@ -1,0 +1,60 @@
+version: v0.4
+project:
+  name: Least periods of Moll's signed arctangent companion sequence
+  description: Formulas for the least eventual period modulo every positive integer and for all positive periods starting at zero.
+  authors:
+  - Tomás Correia
+  license: MIT
+  responsible_maintainers:
+  - Tomás Correia
+classification:
+  arxiv:
+  - math.NT
+  msc2020:
+  - 11A07
+  - 11B50
+sources:
+- title: An arithmetic conjecture on a sequence of arctangent sums
+  authors:
+  - Victor H. Moll
+  location: https://www.math.tulane.edu/~vhm/papers_html/xn-final.pdf
+  relationship: independently-proves
+  note: Theorem 2.4 defines the signed real sequence. Theorem 6.1 gives the case at 19, Note 6.6 proposes its dependence on the prime residue class, and Note 7.3 gives the period at 43.
+- title: Not so new congruences for Stirling numbers of the first kind, with an application to Chern classes
+  authors:
+  - Pierre Guillot
+  - Yohann Ségalat
+  location: https://arxiv.org/abs/1507.02834
+  relationship: background
+  note: See the public proof for the attribution of the complete residue block identity.
+status:
+  scope: The exact least eventual period and all positive pure periods, for every positive integer modulus, of the signed real coordinate in Moll's Theorem 2.4. The original conjecture on nonintegrality of tangent sums has a different scope.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    framework: Codex
+    models: []
+    tool_setup: Lean 4, Mathlib, and independent exact modular arithmetic checks.
+  notes: Tomás Correia directed the project. Codex performed the mathematical development, independent checks and Lean formalization.
+fidelity:
+  divergences: The challenge states a corrected all-modulus classification for the sequence of Theorem 2.4. The definition uses the original sign and includes the neutral index-zero factor.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: An independent in-project investigator checked the prime-power proof. The composite formula was checked against a finite state calculation with direct minimal periods. External peer review is pending.
+alignment:
+  statements:
+  - source: https://www.math.tulane.edu/~vhm/papers_html/xn-final.pdf
+    lean: PalomarMoll.least_eventual_period
+    module: Solution
+    status: proved
+  - source: https://www.math.tulane.edu/~vhm/papers_html/xn-final.pdf
+    lean: PalomarMoll.pure_period_iff
+    module: Solution
+    status: proved
