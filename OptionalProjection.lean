@@ -128,9 +128,8 @@ theorem base_no_optional_valley_before_eleven {t : Nat} {word : Word}
   have hrows := List.all_eq_true.mp finite_check t (List.mem_range.mpr ht)
   exact List.all_eq_true.mp hrows word (orbit_mem_reachable h)
 
-def run (word : Word) : Nat → Word
-  | 0 => word
-  | t + 1 => deterministicScan (run word t) [] []
+def run (word : Word) : Nat → Word :=
+  Nat.rec word (fun _ previous => deterministicScan previous [] [])
 
 theorem orbit_of_projected_run {word : Word} (hbase : project 8 word = base) (t : Nat) :
     Orbit t (project 8 (run word t)) := by

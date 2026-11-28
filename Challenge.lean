@@ -15,9 +15,8 @@ def deterministicScan : Word → Word → Word → Word
       else deterministicScan input (c :: b :: a :: stack) log
   | c :: input, stack, log => deterministicScan input (c :: stack) log
 
-def run (word : Word) : Nat → Word
-  | 0 => word
-  | t + 1 => deterministicScan (run word t) [] []
+def run (word : Word) : Nat → Word :=
+  Nat.rec word (fun _ previous => deterministicScan previous [] [])
 
 def IsTarget (word : Word) : Prop :=
   ∀ {a b c : Nat}, List.Sublist [a, b, c] word → ¬ (a < b ∧ c < b)
