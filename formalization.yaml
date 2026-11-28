@@ -5,7 +5,7 @@ project:
   description: Strict adjacent log-concavity in second-kind column one has threshold
     rank six for ranks at least two. The first-kind rising-side midpoint inequality
     holds in column one, and both families satisfy the parity inequality on the second
-    diagonal.
+    diagonal. First-kind column one is unimodal with a peak between consecutive triangular numbers.
   authors:
   - Tomás Correia
   license: MIT
