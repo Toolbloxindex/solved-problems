@@ -1,0 +1,52 @@
+{
+  "v1.0.0/first-column": {
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099956872"
+  },
+  "v1.1.0/wowii-138": {
+    "status": "No public registration confirmed"
+  },
+  "v1.10.0/unicyclic-independence-breaks": {
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099963289"
+  },
+  "v1.11.0/sparsity-of-integral-arctangent-sums": {
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46100364212"
+  },
+  "v1.12.0/moll-signed-real-periods": {
+    "status": "No public registration confirmed"
+  },
+  "v1.2.0/graffiti-pc-392b-two-domination": {
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099954054"
+  },
+  "v1.3.0/sagan-swanson-column-one": {
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099956872"
+  },
+  "v1.4.0/type-b-q-stirling-coefficients": {
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099956872"
+  },
+  "v1.5.0/graph-grabbing-partial-results": {
+    "status": "Preflight needs repair",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46100405547"
+  },
+  "v1.6.0/songsuwan-node-kayles-counterexample": {
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46088028046"
+  },
+  "v1.7.0/consecutive-231-stack-delay": {
+    "status": "Preflight needs repair",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46100306685"
+  },
+  "v1.8.0/armstrong-six-ribbons": {
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099945075"
+  },
+  "v1.9.0/nineteen-letter-subsequence-cover": {
+    "status": "Preflight passed",
+    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099960127"
+  }
+}
