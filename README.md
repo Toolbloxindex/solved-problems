@@ -17,3 +17,5 @@ Read the [public results archive](https://www.tomdco.com/proofs). To discuss a p
 - [Coefficient inequalities for the type B q-Stirling numbers](results/type-b-q-stirling-coefficients/README.md) · v1.4.0
 
 - [Two partial results on the Seacrest–Seacrest graph-grabbing conjecture](results/graph-grabbing-partial-results/README.md) · v1.5.0
+
+- [A counterexample to Songsuwan’s period-two conjecture for Node-Kayles](results/songsuwan-node-kayles-counterexample/README.md) · v1.6.0

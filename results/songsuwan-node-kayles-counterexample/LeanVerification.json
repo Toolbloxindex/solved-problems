@@ -1,0 +1,23 @@
+{
+  "modules": [
+    "GameValue",
+    "LeafIdentities",
+    "BoardMap",
+    "RayMoves",
+    "MixedPaths",
+    "RayCounts",
+    "Window",
+    "PeriodFourTable",
+    "PeriodFourTarget",
+    "PathMenus",
+    "PeriodFourMenus",
+    "PeriodFourLiteral",
+    "PeriodFourCoreOptions",
+    "PeriodFourRealization",
+    "PeriodFourProof"
+  ],
+  "theorems": [
+    "KaylesRays.PeriodFourGraph.counterexample_values",
+    "KaylesRays.PeriodFourGraph.songsuwan_conjecture_2_false"
+  ]
+}

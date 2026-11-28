@@ -1,0 +1,10 @@
+{
+  "creators": [
+    {
+      "name": "Correia, Tomás"
+    }
+  ],
+  "license": "mit",
+  "significance": "On a fixed 291-vertex graph, attach copies of the same five-vertex path at one vertex. The Node-Kayles values are 8 and 9 at arbitrarily large branch counts two apart. This disproves Songsuwan’s Conjecture 2.",
+  "prior_work": "Davis (November 26, 2026) and Schubr (Theorem 1.4, edition 1, November 27, 2026) prove period two under a condition on the residual branch. Deleting the far endpoint and its neighbor from an endpoint-rooted five-vertex path leaves a connected three-vertex path at the root. Schubr’s Theorem 1.5 gives a growing onset as the host varies. Here a single host violates period two arbitrarily late."
+}

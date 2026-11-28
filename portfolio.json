@@ -47,5 +47,13 @@
     "title": "Two partial results on the Seacrest–Seacrest graph-grabbing conjecture",
     "summary": "On even connected bipartite graphs with no induced once-subdivided claw, Alice can secure half the weight if adjacent positive weights agree. A second result compares opposite choices of the last vertex on a path with attached leaves. The general conjecture remains open.",
     "verification": "The formal proof was checked in Lean."
+  },
+  {
+    "version": "v1.6.0",
+    "result": "songsuwan-node-kayles-counterexample",
+    "date": "2026-11-28",
+    "title": "A counterexample to Songsuwan’s period-two conjecture for Node-Kayles",
+    "summary": "On a fixed 291-vertex graph, attach copies of the same five-vertex path at one vertex. The Node-Kayles values are 8 and 9 at arbitrarily large branch counts two apart. This disproves Songsuwan’s Conjecture 2.",
+    "verification": "The formal proof was checked in Lean."
   }
 ]

@@ -64,5 +64,17 @@
     "subject": "Graph theory",
     "kind": "Partial result",
     "keywords": "Seacrest, graph grabbing, bipartite graphs, rooted game, claw, weighted graphs"
+  },
+  {
+    "id": "songsuwan-node-kayles-counterexample-v1",
+    "result": "songsuwan-node-kayles-counterexample",
+    "date": "2026-11-28",
+    "version": "v1.6.0",
+    "title": "A counterexample to Songsuwan’s period-two conjecture for Node-Kayles",
+    "summary": "On a fixed 291-vertex graph, attach copies of the same five-vertex path at one vertex. The Node-Kayles values are 8 and 9 at arbitrarily large branch counts two apart. This disproves Songsuwan’s Conjecture 2.",
+    "verification": "Lean 4.37.0-rc1 checks the exact game values and failure of eventual period two. An independent Python evaluator checks all 2,176 certificate entries.",
+    "subject": "Combinatorial game theory",
+    "kind": "Counterexample",
+    "keywords": "Node-Kayles, Sprague-Grundy value, graph games, periodicity, Songsuwan"
   }
 ]
