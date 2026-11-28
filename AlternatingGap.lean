@@ -127,7 +127,7 @@ def anchor (side : Bool) : Word :=
   if side then [8, 6, 3, 1] else [7, 4, 2, 5]
 
 /-- A flank is stored from the summit outward, with its four low letters last. -/
-private inductive Flank (side : Bool) : Word → Prop
+inductive Flank (side : Bool) : Word → Prop
   | base : Flank side (anchor side)
   | grow {x : Nat} {word : Word} :
       8 < x → (∀ y ∈ word, y < x) → Flank side word → Flank side (x :: word)
@@ -229,7 +229,7 @@ private theorem read_outward {side : Bool} {word : Word} (h : Flank side word)
       ih x (b :: stack) log (by simpa using Nat.le_of_lt hc)
 
 
-private structure Gap where
+structure Gap where
   left : Word
   top : Nat
   right : Word
@@ -256,7 +256,7 @@ private theorem Gap.word_flip_startsLow {g : Gap} {side : Bool}
   rw [← g.word_flip]
   simpa [Gap.word, Gap.flip, hrev, StartsLow] using ha
 
-private structure GapShape (g : Gap) (side : Bool) : Prop where
+structure GapShape (g : Gap) (side : Bool) : Prop where
   left : Flank side g.left
   right : Flank (!side) g.right
   topHigh : 8 < g.top
