@@ -160,5 +160,18 @@
     "explainer": "Drew Armstrong asks whether lattice points between successive coprime cuts can be partitioned into chains that visit one point at each successive rank and contain exactly $a$ points. At the cut where the coordinates sum to two, each point gives two occupied positions, with repetition allowed. Order those positions as a pair. Each chain starts by increasing the longer column and then alternates column increases. For example, when $a=7$ one seven-point chain runs from $(0,0)$ along $(0,j)$ through $(0,5)$ and then to $(1,5)$. The construction works at this cut for every odd $a\\ge3$. Complementing the coordinates gives the reflected single slice. The general conjecture over all cuts remains open. [Armstrong’s paper](https://link.springer.com/article/10.1007/s00026-026-00819-9)",
     "significance": "Focused contribution",
     "why_it_matters": "A single geometric rule extends Armstrong’s small-parameter sum-two examples to every odd parameter and also gives their reflected partitions."
+  },
+  {
+    "version": "v1.14.0",
+    "result": "jacobi-stirling-diagonal-root-threshold",
+    "date": "2026-11-28",
+    "title": "A sharp real-root range for Jacobi–Stirling diagonal numerators",
+    "summary": "Determines the sharp nonnegative parameter interval for simultaneous real-rootedness of all second-kind Jacobi–Stirling diagonal numerators and checks two subsidiary assertions in Lin and Zeng.",
+    "verification": "Written proof · independent AI mathematical review",
+    "what_this_settles": "For every nonnegative real parameter \\(u\\), all second-kind Jacobi–Stirling diagonal numerators of index \\(k\\ge1\\) are real-rooted exactly when \\(u\\le\\rho\\), with the second diagonal already having nonreal zeros above \\(\\rho\\) and the negative-parameter classification outside the scope of this proof.",
+    "verification_method": "Written proof",
+    "explainer": "The Jacobi–Stirling numbers form a triangular array controlled by a parameter \\(u\\). Each fixed diagonal has a generating series with a polynomial numerator. Lin and Zeng studied when the zeros are all nonpositive. Here the question is when every numerator has real zeros, allowing either sign.\n\nThe first diagonal already has a positive zero when \\(u>1\\). At \\(u=2\\) the second numerator still has only real zeros. As the parameter increases beyond \\(2\\), two positive zeros meet at \\(\\rho\\) and then become a nonreal pair. The second diagonal determines the exact threshold. Below and at that threshold, a weighted derivative argument accounts for every zero on the two real intervals outside \\([0,1]\\) at each later step.\n\nFor nonnegative \\(u\\), the range is the closed interval from zero to the threshold \\(\\rho\\), which lies between \\(41/20\\) and \\(33/16\\). The proof also supplies the exact degree at every real parameter and an example where a diagonal numerator has no positive zero despite \\(u>1\\).",
+    "significance": "Substantial advance",
+    "why_it_matters": "This extends the known range for real zeros beyond the nonpositive-root range of Lin and Zeng and shows that checking the first two diagonals completely decides the all-diagonal question for nonnegative parameters."
   }
 ]

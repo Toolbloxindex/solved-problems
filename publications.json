@@ -160,5 +160,17 @@
     "subject": "Algebraic combinatorics",
     "kind": "Partial proof",
     "keywords": "Drew Armstrong, ribbon partition, rational q-Catalan, Young diagram, saturated chain"
+  },
+  {
+    "id": "jacobi-stirling-diagonal-root-threshold-v1",
+    "date": "2026-11-28",
+    "version": "v1.14.0",
+    "result": "jacobi-stirling-diagonal-root-threshold",
+    "title": "A sharp real-root range for Jacobi–Stirling diagonal numerators",
+    "summary": "Determines the sharp nonnegative parameter interval for simultaneous real-rootedness of all second-kind Jacobi–Stirling diagonal numerators and checks two subsidiary assertions in Lin and Zeng.",
+    "verification": "Written proof · independent AI mathematical review",
+    "subject": "Enumerative combinatorics",
+    "kind": "Proof",
+    "keywords": "Jacobi–Stirling numbers, diagonal generating functions, real-rootedness, Rolle theorem, cubic discriminant"
   }
 ]
