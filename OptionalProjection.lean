@@ -134,7 +134,10 @@ def run (word : Word) : Nat → Word :=
 theorem orbit_of_projected_run {word : Word} (hbase : project 8 word = base) (t : Nat) :
     Orbit t (project 8 (run word t)) := by
   induction t with
-  | zero => simpa [run, hbase] using Orbit.start
+  | zero =>
+      change Orbit 0 (project 8 word)
+      rw [hbase]
+      exact Orbit.start
   | succ t ih =>
       exact Orbit.next ih (project_deterministic_pass (run word t) 8)
 
