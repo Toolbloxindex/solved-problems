@@ -123,7 +123,7 @@ theorem detached (E : V → V → Bool) (u : V) (s : Finset V) (ids : Finset Nat
     rw [Nat.xor_assoc, Nat.xor_comm (ids.fold Nat.xor 0 (fun n => value path (f n))) (value path (f n))]
     rfl
 
-private def rooted (E : V → V → Bool) (u : V) (s : Finset V) (hu : u∈s)
+def rooted (E : V → V → Bool) (u : V) (s : Finset V) (hu : u∈s)
     (ids : Finset Nat) (f : Arms) : Erasure.Rooted where
   V := Site V
   eqV := inferInstance
@@ -136,7 +136,7 @@ private theorem rooted_score (E : V → V → Bool) (u : V) (s : Finset V) (hu :
     (ids : Finset Nat) (f : Arms) :
     FiveMoves.score (rooted E u s hu ids f) = score E u s ids f := rfl
 
-private def graft (n : Nat) : Site V ⊕ Fin 5 → Site V
+def graft (n : Nat) : Site V ⊕ Fin 5 → Site V
   | inl v => v
   | inr i => inr (n,i)
 

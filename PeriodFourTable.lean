@@ -10,7 +10,7 @@ open Positive
 open Quartet (Mex)
 
 /-- Rows indexed by host, minimum, and signed gap, with both leaf parities. -/
-private def rows : Nat → Nat → List Nat
+def rows : Nat → Nat → List Nat
   | 0, 0 => [4,7,7,4,4,7,7,4,4,7,11,4,4,6,10,8,6,7,10,5,6,7,10,5,6,7]
   | 0, 1 => [8,6,6,8,8,6,6,8,8,6,10,8,7,6,11,4,7,6,11,4,7,6,11,4,7,6]
   | 0, 2 => [10,7,7,4,9,7,7,4,9,7,11,4,6,7,10,5,6,7,10,5,6,7,10,5,6,7]
@@ -71,7 +71,7 @@ private def rows : Nat → Nat → List Nat
 def masks : List Nat := [15,7,45,71,132,227,247,1271]
 def erased : List Nat := [4,3,1,3,0,2,3,3]
 
-private def raw (h : Nat) (x c : Int) (z : Bool) : Nat :=
+def raw (h : Nat) (x c : Int) (z : Bool) : Nat :=
   (rows h (min x c).toNat)[2*(c-x+6).toNat+z.toNat]?.getD 0
 
 def profile (h : Nat) : Int → Int → Bool → Nat :=
@@ -88,7 +88,7 @@ def exits (quiet : Nat → Int → Int → Bool → Nat) (h : Nat) (x c : Int) (
     (if 0<c then [a ^^^ d ^^^ 3] else []) ++
     (if h=0 then (List.range 7).map (fun i => quiet (i+1) x c z) else [])
 
-private def isMex (l : List Nat) (v : Nat) : Bool :=
+def isMex (l : List Nat) (v : Nat) : Bool :=
   (decide (v ∉ l)) && (List.range v).all (fun k => decide (k ∈ l))
 
 private theorem ofCheck {l : List Nat} {v : Nat} (h : isMex l v = true) :
@@ -96,7 +96,7 @@ private theorem ofCheck {l : List Nat} {v : Nat} (h : isMex l v = true) :
   simp only [isMex, Bool.and_eq_true, decide_eq_true_eq, List.all_eq_true, List.mem_range] at h
   exact h
 
-private def cell (h m d : Nat) (z : Bool) : Bool :=
+def cell (h m d : Nat) (z : Bool) : Bool :=
   let p := coordinates m ((d : Int)-8)
   isMex (options (exits profile h) (profile h) p.1 p.2 z) (profile h p.1 p.2 z)
 

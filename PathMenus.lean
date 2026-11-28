@@ -13,7 +13,7 @@ def edge (i j : Nat) := decide (i+1=j ∨ j+1=i)
 
 def score (n : Nat) : Nat := value edge (Finset.range n)
 
-private def translate (a : Nat) : Nat ↪ Nat :=
+def translate (a : Nat) : Nat ↪ Nat :=
   ⟨fun k => a+k, by intro r s h; exact Nat.add_left_cancel h⟩
 
 /-- Choosing the vertex numbered i leaves the prefix through i-2 and the
@@ -73,10 +73,10 @@ end KaylesRays.Path
 
 namespace KaylesRays.Path
 open KaylesPair
-private def tab : List Nat := [0,1,1,2,0,3,1,1,0,3,3,2,2,4,0,5,2,2,3,3,0,1,1,3,0,2,1,1,0,4,5,2,7,4,0,1,1,2,0,3,1,1,0,3,3,2,2,4,4,5,5,2,3,3,0,1,1,3,0,2,1,1,0,4,5,3,7,4,8,1,1,2,0,3,1,1]
+def tab : List Nat := [0,1,1,2,0,3,1,1,0,3,3,2,2,4,0,5,2,2,3,3,0,1,1,3,0,2,1,1,0,4,5,2,7,4,0,1,1,2,0,3,1,1,0,3,3,2,2,4,4,5,5,2,3,3,0,1,1,3,0,2,1,1,0,4,5,3,7,4,8,1,1,2,0,3,1,1]
 def expected (n : Nat) := tab[n]?.getD 0
 def evalOptions (n : Nat) := (List.range n).map (fun i => expected (i-1) ^^^ expected (n-i-2))
-private def checked (n : Nat) :=
+def checked (n : Nat) :=
   let opts := evalOptions n
   let v := expected n
   decide (v ∉ opts) && (List.range v).all (fun u => decide (u∈opts))

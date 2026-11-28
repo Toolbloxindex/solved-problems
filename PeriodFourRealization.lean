@@ -19,7 +19,7 @@ private theorem contribution_eq (v n : Nat) : contribution v n = v*(n%2) := by
   · have h0 : n%2=0 := by omega
     simp [contribution,odd,h0]
 
-private def detachedBits (x c : Nat) (z : Bool) :=
+def detachedBits (x c : Nat) (z : Bool) :=
   (3*(x%2)) ^^^ (2*(c%2)) ^^^ z.toNat
 
 set_option maxHeartbeats 800000 in
@@ -99,7 +99,7 @@ theorem board_mex (f : Nat → Int → Int → Bool → Nat) (h : Fin 8)
   have sp := value_spec (siteEdge coreAdj none) (mixed (hostBoard h) ids (arms kind))
   exact ⟨fun hm => sp.1 ((g _).mp hm),fun k hk => (g k).mpr (sp.2 k hk)⟩
 
-private def rank (h : Fin 8) (ids : Finset Nat) (kind : Nat → Nat) :=
+def rank (h : Fin 8) (ids : Finset Nat) (kind : Nat → Nat) :=
   2*(2*count ids kind 5+count ids kind 3) + if h.val=0 then 1 else 0
 
 /-- Independently of the order of physical labels, every positive-leaf
@@ -130,9 +130,9 @@ theorem mixed_eq_profile (h : Fin 8) (ids : Finset Nat) (kind : Nat → Nat)
       unfold rank
       omega
 
-private def leafCount (z : Bool) : Nat := if z then 1 else 2
-private def idsFor (x c : Nat) (z : Bool) : Finset Nat := Finset.range (leafCount z+c+x)
-private def kindFor (c : Nat) (z : Bool) (n : Nat) : Nat :=
+def leafCount (z : Bool) : Nat := if z then 1 else 2
+def idsFor (x c : Nat) (z : Bool) : Finset Nat := Finset.range (leafCount z+c+x)
+def kindFor (c : Nat) (z : Bool) (n : Nat) : Nat :=
   if n<leafCount z then 1 else if n<leafCount z+c then 3 else 5
 
 private theorem canonicalCounts (x c : Nat) (z : Bool) :

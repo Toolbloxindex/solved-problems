@@ -9,12 +9,12 @@ open LiteralKayles Sum
 
 variable {V : Type} [DecidableEq V]
 
-private def putShort (n : Nat) : PairedGraph.Vertex (Site V) → Site V
+def putShort (n : Nat) : PairedGraph.Vertex (Site V) → Site V
   | .host v => v
   | .left i | .right i => inr (n,⟨i.val,by omega⟩)
 
 
-private def paddedEdge (E : V → V → Bool) (u : V) (p : Nat) : Site V → Site V → Bool
+def paddedEdge (E : V → V → Bool) (u : V) (p : Nat) : Site V → Site V → Bool
   | inr (m,i), inr (n,j) => decide (m≠p) && decide (n≠p) && siteEdge E u (inr (m,i)) (inr (n,j))
   | a, b => siteEdge E u a b
 

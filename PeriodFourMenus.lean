@@ -113,9 +113,9 @@ private theorem path_after_two (n a b : Nat) (ha : a<n) (hb : b<n) (hab : a≤b)
       show value Path.edge back = _ from interval _ _]
     rfl))
 
-private def cycleEdge (n i j : Nat) : Bool := (Factor.cycle n).edge i j
+def cycleEdge (n i j : Nat) : Bool := (Factor.cycle n).edge i j
 
-private def rotate (n a i : Nat) : Nat :=
+def rotate (n a i : Nat) : Nat :=
   if a+2+i<n then a+2+i else a+2+i-n
 
 private theorem cycle_relabel (n a : Nat) (hn : 3≤n) (ha : a<n) :
@@ -208,7 +208,7 @@ private theorem cycle_value (n : Nat) (hn : 3≤n) :
     simp [KaylesPair.IsMex,Ne.symm e]
 
 /-- Simultaneous closed-neighborhood deletions, with original labels. -/
-private def rest (E : Nat → Nat → Bool) (s : Finset Nat) (ms : List Nat) : Finset Nat :=
+def rest (E : Nat → Nat → Bool) (s : Finset Nat) (ms : List Nat) : Finset Nat :=
   s.filter fun v => ms.all fun m => decide (v ≠ m ∧ E m v = false)
 
 private theorem mem_rest (E : Nat → Nat → Bool) (s : Finset Nat) (ms : List Nat) (v : Nat) :
@@ -231,13 +231,13 @@ private theorem rest_cons (E : Nat → Nat → Bool) (s : Finset Nat) (m : Nat) 
     · exact hm
     · exact ht w hw
 
-private def movesLeft (n : Nat) (ms : List Nat) := ms.filter fun v => decide (v<n)
-private def movesRight (n : Nat) (ms : List Nat) :=
+def movesLeft (n : Nat) (ms : List Nat) := ms.filter fun v => decide (v<n)
+def movesRight (n : Nat) (ms : List Nat) :=
   (ms.filter fun v => decide (n≤v)).map (·-n)
 
-private def leftLive (j : Bool) (n : Nat) (ms : List Nat) :=
+def leftLive (j : Bool) (n : Nat) (ms : List Nat) :=
   !j || (ms.all fun v => decide (v<n))
-private def rightLive (j : Bool) (n : Nat) (ms : List Nat) :=
+def rightLive (j : Bool) (n : Nat) (ms : List Nat) :=
   !j || (ms.all fun v => decide (n≤v))
 
 private theorem leftLive_spec (j : Bool) (n : Nat) (ms : List Nat) :
@@ -248,10 +248,10 @@ private theorem rightLive_spec (j : Bool) (n : Nat) (ms : List Nat) :
     rightLive j n ms = true ↔ ∀ m ∈ ms, m<n → j=false := by
   cases j <;> simp [rightLive]
 
-private def leftBoard (j : Bool) (l : Factor) (ms : List Nat) :=
+def leftBoard (j : Bool) (l : Factor) (ms : List Nat) :=
   if leftLive j l.order ms then rest l.edge (Finset.range l.order) (movesLeft l.order ms) else ∅
 
-private def rightBoard (j : Bool) (l r : Factor) (ms : List Nat) :=
+def rightBoard (j : Bool) (l r : Factor) (ms : List Nat) :=
   if rightLive j l.order ms then rest r.edge (Finset.range r.order) (movesRight l.order ms) else ∅
 
 private theorem mem_leftBoard (j : Bool) (l : Factor) (ms : List Nat) (v : Nat) :
@@ -394,10 +394,10 @@ private theorem join_value (l r : Factor) :
     · exact ⟨v,by omega,(join_first_left l r hv).trans he⟩
     · exact ⟨l.order+v,by omega,(join_first_right l r v).trans he⟩
 
-private def literal (f : Factor) (ms : List Nat) : Nat :=
+def literal (f : Factor) (ms : List Nat) : Nat :=
   value f.edge (rest f.edge (Finset.range f.order) ms)
 
-private def evalPath (n : Nat) (ms : List Nat) : Nat :=
+def evalPath (n : Nat) (ms : List Nat) : Nat :=
   if n≤75 then
     match ms with
     | [] => Path.expected n
@@ -458,7 +458,7 @@ private theorem evalPath_sound (n : Nat) (ms : List Nat) :
         | cons => rfl
   · rfl
 
-private def evalCycle (n : Nat) (ms : List Nat) : Nat :=
+def evalCycle (n : Nat) (ms : List Nat) : Nat :=
   if 3≤n ∧ n≤78 then
     match ms with
     | [] => if Path.expected (n-3)=0 then 1 else 0
@@ -511,7 +511,7 @@ private theorem evalCycle_sound (n : Nat) (ms : List Nat) :
   · rfl
 
 /-- Factor by factor score. The path table handles the large factors of the witness. -/
-private def fast : Factor → List Nat → Nat
+def fast : Factor → List Nat → Nat
   | .path n, ms => evalPath n ms
   | .cycle n, ms => evalCycle n ms
   | .bits n mask, ms => literal (.bits n mask) ms
@@ -560,7 +560,7 @@ private theorem fast_sound (f : Factor) (ms : List Nat) : literal f ms = fast f 
         · exact ihr _
         · exact value_empty _
 
-private def history (h : Fin 8) : List Nat :=
+def history (h : Fin 8) : List Nat :=
   if h.val = 0 then [] else [(marks ⟨h.val-1, by omega⟩).val]
 
 private theorem rest_append (E : Nat → Nat → Bool) (s : Finset Nat) (ms : List Nat) (i : Nat) :
@@ -603,7 +603,7 @@ private theorem exact_move (h : Fin 8) (v : Fin 279) (hv : v ∈ coreBoard h) :
     board_labels,←rest_append,congrArg Finset.range order_core.symm] at e
   exact e.symm.trans (fast_sound _ _)
 
-private def markLabels : List Nat := [0,5,30,55,101,177,198]
+def markLabels : List Nat := [0,5,30,55,101,177,198]
 
 private theorem marked_labels (v : Fin 279) : v ∈ marked ↔ v.val ∈ markLabels := by
   have e : ((Finset.univ : Finset (Fin 7)).image fun i => (marks i).val) = markLabels.toFinset := by
@@ -620,7 +620,7 @@ private theorem marked_labels (v : Fin 279) : v ∈ marked ↔ v.val ∈ markLab
     obtain ⟨i,_,eq⟩ := Finset.mem_image.mp t
     exact Finset.mem_image.mpr ⟨i,Finset.mem_univ _,Fin.ext eq⟩
 
-private def validNear (h : Fin 8) (i : Nat) : Bool :=
+def validNear (h : Fin 8) (i : Nat) : Bool :=
   !(markLabels.contains i) &&
     (history h).all (fun m => decide (i≠m ∧ joinedCore.edge m i=false))
 
@@ -638,10 +638,10 @@ private theorem near_labels (h : Fin 8) (v : Fin 279) :
     ←decide_not,v.isLt,true_and]
   tauto
 
-private def computedValues (h : Fin 8) : List Nat :=
+def computedValues (h : Fin 8) : List Nat :=
   ((List.range 279).filter (validNear h)).map fun v => fast joinedCore (history h ++ [v])
 
-private def flags : List Nat → Nat
+def flags : List Nat → Nat
   | [] => 0
   | k::ks => (2^k) ||| flags ks
 
@@ -662,7 +662,7 @@ private theorem mask_mem (h : Fin 8) (k : Nat) : (mask h).testBit k = true ↔ k
   rw [Nat.testBit_lt_two_pow hlt] at hb
   contradiction
 
-private def block (h : Fin 8) (start len : Nat) : Nat :=
+def block (h : Fin 8) (start len : Nat) : Nat :=
   flags (((List.range' start len).filter (validNear h)).map
     (fun v => fast joinedCore (history h ++ [v])))
 

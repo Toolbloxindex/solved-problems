@@ -26,9 +26,9 @@ def coreAdj (a b : Option (Fin 279)) : Bool :=
     coreAdj (some a) (some b) = coreEdge a b := by
   simp [coreAdj,coreLabel,hostEdge,coreEdge,a.isLt,b.isLt]
 
-private def isMark (v : Fin 279) : Prop := v.val ∈ [0,5,30,55,101,177,198]
+def isMark (v : Fin 279) : Prop := v.val ∈ [0,5,30,55,101,177,198]
 
-private instance (v : Fin 279) : Decidable (isMark v) :=
+instance decIsMark (v : Fin 279) : Decidable (isMark v) :=
   inferInstanceAs (Decidable (v.val ∈ [0,5,30,55,101,177,198]))
 
 private theorem coreAdj_to_hub (a : Fin 279) :
@@ -126,19 +126,19 @@ theorem core_image_value (s : Finset (Fin 279)) :
   intro a _ b _ h
   exact Option.some.inj h
 
-private def fixedOld (i : Fin 11) : Fin 291 := ⟨280+i.val, by omega⟩
+def fixedOld (i : Fin 11) : Fin 291 := ⟨280+i.val, by omega⟩
 
 /-- Two length-one arms and three length-three arms, named in host order. -/
-private def fixedSite (i : Fin 11) : Nat × Fin 5 :=
+def fixedSite (i : Fin 11) : Nat × Fin 5 :=
   if i.val<2 then (i.val,0)
   else ((i.val-2)/3+2,⟨(i.val-2)%3,by omega⟩)
 
-private def oldSite (i : Fin 291) : Site (Option (Fin 279)) :=
+def oldSite (i : Fin 291) : Site (Option (Fin 279)) :=
   if h : i.val < 279 then .inl (some ⟨i.val,h⟩)
   else if h' : i.val = 279 then .inl none
   else .inr (fixedSite ⟨i.val-280, by omega⟩)
 
-private def vertexSite : Vertex → Site (Option (Fin 279))
+def vertexSite : Vertex → Site (Option (Fin 279))
   | .old i => oldSite i
   | .ray n i => .inr (n+5,i)
 
@@ -198,7 +198,7 @@ private theorem vertexSite_inj : Function.Injective vertexSite := by
         omega
     | ray m j => simpa [vertexSite,Prod.ext_iff] using h
 
-private def vertexEmbedding : Vertex ↪ Site (Option (Fin 279)) :=
+def vertexEmbedding : Vertex ↪ Site (Option (Fin 279)) :=
   ⟨vertexSite,vertexSite_inj⟩
 
 private theorem coreLabel_hub (a : Option (Fin 279)) : coreLabel a=hub ↔ a=none := by
