@@ -196,5 +196,17 @@
     "subject": "Discrete geometry",
     "kind": "Partial proof",
     "keywords": "no-three-in-line, lattice cube, caps, exact certificate, layer bounds"
+  },
+  {
+    "id": "jacobi-stirling-diagonal-root-threshold-lean-v1",
+    "version": "v1.17.0",
+    "date": "2026-11-28",
+    "result": "jacobi-stirling-diagonal-root-threshold",
+    "title": "A sharp real-root range for Jacobi–Stirling diagonal numerators",
+    "summary": "Formalizes the sharp nonnegative cutoff for simultaneous real-rootedness of all positive-rank second-kind Jacobi–Stirling diagonal numerators.",
+    "verification": "Lean-verified proof · independent AI source review and pinned replay",
+    "subject": "Enumerative combinatorics",
+    "kind": "Theorem",
+    "keywords": "Jacobi–Stirling numbers, diagonal generating functions, real-rootedness, projective substitution, Lean"
   }
 ]

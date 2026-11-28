@@ -1,29 +1,25 @@
-# A sharp real-root range for Jacobi–Stirling diagonal numerators
+# The real-rootedness cutoff for Jacobi–Stirling diagonal numerators
 
 ## In brief
 
-The Jacobi–Stirling numbers form a triangular array controlled by a parameter \(u\). Each fixed diagonal has a generating series with a polynomial numerator. Lin and Zeng studied when the zeros are all nonpositive. Here the question is when every numerator has real zeros, allowing either sign.
-
-The first diagonal already has a positive zero when \(u>1\). At \(u=2\) the second numerator still has only real zeros. As the parameter increases beyond \(2\), two positive zeros meet at \(\rho\) and then become a nonreal pair. The second diagonal determines the exact threshold. Below and at that threshold, a weighted derivative argument accounts for every zero on the two real intervals outside \([0,1]\) at each later step.
-
-For nonnegative \(u\), the range is the closed interval from zero to the threshold \(\rho\), which lies between \(41/20\) and \(33/16\). The proof also supplies the exact degree at every real parameter and an example where a diagonal numerator has no positive zero despite \(u>1\).
+The Jacobi–Stirling numbers form a triangular array controlled by a real parameter. Each diagonal gives a generating series with a polynomial numerator. Lin and Zeng established when these numerators have only nonpositive zeros. Allowing positive zeros gives a wider range. At parameter 2 the second numerator is (x(9+34x-3x^2)), which has three real zeros. As the parameter increases past the cutoff, the second numerator develops a nonreal pair. Up to the cutoff, a change of variable and a weighted polynomial recurrence propagate real splitting to every higher diagonal.
 
 ## What this settles
 
-For every nonnegative real parameter \(u\), all second-kind Jacobi–Stirling diagonal numerators of index \(k\ge1\) are real-rooted exactly when \(u\le\rho\), with the second diagonal already having nonreal zeros above \(\rho\) and the negative-parameter classification outside the scope of this proof.
+For every real parameter (ugeq0), Lean proves that all positive-rank second-kind Jacobi–Stirling diagonal numerators split over the reals exactly when (uleq
+ho), where (41/20<
+ho<33/16), with the negative parameters and the two subsidiary assertions covered separately in writing.
 
 ## Why it matters
 
 Substantial advance
 
-This extends the known range for real zeros beyond the nonpositive-root range of Lin and Zeng and shows that checking the first two diagonals completely decides the all-diagonal question for nonnegative parameters.
+The sharp cutoff extends Lin and Zeng’s nonpositive-root range and shows that the second diagonal decides whether all the numerators have real zeros for a fixed nonnegative parameter.
 
-## Prior work and scope
+## Source and formalization
 
-Lin and Zeng's Lemma 2.3 gives real, nonpositive zeros for parameters in \([-1,1]\), and their equation (2.6) supplies the series identity behind the induction. Egge had treated the Legendre parameter \(u=1\) in Theorem 5.1. The new part of the root classification is the exact signed-root interval beyond \(u=1\), with collision at its upper endpoint and failure beyond it. The two source assertions checked are the degree assertion in Lemma 2.2 and the positive-zero assertion in the proof of Theorem 1.1. [Lin–Zeng, §2](https://arxiv.org/html/1309.4237v2#S2) · [Egge, Theorem 5.1](https://www.ericegge.net/papers/lsperm.pdf)
+For (kgeq1), set (D_k(n;u)=operatorname{JS}(n+k,n;u)) using Lin and Zeng’s second-kind recurrence (1.2) and its boundary values. The theorem uses the numerator in their equation (2.1), namely ((1-x)^{3k+1}sum_{ngeq0}D_k(n;u)x^n). Its coefficient at (x) is ((1+u)^k), so it is nonzero throughout the formal range. The Lean index (m) denotes (k-1). The inverse change sends the split factor with projective root (-1) to the constant (1) and retains the rank-two degree drop at (u=2). [Lin–Zeng, equations (1.2) and (2.1)](https://arxiv.org/html/1309.4237v2#S2)
 
-Gessel–Lin–Zeng's Conjecture 15 concerns individual coefficient polynomials in the parameter. Ma and Wang's Theorem 2 settles several fixed deletion-count families of that conjecture. Davis's nondefault notes give a related projective recurrence and investigate common interlacing for those coefficient families. The interior fixed deletion-count cases of Conjecture 15 remain open in the checked sources. [Gessel–Lin–Zeng, Conjecture 15](https://arxiv.org/pdf/1201.0622) · [Ma–Wang, §4](https://arxiv.org/html/2610.03111v1#S4) · [Davis, transformed recurrence](https://github.com/1337isnot1337/solved-conjectures/blob/36f68ded87032c2bf085cf19554f789497762274/research/campaign-20261121/gessel-lin-zeng-followup.md)
+This release formalizes the main classification of the v1.14.0 written proof. The earlier tag also proves the all-real degree formula and gives a rank-two counterexample at (u=3) to an auxiliary positive-zero assertion in Lin and Zeng’s proof. Lin and Zeng’s Lemma 2.3 and Egge’s Legendre special case are earlier results. Ma and Wang’s fixed-coefficient theorem addresses coefficient extraction before taking the numerator. [Written proof at v1.14.0](https://github.com/Toolbloxindex/solved-problems/tree/v1.14.0/results/jacobi-stirling-diagonal-root-threshold) · [Separate negative range at v1.15.0](https://github.com/Toolbloxindex/solved-problems/tree/v1.15.0/results/jacobi-stirling-negative-interval) · [Egge’s Theorem 5.1](https://www.ericegge.net/papers/lsperm.pdf) · [Ma–Wang, §4](https://arxiv.org/html/2610.03111v1#S4)
 
-## Proof
-
-The proof was developed with AI assistance. The series recurrence, weighted Rolle argument, cubic discriminant and degree correction are in [PROOF.md](PROOF.md).
+The exact declaration is `JacobiProjective.sharp_nonnegative_source_series`. The pinned build uses Lean 4.37.0-rc1 at `0b77e12952ad39077d80d8bd6b66d601f225c321` and Mathlib at `31ce06eaadf4a200c0e1407c5f10953cf606b8f8`. The theorem depends on `propext`, `Classical.choice` and `Quot.sound`. [Final module](JacobiSourceSeries.lean) · [Module order](LeanVerification.json)

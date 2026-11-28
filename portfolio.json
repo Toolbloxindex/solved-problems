@@ -199,5 +199,19 @@
     "explainer": "How many points can a seven-by-seven-by-seven grid hold if no three distinct points lie on a straight line? A coordinate layer can hold at most 14 points, because its seven rows can hold at most two apiece. We check whether 87 points can fit when each coordinate direction has a layer of 14.\n\nOnce three full layers are fixed, any site on a line through two of their points is ruled out. Counting the sites that can still fit in each of the other layers usually gives an upper bound below 87. In the remaining cases the checker lists every possible pattern for one additional layer and closes each branch. For example, one triple of full layers at height zero leaves a single 13-point pattern in the layer at $z=3$ if the total is to reach 87. Fixing that pattern reduces the bound to 78 by counting along parallel lines.\n\nThe complete replay shows that a set with three full perpendicular layers has at most 86 points. The exact maximum without the layer condition remains open. [Original seven-cube problem](https://arxiv.org/html/2609.25133v1#S3)",
     "significance": "Focused contribution",
     "why_it_matters": "The bound adds to the known one-axis layer exclusions by showing that 87 points are impossible with three full perpendicular layers at any heights."
+  },
+  {
+    "version": "v1.17.0",
+    "result": "jacobi-stirling-diagonal-root-threshold",
+    "date": "2026-11-28",
+    "title": "A sharp real-root range for Jacobi–Stirling diagonal numerators",
+    "summary": "Formalizes the sharp nonnegative cutoff for simultaneous real-rootedness of all positive-rank second-kind Jacobi–Stirling diagonal numerators.",
+    "verification": "Lean-verified proof · independent AI source review and pinned replay",
+    "what_this_settles": "For every real parameter (ugeq0), Lean proves that all positive-rank second-kind Jacobi–Stirling diagonal numerators split over the reals exactly when (uleq ho), where (41/20< ho<33/16), with the negative parameters and the two subsidiary assertions covered separately in writing.",
+    "verification_method": "Lean-verified proof",
+    "previous_version": "v1.14.0",
+    "explainer": "The Jacobi–Stirling numbers form a triangular array controlled by a real parameter. Each diagonal gives a generating series with a polynomial numerator. Lin and Zeng established when these numerators have only nonpositive zeros. Allowing positive zeros gives a wider range. At parameter 2 the second numerator is (x(9+34x-3x^2)), which has three real zeros. As the parameter increases past the cutoff, the second numerator develops a nonreal pair. Up to the cutoff, a change of variable and a weighted polynomial recurrence propagate real splitting to every higher diagonal.",
+    "significance": "Substantial advance",
+    "why_it_matters": "The sharp cutoff extends Lin and Zeng’s nonpositive-root range and shows that the second diagonal decides whether all the numerators have real zeros for a fixed nonnegative parameter."
   }
 ]

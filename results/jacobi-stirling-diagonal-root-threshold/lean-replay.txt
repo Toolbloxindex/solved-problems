@@ -1,0 +1,61 @@
+Lean (version 4.37.0-rc1, x86_64-unknown-linux-gnu, commit 0b77e12952ad39077d80d8bd6b66d601f225c321, Release)
+31ce06eaadf4a200c0e1407c5f10953cf606b8f8
+0205bb030b9f919c336e73333f8b13db20d614c9813c9bae7c66e63fef39e410  JacobiBinomialBridge.lean
+bd559c560e1a758bda52cdf2da89558768555a7a1edb846992a408e605fb2bde  JacobiCofactors.lean
+6634087fe65a3d65b28e7849096fe952a5095fc8b47ae2483daeb3b3dc561acc  JacobiDiagonalControls.lean
+9e846b0e0d8c7eba6c080f66c6bad23ad602be0c824e1241657bfdce78edf8c4  JacobiDiscriminantInterval.lean
+895e44576c721611f9960e9a6420b9e99f50375626725b9934e140e521869233  JacobiInverse.lean
+4a85cb977a2616209a3a5b20b15ef0fe301267fec51b4c1b4265fe2318fdf2ee  JacobiProjective.lean
+edd35587dd1d75b33271ae2c898856511e57de10a005331b25d7bb983339832d  JacobiProjectiveBase.lean
+4d6e19ea304910e3ea06cd60f641a8bc3933edb3682e7a201e5436ac5e2c1a2e  JacobiPropagation.lean
+37720ffcddd9b960a5325c79ef3d1985e3af8e693ecef0cdfa0dde5f6a81ea16  JacobiRankTwo.lean
+4e17f70ef300b5b7567478ab3e8afe5ae0bb8c025a15a543c4518a5c979c6261  JacobiRankTwoSource.lean
+38b33893d876914af3db91e3d2a98e37c21243702b8a9be6634ac9d850baa01a  JacobiSourceSeries.lean
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+JacobiProjective.step_splits_negative {a b : ℝ} {p : Polynomial ℝ} (ha : 0 < a) (hab : a < b) (hp : p.Splits)
+  (hneg : ∀ r ∈ p.roots, r < 0) :
+  (JacobiProjective.step a b p).Splits ∧ ∀ r ∈ (JacobiProjective.step a b p).roots, r < 0
+JacobiProjective.diagonal_eq_binomialLift (u : ℝ) (m n : ℕ) :
+  JacobiDiagonalControls.diagonal u (m + 1) n =
+    JacobiProjective.binomialLift (n + (m + 1)) (m + 2) (JacobiProjective.projective u m)
+JacobiProjective.projective_splits_for_cutoff {u : ℝ} (hu : 0 ≤ u) (h₃ : u < 3)
+  (hdisc : 0 ≤ JacobiDiagonalControls.disc u) (k : ℕ) :
+  (JacobiProjective.projective u (k + 1)).Splits ∧ ∀ r ∈ (JacobiProjective.projective u (k + 1)).roots, r < 0
+JacobiDiagonalControls.diagonal_two (u : ℝ) (n : ℕ) :
+  JacobiDiagonalControls.diagonal u 2 n = JacobiDiagonalControls.secondSeriesCoeff u ↑n
+JacobiRankTwoSource.secondNumerator_splits_sharp :
+  ∃ left ∈ Set.Ioo (-(121 / 100)) (-(6 / 5)),
+    ∃ right ∈ Set.Ioo (41 / 20) (33 / 16),
+      JacobiDiagonalControls.disc left = 0 ∧
+        JacobiDiagonalControls.disc right = 0 ∧
+          ∀ (u : ℝ), (JacobiRankTwoSource.secondNumerator u).Splits ↔ left ≤ u ∧ u ≤ right
+'JacobiDiagonalControls.diagonal_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiDiscriminantInterval.disc_mid_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiRankTwo.cubic_factors_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiRankTwo.disc_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiRankTwo.rank_two_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiRankTwoSource.secondNumerator_splits_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiProjective.step_pole' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiProjective.splits_and_roots_lt_of_alternating_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiProjective.adjacent_cofactor_signs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiProjective.step_splits_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiProjective.diagonal_eq_binomialLift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiProjective.projective_splits_for_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+JacobiProjective.sharp_nonnegative_source_series :
+  ∃ ρ ∈ Set.Ioo (41 / 20) (33 / 16),
+    JacobiDiagonalControls.disc ρ = 0 ∧
+      ∀ (u : ℝ),
+        0 ≤ u →
+          ((∀ (m : ℕ),
+              ∃ A, A.Splits ∧ ↑A = (1 - PowerSeries.X) ^ (3 * (m + 1) + 1) * JacobiProjective.diagonalSeries u m) ↔
+            u ≤ ρ)
+'JacobiProjective.inverse_splits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiProjective.inverse_linear_at_pole' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiProjective.sourceNumerator_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiProjective.sourceNumerator_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JacobiProjective.sharp_nonnegative_source_series' depends on axioms: [propext, Classical.choice, Quot.sound]

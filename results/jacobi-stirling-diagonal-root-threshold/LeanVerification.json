@@ -1,0 +1,18 @@
+{
+  "modules": [
+    "JacobiDiagonalControls",
+    "JacobiDiscriminantInterval",
+    "JacobiRankTwo",
+    "JacobiRankTwoSource",
+    "JacobiProjective",
+    "JacobiCofactors",
+    "JacobiPropagation",
+    "JacobiBinomialBridge",
+    "JacobiProjectiveBase",
+    "JacobiInverse",
+    "JacobiSourceSeries"
+  ],
+  "theorems": [
+    "JacobiProjective.sharp_nonnegative_source_series"
+  ]
+}
