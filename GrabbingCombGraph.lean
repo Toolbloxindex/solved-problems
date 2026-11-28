@@ -171,10 +171,10 @@ private theorem mem_rootMoves {S z} : z∈rootMoves S ↔ RootLegal S z := by
   exact ⟨And.right,fun h => ⟨h.1.1,h⟩⟩
 
 /-- Literal connectivity-preserving negamax with hub zero held to the last move. -/
-noncomputable def rootedValue (w : ℕ → ℝ) : ℕ → Vertices → ℝ
-  | 0, _ => 0
-  | f+1, S => if ne : (rootMoves S).Nonempty then
-      (rootMoves S).sup' ne fun z => w z-rootedValue w f (S.erase z)
+noncomputable def rootedValue (w : ℕ → ℝ) : ℕ → Vertices → ℝ :=
+  Nat.rec (motive := fun _ => Vertices → ℝ) (fun _ => 0) fun _ previous S =>
+    if ne : (rootMoves S).Nonempty then
+      (rootMoves S).sup' ne fun z => w z - previous (S.erase z)
     else 0
 
 private theorem eval_eq (u w : ℕ → ℝ) (fuel : ℕ) {h L} (fit : Fits h L)

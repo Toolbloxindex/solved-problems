@@ -101,10 +101,10 @@ def weight (u w : ℕ → ℝ) (z : ℕ) : ℝ := if z%2=0 then u (z/2) else w (
 noncomputable def rootMoves (S : Vertices) : Vertices := by
   classical exact S.filter (RootLegal S)
 
-noncomputable def rootedValue (w : ℕ → ℝ) : ℕ → Vertices → ℝ
-  | 0, _ => 0
-  | f+1, S => if ne : (rootMoves S).Nonempty then
-      (rootMoves S).sup' ne fun z => w z-rootedValue w f (S.erase z)
+noncomputable def rootedValue (w : ℕ → ℝ) : ℕ → Vertices → ℝ :=
+  Nat.rec (motive := fun _ => Vertices → ℝ) (fun _ => 0) fun _ previous S =>
+    if ne : (rootMoves S).Nonempty then
+      (rootMoves S).sup' ne fun z => w z - previous (S.erase z)
     else 0
 
 theorem opposite_rooted_values (u w : ℕ → ℝ) {n L} (fit : Fits n L)
