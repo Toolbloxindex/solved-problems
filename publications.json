@@ -208,5 +208,17 @@
     "subject": "Enumerative combinatorics",
     "kind": "Theorem",
     "keywords": "Jacobi–Stirling numbers, diagonal generating functions, real-rootedness, projective substitution, Lean"
+  },
+  {
+    "id": "gessel-lin-zeng-four-deletions-weighted-v1",
+    "date": "2026-11-28",
+    "version": "v1.18.0",
+    "result": "gessel-lin-zeng-four-deletions-weighted",
+    "title": "A four-deletion obstruction for Jacobi–Stirling descent polynomials",
+    "summary": "At rank 31, strictly positive integer weights on every four-deletion set give a Jacobi–Stirling descent polynomial with nonreal zeros. The all-rank equal-weight case remains open.",
+    "verification": "Computer-assisted proof · independent AI mathematical review",
+    "subject": "Enumerative combinatorics",
+    "kind": "Counterexample",
+    "keywords": "Jacobi–Stirling numbers, descent polynomials, real-rootedness, four deletions, Laguerre inequality"
   }
 ]
