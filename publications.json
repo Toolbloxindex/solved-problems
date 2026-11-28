@@ -100,5 +100,17 @@
     "subject": "Algebraic combinatorics",
     "verification": "Lean checks the integer-coordinate theorem and all slice certificates. A separate Python checker verifies coverage and cover relations.",
     "keywords": "Drew Armstrong, ribbon partition, rational q-Catalan numbers, Conjecture 10.2"
+  },
+  {
+    "id": "nineteen-letter-subsequence-cover-v1",
+    "result": "nineteen-letter-subsequence-cover",
+    "version": "v1.9.0",
+    "date": "2026-11-28",
+    "title": "A positional proof for a 19-letter subsequence cover",
+    "summary": "Only the full word can cover every position of abacadbabdcabcbadac by subsequence occurrences.",
+    "verification": "Pinned Lean replay of WordSPrimitivityReplay.exact_claim and an independent exact computation.",
+    "subject": "Combinatorics on words",
+    "kind": "Proof",
+    "keywords": "Combinatorics on words"
   }
 ]

@@ -1,0 +1,9 @@
+{
+  "modules": [
+    "WordSPrimitivity",
+    "Replay"
+  ],
+  "theorems": [
+    "WordSPrimitivityReplay.exact_claim"
+  ]
+}

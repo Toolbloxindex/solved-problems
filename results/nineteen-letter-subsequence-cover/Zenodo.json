@@ -1,0 +1,10 @@
+{
+  "creators": [
+    {
+      "name": "Correia, Tomás"
+    }
+  ],
+  "license": "mit",
+  "significance": "Only the full word can cover every position of abacadbabdcabcbadac by subsequence occurrences.",
+  "prior_work": "Charalampopoulos, Pissis, Radoszewski, Rytter, Waleń and Zuba already established the answer computationally. Their question asks for a paper proof. The result here is the positional argument and its formalization. Priority for the argument remains undetermined. [Original question](https://doi.org/10.1016/j.tcs.2025.115216)"
+}

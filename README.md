@@ -29,3 +29,5 @@ To cite a result, use its title and DOI where available, or give the release tag
 - [A uniform lower bound on the transient length of the consecutive-231 stack map](results/consecutive-231-stack-delay/README.md) · v1.7.0
 
 - [Armstrong’s Catalan ribbon partition conjecture at a = 6](results/armstrong-six-ribbons/README.md) · v1.8.0
+
+- [A positional proof for a 19-letter subsequence cover](results/nineteen-letter-subsequence-cover/README.md) · v1.9.0
