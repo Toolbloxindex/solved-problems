@@ -245,5 +245,19 @@
     "significance": "Focused contribution",
     "why_it_matters": "Ma and Wang's theorem for arbitrary weights at one, two and three deletions cannot extend to the next deletion count.",
     "difficulty": 3
+  },
+  {
+    "version": "v1.20.0",
+    "result": "gessel-lin-zeng-four-deletions-endpoints",
+    "date": "2026-11-28",
+    "title": "Growing interlacing ranges for four Jacobi–Stirling deletions",
+    "summary": "For some absolute c1,c2>0 and all sufficiently large n=k−2, the partner in Ma–Wang's equal-weight four-deletion comparison has a simple negative zero in each of the first floor(c1√(n/log n)) pivot gaps from zero and the first floor(c2 log n) gaps from the most negative root. The middle gaps remain open.",
+    "verification": "Written proof · independent AI mathematical review",
+    "what_this_settles": "For some absolute constants \\(c_1,c_2>0\\) and every sufficiently large \\(n=k-2\\), the equal-weight partner in Ma–Wang's four-deletion comparison has a simple negative zero in each of the first \\(\\lfloor c_1\\sqrt{n/\\log n}\\rfloor\\) pivot gaps counted from zero and the first \\(\\lfloor c_2\\log n\\rfloor\\) counted from the most negative root, with the middle gaps still open.",
+    "verification_method": "Written proof",
+    "explainer": "Gessel, Lin and Zeng ask whether the descent polynomial obtained by summing equally over deletion sets has only real zeros. For four deletions, Ma and Wang propose proving the claim by fitting one zero of a new polynomial between each consecutive pair of zeros of a known polynomial. This work proves that the comparison holds in growing ranges at both ends for sufficiently large rank. Near zero, two adjacent coefficients control the signs. At the most negative end, reciprocating the variable brings the zeros near negative squares, where a finite product lets us locate both zero lists. The middle gaps and the full four-deletion conjecture remain open. [Gessel–Lin–Zeng](https://arxiv.org/pdf/1201.0622v2) · [Ma–Wang, Remark 1](https://arxiv.org/html/2610.03111v1#S4)",
+    "significance": "Focused contribution",
+    "why_it_matters": "The proof establishes Ma and Wang's proposed zero comparison in ranges that grow with rank at both ends of the negative axis.",
+    "difficulty": 3
   }
 ]
