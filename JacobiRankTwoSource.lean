@@ -11,7 +11,7 @@ open Polynomial JacobiDiagonalControls JacobiRankTwo Set
 
 private instance : Infinite ℝ := Infinite.of_injective (fun n : ℕ => (n : ℝ)) Nat.cast_injective
 
-private noncomputable def reduced (u : ℝ) : Cubic ℝ :=
+noncomputable def reduced (u : ℝ) : Cubic ℝ :=
   ⟨2*(2-u)*(1-u), 21-6*u-3*u^2, 14+10*u, (1+u)^2⟩
 
 /-- The literal second-diagonal numerator in Lin–Zeng's denominator convention. -/

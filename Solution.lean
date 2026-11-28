@@ -12,10 +12,9 @@ open scoped PowerSeries
 namespace PalomarJacobi
 
 /-- The source diagonal J(n+k,n;u) with its literal triangular recurrence. -/
-noncomputable def diagonal (u : ℝ) : ℕ → ℕ → ℝ
-  | 0 => fun _ => 1
-  | k+1 => Nat.rec 0 (fun n acc =>
-      acc + ((n+1 : ℕ) : ℝ) * (((n+1 : ℕ) : ℝ)+u) * diagonal u k (n+1))
+noncomputable def diagonal (u : ℝ) : ℕ → ℕ → ℝ :=
+  Nat.rec (motive := fun _ => ℕ → ℝ) (fun _ => 1) fun _ prev =>
+    Nat.rec 0 (fun n acc => acc + ((n+1 : ℕ) : ℝ) * (((n+1 : ℕ) : ℝ)+u) * prev (n+1))
 
 /-- The power series for the positive rank m+1. -/
 noncomputable def diagonalSeries (u : ℝ) (m : ℕ) : ℝ⟦X⟧ :=
@@ -35,7 +34,10 @@ theorem nonnegative_threshold :
   have hcells (u : ℝ) (k : ℕ) : diagonal u k = JacobiDiagonalControls.diagonal u k := by
     induction k with
     | zero => rfl
-    | succ k ih => rw [diagonal, JacobiDiagonalControls.diagonal, ih]; rfl
+    | succ k ih =>
+      change Nat.rec (motive := fun _ => ℝ) 0 (fun n acc => acc + ((n+1 : ℕ) : ℝ) * (((n+1 : ℕ) : ℝ)+u) * diagonal u k (n+1)) = _
+      rw [ih]
+      rfl
   have hdiag : diagonalSeries = JacobiProjective.diagonalSeries := by
     funext u m
     unfold diagonalSeries JacobiProjective.diagonalSeries

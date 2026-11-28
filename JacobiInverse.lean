@@ -10,7 +10,7 @@ namespace JacobiProjective
 
 open Polynomial JacobiDiagonalControls JacobiRankTwo JacobiRankTwoSource
 
-private noncomputable def inverseCoords : Fin 2 → ℝ[X] := ![X,1-X]
+noncomputable def inverseCoords : Fin 2 → ℝ[X] := ![X,1-X]
 
 /-- Homogeneous substitution of x and 1-x into a projective polynomial. -/
 noncomputable def inverse (d : ℕ) (p : ℝ[X]) : ℝ[X] :=

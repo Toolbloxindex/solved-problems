@@ -11,10 +11,9 @@ open scoped PowerSeries
 namespace PalomarJacobi
 
 /-- The source diagonal J(n+k,n;u) with its literal triangular recurrence. -/
-noncomputable def diagonal (u : ℝ) : ℕ → ℕ → ℝ
-  | 0 => fun _ => 1
-  | k+1 => Nat.rec 0 (fun n acc =>
-      acc + ((n+1 : ℕ) : ℝ) * (((n+1 : ℕ) : ℝ)+u) * diagonal u k (n+1))
+noncomputable def diagonal (u : ℝ) : ℕ → ℕ → ℝ :=
+  Nat.rec (motive := fun _ => ℕ → ℝ) (fun _ => 1) fun _ prev =>
+    Nat.rec 0 (fun n acc => acc + ((n+1 : ℕ) : ℝ) * (((n+1 : ℕ) : ℝ)+u) * prev (n+1))
 
 /-- The power series for the positive rank m+1. -/
 noncomputable def diagonalSeries (u : ℝ) (m : ℕ) : ℝ⟦X⟧ :=
