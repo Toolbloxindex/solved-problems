@@ -1,0 +1,56 @@
+version: v0.4
+project:
+  name: Sharp nonnegative Jacobi–Stirling root threshold
+  description: The exact range for which every positive-rank second-kind diagonal numerator from the literal source series has only real zeros.
+  authors:
+  - Tomás Correia
+  license: MIT
+  responsible_maintainers:
+  - Tomás Correia
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05A19
+  - 26C10
+sources:
+- title: A sharp real-root range for Jacobi–Stirling diagonal numerators
+  authors:
+  - Tomás Correia
+  location: https://github.com/Toolbloxindex/solved-problems/tree/v1.14.0/results/jacobi-stirling-diagonal-root-threshold
+  relationship: independently-proves
+  note: The nonnegative threshold theorem of the earlier written release.
+- title: Positivity properties of Jacobi–Stirling numbers and generalized Ramanujan polynomials
+  authors:
+  - Zhicong Lin
+  - Jiang Zeng
+  location: https://arxiv.org/html/1309.4237v2#S2
+  relationship: extends
+  note: Equations (1.2), (2.1) and (2.6) supply the original recurrence and numerator convention.
+status:
+  scope: The all-positive-rank real-rootedness threshold for real nonnegative parameters in the exact original series normalization.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    framework: Codex
+    models: []
+    tool_setup: Lean and pinned Mathlib with literal coefficient controls and a homogeneous substitution proof.
+  notes: Tomás Correia directed the project. Codex developed the Lean proof and checked exact specializations.
+fidelity:
+  divergences: The Lean index m represents source rank m+1. Splitting over the reals expresses real-rootedness with multiplicities. The formal scope is the nonnegative threshold theorem.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: A separate in-project AI session independently reviewed the exact source statement, checked the pinned kernel replay and compared the exported declarations. Official mechanical preflight and external review are pending.
+alignment:
+  statements:
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.14.0/results/jacobi-stirling-diagonal-root-threshold
+    lean: PalomarJacobi.nonnegative_threshold
+    module: Solution
+    status: proved
