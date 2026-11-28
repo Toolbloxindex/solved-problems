@@ -8,7 +8,8 @@
     "verification": "The classification was formally checked in Lean.",
     "significance": "Focused contribution",
     "why_it_matters": "The exact threshold at rank six identifies where the proposed strict inequality begins to hold throughout the first column.",
-    "what_this_settles": "In the first column of the type-B Stirling numbers of the second kind, every interior coefficient satisfies strict log-concavity exactly from rank six onward."
+    "what_this_settles": "In the first column of the type-B Stirling numbers of the second kind, every interior coefficient satisfies strict log-concavity exactly from rank six onward.",
+    "difficulty": 3
   },
   {
     "version": "v1.1.0",
@@ -19,7 +20,8 @@
     "verification": "Direct proof and an exhaustive check of the 19-vertex tree.",
     "significance": "Focused contribution",
     "why_it_matters": "The tree explains how the proposed path bound fails, and extending its spine makes the shortfall arbitrarily large.",
-    "what_this_settles": "A 19-vertex tree has a longest induced path of 17 vertices where Graffiti.pc Conjecture 138 requires at least 18, disproving the conjecture."
+    "what_this_settles": "A 19-vertex tree has a longest induced path of 17 vertices where Graffiti.pc Conjecture 138 requires at least 18, disproving the conjecture.",
+    "difficulty": 2
   },
   {
     "version": "v1.2.0",
@@ -31,7 +33,8 @@
     "doi": "10.5281/zenodo.24571980",
     "significance": "Focused contribution",
     "why_it_matters": "The matching bound gives a guarantee for every connected graph with at least three vertices, including graphs with leaves.",
-    "what_this_settles": "The matching bound in Graffiti.pc Conjecture 392b holds for every finite simple connected graph with at least three vertices."
+    "what_this_settles": "The matching bound in Graffiti.pc Conjecture 392b holds for every finite simple connected graph with at least three vertices.",
+    "difficulty": 2
   },
   {
     "version": "v1.3.0",
@@ -42,7 +45,8 @@
     "verification": "The formal proof was checked in Lean.",
     "significance": "Focused contribution",
     "why_it_matters": "The result locates a whole range of coefficients where the conjectured inequality holds across ranks, even though the unrestricted case remains open.",
-    "what_this_settles": "The parity log-concavity inequality holds on the rising side of first-kind column one and on the second diagonal of both type-B families, leaving the other cases open."
+    "what_this_settles": "The parity log-concavity inequality holds on the rising side of first-kind column one and on the second diagonal of both type-B families, leaving the other cases open.",
+    "difficulty": 3
   },
   {
     "version": "v1.4.0",
@@ -53,7 +57,8 @@
     "verification": "The formal proof was checked in Lean.",
     "significance": "Focused contribution",
     "why_it_matters": "The combined treatment shows which coefficient inequalities are known across the two families and where the general conjecture remains open.",
-    "what_this_settles": "The combined results establish the rank-six threshold for strict log-concavity in second-kind column one and prove special cases of the parity inequalities in Sagan–Swanson Conjecture 7.5."
+    "what_this_settles": "The combined results establish the rank-six threshold for strict log-concavity in second-kind column one and prove special cases of the parity inequalities in Sagan–Swanson Conjecture 7.5.",
+    "difficulty": 3
   },
   {
     "version": "v1.5.0",
@@ -64,7 +69,8 @@
     "verification": "The formal proof was checked in Lean.",
     "significance": "Focused contribution",
     "why_it_matters": "The weight condition identifies a class of bipartite boards on which Alice can guarantee half the total weight.",
-    "what_this_settles": "Alice can guarantee half the total weight on even connected bipartite graphs with no induced once-subdivided claw when adjacent positive weights agree."
+    "what_this_settles": "Alice can guarantee half the total weight on even connected bipartite graphs with no induced once-subdivided claw when adjacent positive weights agree.",
+    "difficulty": 3
   },
   {
     "version": "v1.6.0",
@@ -76,7 +82,8 @@
     "doi": "10.5281/zenodo.24614057",
     "significance": "Substantial advance",
     "why_it_matters": "Even after arbitrarily many identical branches are attached, adding two more can still change the game value, overturning the proposed long-run pattern.",
-    "what_this_settles": "Adding two identical branches can change the Node-Kayles value even at arbitrarily large branch counts, disproving Songsuwan’s Conjecture 2."
+    "what_this_settles": "Adding two identical branches can change the Node-Kayles value even at arbitrarily large branch counts, disproving Songsuwan’s Conjecture 2.",
+    "difficulty": 3
   },
   {
     "version": "v1.7.0",
@@ -87,7 +94,8 @@
     "verification": "The formal proof was checked in Lean.",
     "significance": "Focused contribution",
     "why_it_matters": "A construction for every length from eight onward raises the known lower bound on how many passes this sorting rule can take.",
-    "what_this_settles": "For every length n ≥ 8, some permutation takes at least n + 3 passes of the consecutive-231 stack map to reach a periodic point, leaving the maximum delay open."
+    "what_this_settles": "For every length n ≥ 8, some permutation takes at least n + 3 passes of the consecutive-231 stack map to reach a periodic point, leaving the maximum delay open.",
+    "difficulty": 3
   },
   {
     "version": "v1.8.0",
@@ -98,7 +106,8 @@
     "verification": "The formal proof was checked in Lean.",
     "significance": "Focused contribution",
     "why_it_matters": "Explicit chains cover all nine slices for the six-ribbon case, giving a complete construction that can be checked point by point.",
-    "what_this_settles": "All nine slices admit the required ribbon partition at a = 6, proving that case of Armstrong’s conjecture."
+    "what_this_settles": "All nine slices admit the required ribbon partition at a = 6, proving that case of Armstrong’s conjecture.",
+    "difficulty": 3
   },
   {
     "version": "v1.9.0",
@@ -110,7 +119,8 @@
     "explainer": "Pick one shorter word and try to cover every letter of abacadbabdcabcbadac with occurrences of it. Each occurrence may skip letters, and different occurrences may cover different positions. The three copies of d force an unexpectedly rigid choice: a covering word must use all three. That pins its four intervening and end pieces in place and forces the entire original word. This answers the authors’ request for a computer-free proof for this particular word.",
     "significance": "Focused contribution",
     "why_it_matters": "The authors knew the answer by computation, and the positions of the three d’s explain by hand why every shorter word fails.",
-    "what_this_settles": "Only the full 19-letter word abacadbabdcabcbadac can cover all its positions by subsequence occurrences, answering the authors’ request for a computer-free proof."
+    "what_this_settles": "Only the full 19-letter word abacadbabdcabcbadac can cover all its positions by subsequence occurrences, answering the authors’ request for a computer-free proof.",
+    "difficulty": 2
   },
   {
     "version": "v1.10.0",
@@ -122,7 +132,8 @@
     "explainer": "Count the ways to pick k vertices of a graph with no edges between them. As k grows, those counts can go up to a single peak and then drop, yet still bend the wrong way compared with their neighbors. Can several such bends survive after one extra edge closes a tree into a cycle? Three explicit graphs show that they can. The 315-vertex example has three consecutive breaks and still has a single peak. This settles the existence question; minimal graph sizes remain open.",
     "significance": "Focused contribution",
     "why_it_matters": "Explicit examples from both named tree constructions answer the existence question, including a graph with three consecutive failures of log-concavity.",
-    "what_this_settles": "Both tree constructions in Levit and Kadrawi’s Problem 6.6 admit a one-edge closure with consecutive failures of log-concavity."
+    "what_this_settles": "Both tree constructions in Levit and Kadrawi’s Problem 6.6 admit a one-edge closure with consecutive failures of log-concavity.",
+    "difficulty": 2
   },
   {
     "version": "v1.11.0",
@@ -134,7 +145,8 @@
     "explainer": "Add the angles whose tangents are the integers from 1 to n, then take the tangent of the sum. Can the answer be an integer once n reaches five? Amdeberhan, Medina and Moll conjectured that it never is. This result limits how often an exception could occur. Among the first N indices, the count grows at most like the three-quarters power of the logarithm of N. The estimate still allows isolated exceptions.",
     "significance": "Substantial advance",
     "why_it_matters": "The new bound improves the logarithmic estimate for how often an integer value could occur, while leaving open whether any occur after the first four terms.",
-    "what_this_settles": "Among indices from 5 through N, at most O((log N)^(3/4)) yield an integer tangent, leaving open whether any such index exists."
+    "what_this_settles": "Among indices from 5 through N, at most O((log N)^(3/4)) yield an integer tangent, leaving open whether any such index exists.",
+    "difficulty": 3
   },
   {
     "version": "v1.12.0",
@@ -146,7 +158,8 @@
     "explainer": "Victor Moll studied the real part of the running product $(1+i)(1+2i)\\cdots(1+ni)$ with an alternating sign. His paper gives several periods modulo primes and proposes a formula based on the prime’s residue modulo eight. The exact period depends on the multiplicative order of $-2$ instead. For example, modulo 31 that order is 10, and the least period is 310 rather than the 930 proposed by the residue-class formula.\n\nThe proof compares a handful of terms near the initial index with the same terms one period later. For odd moduli, these comparisons recover the index modulo the modulus and both coordinates of the running Gaussian product. A full block then acts by a scalar. The result gives the least eventual period modulo every positive integer, and determines exactly when the pattern repeats from the start. The conjecture that the original tangent sums are nonintegral for every $n\\ge5$ remains open.",
     "significance": "Substantial advance",
     "why_it_matters": "The period modulo 31 overturns the proposed formula, and the replacement theorem gives the least eventual period for every positive modulus.",
-    "what_this_settles": "The result determines the least eventual period for every positive modulus and disproves Moll’s proposed prime-modulus formula at 31."
+    "what_this_settles": "The result determines the least eventual period for every positive modulus and disproves Moll’s proposed prime-modulus formula at 31.",
+    "difficulty": 3
   },
   {
     "version": "v1.13.0",
@@ -159,7 +172,8 @@
     "verification_method": "Lean-verified proof",
     "explainer": "Drew Armstrong asks whether lattice points between successive coprime cuts can be partitioned into chains that visit one point at each successive rank and contain exactly $a$ points. At the cut where the coordinates sum to two, each point gives two occupied positions, with repetition allowed. Order those positions as a pair. Each chain starts by increasing the longer column and then alternates column increases. For example, when $a=7$ one seven-point chain runs from $(0,0)$ along $(0,j)$ through $(0,5)$ and then to $(1,5)$. The construction works at this cut for every odd $a\\ge3$. Complementing the coordinates gives the reflected single slice. The general conjecture over all cuts remains open. [Armstrong’s paper](https://link.springer.com/article/10.1007/s00026-026-00819-9)",
     "significance": "Focused contribution",
-    "why_it_matters": "A single geometric rule extends Armstrong’s small-parameter sum-two examples to every odd parameter and also gives their reflected partitions."
+    "why_it_matters": "A single geometric rule extends Armstrong’s small-parameter sum-two examples to every odd parameter and also gives their reflected partitions.",
+    "difficulty": 3
   },
   {
     "version": "v1.14.0",
@@ -172,7 +186,8 @@
     "verification_method": "Written proof",
     "explainer": "The Jacobi–Stirling numbers form a triangular array controlled by a parameter \\(u\\). Each fixed diagonal has a generating series with a polynomial numerator. Lin and Zeng studied when the zeros are all nonpositive. Here the question is when every numerator has real zeros, allowing either sign.\n\nThe first diagonal already has a positive zero when \\(u>1\\). At \\(u=2\\) the second numerator still has only real zeros. As the parameter increases beyond \\(2\\), two positive zeros meet at \\(\\rho\\) and then become a nonreal pair. The second diagonal determines the exact threshold. Below and at that threshold, a weighted derivative argument accounts for every zero on the two real intervals outside \\([0,1]\\) at each later step.\n\nFor nonnegative \\(u\\), the range is the closed interval from zero to the threshold \\(\\rho\\), which lies between \\(41/20\\) and \\(33/16\\). The proof also supplies the exact degree at every real parameter and an example where a diagonal numerator has no positive zero despite \\(u>1\\).",
     "significance": "Substantial advance",
-    "why_it_matters": "This extends the known range for real zeros beyond the nonpositive-root range of Lin and Zeng and shows that checking the first two diagonals completely decides the all-diagonal question for nonnegative parameters."
+    "why_it_matters": "This extends the known range for real zeros beyond the nonpositive-root range of Lin and Zeng and shows that checking the first two diagonals completely decides the all-diagonal question for nonnegative parameters.",
+    "difficulty": 3
   },
   {
     "version": "v1.15.0",
@@ -185,7 +200,8 @@
     "verification_method": "Written proof",
     "explainer": "The second-kind Jacobi–Stirling numbers form a triangular array that depends on a real parameter \\(u\\). Each diagonal has a generating function whose numerator is a polynomial. The question is how far below zero \\(u\\) can go while every one of those polynomials still has only real zeros.\n\nAt \\(u=-6/5\\), all the diagonal numerators have real zeros. Apart from the factor \\(x\\), the second numerator has three negative zeros, one in each of the intervals cut out by \\(-2,-1,-1/20,0\\). The odd diagonals each have one positive zero. The proof uses the first three generating-series coefficients to control where two negative zeros appear at each odd-to-even step.\n\nThere is an exact cutoff between \\(-121/100\\) and \\(-6/5\\). The cutoff is included, even though two roots of the second numerator coincide there. At every more negative parameter the second numerator has a nonreal pair.",
     "significance": "Substantial advance",
-    "why_it_matters": "The result extends Lin and Zeng's nonpositive-root range to the exact negative cutoff for real zeros and shows that the second diagonal decides the question for the whole family."
+    "why_it_matters": "The result extends Lin and Zeng's nonpositive-root range to the exact negative cutoff for real zeros and shows that the second diagonal decides the question for the whole family.",
+    "difficulty": 3
   },
   {
     "version": "v1.16.0",
@@ -198,7 +214,8 @@
     "verification_method": "Computer-assisted proof",
     "explainer": "How many points can a seven-by-seven-by-seven grid hold if no three distinct points lie on a straight line? A coordinate layer can hold at most 14 points, because its seven rows can hold at most two apiece. We check whether 87 points can fit when each coordinate direction has a layer of 14.\n\nOnce three full layers are fixed, any site on a line through two of their points is ruled out. Counting the sites that can still fit in each of the other layers usually gives an upper bound below 87. In the remaining cases the checker lists every possible pattern for one additional layer and closes each branch. For example, one triple of full layers at height zero leaves a single 13-point pattern in the layer at $z=3$ if the total is to reach 87. Fixing that pattern reduces the bound to 78 by counting along parallel lines.\n\nThe complete replay shows that a set with three full perpendicular layers has at most 86 points. The exact maximum without the layer condition remains open. [Original seven-cube problem](https://arxiv.org/html/2609.25133v1#S3)",
     "significance": "Focused contribution",
-    "why_it_matters": "The bound adds to the known one-axis layer exclusions by showing that 87 points are impossible with three full perpendicular layers at any heights."
+    "why_it_matters": "The bound adds to the known one-axis layer exclusions by showing that 87 points are impossible with three full perpendicular layers at any heights.",
+    "difficulty": 3
   },
   {
     "version": "v1.17.0",
@@ -212,7 +229,8 @@
     "previous_version": "v1.14.0",
     "explainer": "The Jacobi–Stirling numbers form a triangular array controlled by a real parameter. Each diagonal gives a generating series with a polynomial numerator. Lin and Zeng established when these numerators have only nonpositive zeros. Allowing positive zeros gives a wider range. At parameter 2 the second numerator is (x(9+34x-3x^2)), which has three real zeros. As the parameter increases past the cutoff, the second numerator develops a nonreal pair. Up to the cutoff, a change of variable and a weighted polynomial recurrence propagate real splitting to every higher diagonal.",
     "significance": "Substantial advance",
-    "why_it_matters": "The sharp cutoff extends Lin and Zeng’s nonpositive-root range and shows that the second diagonal decides whether all the numerators have real zeros for a fixed nonnegative parameter."
+    "why_it_matters": "The sharp cutoff extends Lin and Zeng’s nonpositive-root range and shows that the second diagonal decides whether all the numerators have real zeros for a fixed nonnegative parameter.",
+    "difficulty": 3
   },
   {
     "version": "v1.18.0",
@@ -225,6 +243,7 @@
     "verification_method": "Computer-assisted proof",
     "explainer": "Start with two copies of every label and one barred copy of every label. After deleting four barred copies, count the allowed arrangements by descents, which are places where a letter is followed by a smaller one. This gives one polynomial for each deletion set. Gessel, Lin and Zeng ask whether the equal-weight sum always has real zeros. Ma and Wang proved that every nonnegative weighted sum works for several deletion counts, including one, two and three.\n\nAt rank 31, give extra weight to deleting the first four barred labels and to deleting the last four. Every deletion set still receives positive weight, but the resulting polynomial violates an inequality that every polynomial with only real zeros must satisfy. This example rules out a guarantee for all positive weights at four deletions. The all-rank claim for equal weights remains open. [Original conjecture](https://arxiv.org/pdf/1201.0622) · [Ma–Wang, §4](https://arxiv.org/html/2610.03111v1#S4)",
     "significance": "Focused contribution",
-    "why_it_matters": "Ma and Wang's theorem for arbitrary weights at one, two and three deletions cannot extend to the next deletion count."
+    "why_it_matters": "Ma and Wang's theorem for arbitrary weights at one, two and three deletions cannot extend to the next deletion count.",
+    "difficulty": 3
   }
 ]

@@ -37,3 +37,7 @@ python3 results/songsuwan-node-kayles-counterexample/verify.py
 | v1.0.0 | [Type B q-Stirling numbers, second-kind column one](results/first-column/README.md) · Among ranks $n \geq 2$, all interior coefficient gaps are strictly positive exactly when $n \geq 6$. | Lean classification for all ranks and a Python replay through row 256. |
 
 To cite a result, use its title and DOI where available, or give the release tag and the exact theorem you used. Corrections, earlier references and independent replays are welcome. [Open an issue](https://github.com/Toolbloxindex/solved-problems/issues)
+
+### Difficulty assessments
+
+Each new portfolio entry includes a numeric difficulty from L1 through L5 on the worklog scale. The publisher uses the result-specific level in `difficulty-ratings.json` when available and otherwise applies the worklog criteria to the title and settlement statement. When reviewing a release, record any result-specific rating under its slug before publication. Rate the released result itself, including the scope of a partial result.
