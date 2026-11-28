@@ -5,7 +5,9 @@
     "date": "2026-11-26",
     "title": "Strict log-concavity in the first type-B q-Stirling column",
     "summary": "In the first column of the second-kind array, strict log-concavity begins at row six.",
-    "verification": "The classification was formally checked in Lean."
+    "verification": "The classification was formally checked in Lean.",
+    "significance": "Focused contribution",
+    "why_it_matters": "The exact threshold at rank six identifies where the proposed strict inequality begins to hold throughout the first column."
   },
   {
     "version": "v1.1.0",
@@ -13,7 +15,9 @@
     "date": "2026-11-26",
     "title": "A 19-vertex counterexample to Graffiti.pc 138",
     "summary": "A tree whose longest path has 17 vertices, one fewer than the conjecture requires.",
-    "verification": "Direct proof and an exhaustive check of the 19-vertex tree."
+    "verification": "Direct proof and an exhaustive check of the 19-vertex tree.",
+    "significance": "Focused contribution",
+    "why_it_matters": "The tree explains how the proposed path bound fails, and extending its spine makes the shortfall arbitrarily large."
   },
   {
     "version": "v1.2.0",
@@ -22,7 +26,9 @@
     "title": "Graffiti.pc 392b on 2-domination and matchings",
     "summary": "A matching bound on the number of vertices needed to give every unmarked vertex two marked neighbors.",
     "verification": "The full theorem was formally checked in Lean.",
-    "doi": "10.5281/zenodo.24571980"
+    "doi": "10.5281/zenodo.24571980",
+    "significance": "Focused contribution",
+    "why_it_matters": "The matching bound gives a guarantee for every connected graph with at least three vertices, including graphs with leaves."
   },
   {
     "version": "v1.3.0",
@@ -30,7 +36,9 @@
     "date": "2026-11-27",
     "title": "One-sided log-concavity for a column of the type B q-Stirling numbers",
     "summary": "Proves the parity inequality on the rising side of first-kind column one at every rank, and on the second diagonal of both families. The unrestricted conjecture remains open.",
-    "verification": "The formal proof was checked in Lean."
+    "verification": "The formal proof was checked in Lean.",
+    "significance": "Focused contribution",
+    "why_it_matters": "The result locates a whole range of coefficients where the conjectured inequality holds across ranks, even though the unrestricted case remains open."
   },
   {
     "version": "v1.4.0",
@@ -38,7 +46,9 @@
     "date": "2026-11-27",
     "title": "Coefficient inequalities for the type B q-Stirling numbers",
     "summary": "A combined technical note on seven Lean-verified results. Strict adjacent log-concavity in second-kind column one begins at rank six for ranks at least two. The note also proves a rising-side inequality in first-kind column one and parity log-concavity on the second diagonal of both families.",
-    "verification": "The formal proof was checked in Lean."
+    "verification": "The formal proof was checked in Lean.",
+    "significance": "Focused contribution",
+    "why_it_matters": "The combined treatment shows which coefficient inequalities are known across the two families and where the general conjecture remains open."
   },
   {
     "version": "v1.5.0",
@@ -46,7 +56,9 @@
     "date": "2026-11-27",
     "title": "Two partial results on the Seacrest–Seacrest graph-grabbing conjecture",
     "summary": "On even connected bipartite graphs with no induced once-subdivided claw, Alice can secure half the weight if adjacent positive weights agree. A second result compares opposite choices of the last vertex on a path with attached leaves. The general conjecture remains open.",
-    "verification": "The formal proof was checked in Lean."
+    "verification": "The formal proof was checked in Lean.",
+    "significance": "Focused contribution",
+    "why_it_matters": "The weight condition identifies a class of bipartite boards on which Alice can guarantee half the total weight."
   },
   {
     "version": "v1.6.0",
@@ -55,7 +67,9 @@
     "title": "A counterexample to Songsuwan’s period-two conjecture for Node-Kayles",
     "summary": "On a fixed 291-vertex graph, attach copies of the same five-vertex path at one vertex. The Node-Kayles values are 8 and 9 at arbitrarily large branch counts two apart. This disproves Songsuwan’s Conjecture 2.",
     "verification": "The formal proof was checked in Lean.",
-    "doi": "10.5281/zenodo.24614057"
+    "doi": "10.5281/zenodo.24614057",
+    "significance": "Substantial advance",
+    "why_it_matters": "Even after arbitrarily many identical branches are attached, adding two more can still change the game value, overturning the proposed long-run pattern."
   },
   {
     "version": "v1.7.0",
@@ -63,7 +77,9 @@
     "date": "2026-11-28",
     "title": "A uniform lower bound on the transient length of the consecutive-231 stack map",
     "summary": "For every n ≥ 8, some permutation of length n takes at least n + 3 passes of the consecutive-231 stack map to reach a periodic point.",
-    "verification": "The formal proof was checked in Lean."
+    "verification": "The formal proof was checked in Lean.",
+    "significance": "Focused contribution",
+    "why_it_matters": "A construction for every length from eight onward raises the known lower bound on how many passes this sorting rule can take."
   },
   {
     "version": "v1.8.0",
@@ -71,7 +87,9 @@
     "date": "2026-11-28",
     "title": "Armstrong’s Catalan ribbon partition conjecture at a = 6",
     "summary": "At a = 6, all nine slices of the fundamental box admit partitions into six-point saturated chains. The 1,296 ribbons cover all 7,776 points.",
-    "verification": "The formal proof was checked in Lean."
+    "verification": "The formal proof was checked in Lean.",
+    "significance": "Focused contribution",
+    "why_it_matters": "Explicit chains cover all nine slices for the six-ribbon case, giving a complete construction that can be checked point by point."
   },
   {
     "version": "v1.9.0",
@@ -80,7 +98,9 @@
     "title": "A positional proof for a 19-letter subsequence cover",
     "summary": "Only the full word can cover every position of abacadbabdcabcbadac by subsequence occurrences.",
     "verification": "Pinned Lean replay of WordSPrimitivityReplay.exact_claim and an independent exact computation.",
-    "explainer": "Pick one shorter word and try to cover every letter of abacadbabdcabcbadac with occurrences of it. Each occurrence may skip letters, and different occurrences may cover different positions. The three copies of d force an unexpectedly rigid choice: a covering word must use all three. That pins its four intervening and end pieces in place and forces the entire original word. This answers the authors’ request for a computer-free proof for this particular word."
+    "explainer": "Pick one shorter word and try to cover every letter of abacadbabdcabcbadac with occurrences of it. Each occurrence may skip letters, and different occurrences may cover different positions. The three copies of d force an unexpectedly rigid choice: a covering word must use all three. That pins its four intervening and end pieces in place and forces the entire original word. This answers the authors’ request for a computer-free proof for this particular word.",
+    "significance": "Focused contribution",
+    "why_it_matters": "The authors knew the answer by computation, and the positions of the three d’s explain by hand why every shorter word fails."
   },
   {
     "version": "v1.10.0",
@@ -89,7 +109,9 @@
     "title": "One-edge closures with consecutive breaks in log-concavity",
     "summary": "Three explicit one-edge closures answer Levit and Kadrawi’s Problem 6.6 for both named tree constructions.",
     "verification": "Pinned Lean replay of UnicyclicClosure.problem_6_6 and an independent exact computation.",
-    "explainer": "Count the ways to pick k vertices of a graph with no edges between them. As k grows, those counts can go up to a single peak and then drop, yet still bend the wrong way compared with their neighbors. Can several such bends survive after one extra edge closes a tree into a cycle? Three explicit graphs show that they can. The 315-vertex example has three consecutive breaks and still has a single peak. This settles the existence question; minimal graph sizes remain open."
+    "explainer": "Count the ways to pick k vertices of a graph with no edges between them. As k grows, those counts can go up to a single peak and then drop, yet still bend the wrong way compared with their neighbors. Can several such bends survive after one extra edge closes a tree into a cycle? Three explicit graphs show that they can. The 315-vertex example has three consecutive breaks and still has a single peak. This settles the existence question; minimal graph sizes remain open.",
+    "significance": "Focused contribution",
+    "why_it_matters": "Explicit examples from both named tree constructions answer the existence question, including a graph with three consecutive failures of log-concavity."
   },
   {
     "version": "v1.11.0",
@@ -98,7 +120,9 @@
     "title": "A sublogarithmic bound for integral arctangent-sum values",
     "summary": "Through N, the number of indices n ≥ 5 at which the arctangent-sum tangent is an integer is O((log N)^(3/4)).",
     "verification": "Lean checks the asymptotic bound for the literal Gaussian divisibility predicate.",
-    "explainer": "Add the angles whose tangents are the integers from 1 to n, then take the tangent of the sum. Can the answer be an integer once n reaches five? Amdeberhan, Medina and Moll conjectured that it never is. This result limits how often an exception could occur. Among the first N indices, the count grows at most like the three-quarters power of the logarithm of N. The estimate still allows isolated exceptions."
+    "explainer": "Add the angles whose tangents are the integers from 1 to n, then take the tangent of the sum. Can the answer be an integer once n reaches five? Amdeberhan, Medina and Moll conjectured that it never is. This result limits how often an exception could occur. Among the first N indices, the count grows at most like the three-quarters power of the logarithm of N. The estimate still allows isolated exceptions.",
+    "significance": "Substantial advance",
+    "why_it_matters": "The new bound improves the logarithmic estimate for how often an integer value could occur, while leaving open whether any occur after the first four terms."
   },
   {
     "version": "v1.12.0",
@@ -107,6 +131,8 @@
     "title": "Least periods of Moll’s signed arctangent companion sequence",
     "summary": "Gives the least eventual period of Moll’s signed real sequence modulo every positive integer and characterizes periods from index zero.",
     "verification": "Four proof modules rebuilt with pinned Lean and standard axioms. An independent prime-power review and finite state checks on 168 moduli agree.",
-    "explainer": "Victor Moll studied the real part of the running product $(1+i)(1+2i)\\cdots(1+ni)$ with an alternating sign. His paper gives several periods modulo primes and proposes a formula based on the prime’s residue modulo eight. The exact period depends on the multiplicative order of $-2$ instead. For example, modulo 31 that order is 10, and the least period is 310 rather than the 930 proposed by the residue-class formula.\n\nThe proof compares a handful of terms near the initial index with the same terms one period later. For odd moduli, these comparisons recover the index modulo the modulus and both coordinates of the running Gaussian product. A full block then acts by a scalar. The result gives the least eventual period modulo every positive integer, and determines exactly when the pattern repeats from the start. The conjecture that the original tangent sums are nonintegral for every $n\\ge5$ remains open."
+    "explainer": "Victor Moll studied the real part of the running product $(1+i)(1+2i)\\cdots(1+ni)$ with an alternating sign. His paper gives several periods modulo primes and proposes a formula based on the prime’s residue modulo eight. The exact period depends on the multiplicative order of $-2$ instead. For example, modulo 31 that order is 10, and the least period is 310 rather than the 930 proposed by the residue-class formula.\n\nThe proof compares a handful of terms near the initial index with the same terms one period later. For odd moduli, these comparisons recover the index modulo the modulus and both coordinates of the running Gaussian product. A full block then acts by a scalar. The result gives the least eventual period modulo every positive integer, and determines exactly when the pattern repeats from the start. The conjecture that the original tangent sums are nonintegral for every $n\\ge5$ remains open.",
+    "significance": "Substantial advance",
+    "why_it_matters": "The period modulo 31 overturns the proposed formula, and the replacement theorem gives the least eventual period for every positive modulus."
   }
 ]
