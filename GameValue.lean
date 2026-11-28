@@ -171,10 +171,15 @@ theorem bound_missing (s : Finset ℕ) : mexBound s ∉ s := by
 def missing (s : Finset ℕ) := (Finset.range (mexBound s + 1)) \ s
 
 def mex (s : Finset ℕ) : ℕ :=
-  (missing s).min' ⟨mexBound s, by simp [missing, bound_missing]⟩
+  (missing s).min.untopD 0
 
 theorem mex_spec (s : Finset ℕ) : IsMex (· ∈ s) (mex s) := by
-  have hmem : mex s ∈ missing s := Finset.min'_mem _ _
+  have hn : (missing s).Nonempty := ⟨mexBound s, by simp [missing, bound_missing]⟩
+  have hmex : mex s = (missing s).min' hn := by
+    rw [mex, ← Finset.coe_min' hn]
+    rfl
+  rw [hmex]
+  have hmem := Finset.min'_mem (missing s) hn
   obtain ⟨hle, hout⟩ := Finset.mem_sdiff.mp hmem
   have hlt := Finset.mem_range.mp hle
   refine ⟨hout, ?_⟩

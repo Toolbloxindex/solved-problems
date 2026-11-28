@@ -21,7 +21,7 @@ theorem bound_missing (s : Finset ℕ) : mexBound s ∉ s := by
 def missing (s : Finset ℕ) := (Finset.range (mexBound s + 1)) \ s
 
 def mex (s : Finset ℕ) : ℕ :=
-  (missing s).min' ⟨mexBound s, by simp [missing, bound_missing]⟩
+  (missing s).min.untopD 0
 
 variable {V : Type} [DecidableEq V]
 
