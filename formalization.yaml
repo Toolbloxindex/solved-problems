@@ -1,0 +1,64 @@
+version: v0.4
+project:
+  name: Armstrong’s Catalan ribbon partition conjecture at a = 6
+  description: At a = 6, all nine slices of the fundamental box admit partitions into
+    six-point saturated chains. The 1,296 ribbons cover all 7,776 points.
+  authors:
+  - Tomás Correia
+  license: MIT
+  responsible_maintainers:
+  - Tomás Correia
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05A19
+sources:
+- title: Armstrong, Conjecture 10.2
+  location: https://arxiv.org/html/2403.06318v4#S10
+  relationship: background
+- title: Armstrong’s Catalan ribbon partition conjecture at a = 6
+  location: https://github.com/Toolbloxindex/solved-problems/tree/v1.8.0/results/armstrong-six-ribbons
+  relationship: adapts
+related_formalizations:
+- id: https://github.com/Toolbloxindex/solved-problems/tree/v1.8.0/results/armstrong-six-ribbons
+  relationship: adapts
+  note: Tagged development with reproducible proof and computational check.
+status:
+  scope: At a = 6, all nine slices of the fundamental box admit partitions into six-point
+    saturated chains. The 1,296 ribbons cover all 7,776 points.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    framework: Codex
+    models: []
+    tool_setup: Lean 4 and Mathlib.
+    cost:
+      wall_time: not tracked
+      spend_usd: subscription-based
+      hardware: Windows/WSL and VPS
+    prompting_notes: Develop and verify the specific case or bound described in the
+      tagged release.
+  spend_usd: subscription-based
+  notes: Tomás Correia directed the project. Codex performed the mathematical development,
+    Lean formalization and port.
+fidelity:
+  divergences: Only the a = 6 case is settled.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: Self-assessment with agent-assisted independent mathematical and computational
+    checks. External peer review is pending.
+alignment:
+  statements:
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.8.0/results/armstrong-six-ribbons
+    lean: ArmstrongRibbons.SourceAudit.conjecture_10_2_integer_coordinates
+    module: Solution
+    status: proved
+acknowledgements: The authors of the original question and the Lean and Mathlib communities.
