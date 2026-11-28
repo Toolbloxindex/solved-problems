@@ -57,7 +57,7 @@ theorem signed_sample :
     f2 (-(6/5)) (-(1/20)) < 0 ∧ 0 < f2 (-(6/5)) 0 := by
   norm_num [f2]
 
-private noncomputable def weight (u : ℝ) (n : ℕ) : ℝ :=
+noncomputable def weight (u : ℝ) (n : ℕ) : ℝ :=
   (n : ℝ) * ((n : ℝ) + u)
 
 /-- The source entries J(n+k,n;u), reindexed by rank k and column n. -/
@@ -79,7 +79,7 @@ private theorem diagonal_one (u : ℝ) (n : ℕ) :
     unfold diagonalOne
     ring
 
-private noncomputable def chooseSix (n : ℝ) : ℝ :=
+noncomputable def chooseSix (n : ℝ) : ℝ :=
   n * (n-1) * (n-2) * (n-3) * (n-4) * (n-5) / 720
 
 /-- Falling-factorial form for the n-th coefficient of x F₂(x;u) / (1-x)⁷. -/
