@@ -81,6 +81,14 @@ def hostSet (H : Rooted) (d : ℕ) : Prop :=
 def armSet (A : Rooted) (d : ℕ) : Prop :=
   ∃ s, Reach A (· ≠ A.u) s ∧ value A.E s ^^^ value A.E (s.erase A.u) = d
 
+private theorem xor_zero_iff {a b : Nat} : a ^^^ b = 0 ↔ a = b := by
+  constructor
+  · intro h
+    have e := congrArg (fun x => x ^^^ b) h
+    simpa using e
+  · rintro rfl
+    exact Nat.xor_self _
+
 /-- Exact erasure at all quiet followers is equivalent to omission of zero. -/
 theorem hereditary_iff (H : Rooted) :
     (∀ s, quiet H s → value H.E s = value H.E (s.erase H.u)) ↔ ¬hostSet H 0 := by
@@ -88,13 +96,13 @@ theorem hereditary_iff (H : Rooted) :
   · intro eq ⟨s,q,zero⟩
     apply move_ne H.E (quiet_live q)
     rw [eq s q]
-    exact Nat.xor_eq_zero_iff.mp zero
+    exact xor_zero_iff.mp zero
   · intro absent s q
     apply erase_hub_of_quiet H.E H.u (quiet H) _ _ s q
     · intro t reach v hv hn hu
       exact Reach.move reach hv ⟨hn,(Finset.mem_filter.mp hu).2.2⟩
     · intro t reach _ eq
-      exact absent ⟨t,reach,Nat.xor_eq_zero_iff.mpr eq.symm⟩
+      exact absent ⟨t,reach,xor_zero_iff.mpr eq.symm⟩
 
 end LiteralKayles.Erasure
 
