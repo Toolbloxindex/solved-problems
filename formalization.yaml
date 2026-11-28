@@ -1,0 +1,72 @@
+version: v0.4
+project:
+  name: One-edge closures with consecutive breaks in log-concavity
+  description: Count the ways to pick k vertices of a graph with no edges between
+    them. As k grows, those counts can go up to a single peak and then drop, yet still
+    bend the wrong way compared with their neighbors. Can several such bends survive
+    after one extra edge closes a tree into a cycle? Three explicit graphs show that
+    they can. The 315-vertex example has three consecutive breaks and still has a
+    single peak. This settles the existence question; minimal graph sizes remain open.
+  authors:
+  - Tomás Correia
+  license: MIT
+  responsible_maintainers:
+  - Tomás Correia
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05C69
+sources:
+- title: Problem 6.6 on unicyclic closures
+  location: https://arxiv.org/html/2603.17114v1#S6
+  relationship: background
+- title: One-edge closures with consecutive breaks in log-concavity
+  location: https://github.com/Toolbloxindex/solved-problems/tree/v1.10.0/results/unicyclic-independence-breaks
+  relationship: adapts
+related_formalizations:
+- id: https://github.com/Toolbloxindex/solved-problems/tree/v1.10.0/results/unicyclic-independence-breaks
+  relationship: adapts
+  note: Tagged development with reproducible proof and computational check.
+status:
+  scope: Count the ways to pick k vertices of a graph with no edges between them.
+    As k grows, those counts can go up to a single peak and then drop, yet still bend
+    the wrong way compared with their neighbors. Can several such bends survive after
+    one extra edge closes a tree into a cycle? Three explicit graphs show that they
+    can. The 315-vertex example has three consecutive breaks and still has a single
+    peak. This settles the existence question; minimal graph sizes remain open.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    framework: Codex
+    models: []
+    tool_setup: Lean 4 and Mathlib.
+    cost:
+      wall_time: not tracked
+      spend_usd: subscription-based
+      hardware: Windows/WSL and VPS
+    prompting_notes: Develop and verify the specific graph results in the tagged release.
+  spend_usd: subscription-based
+  notes: Tomás Correia directed the project. Codex performed the mathematical development,
+    Lean formalization and port.
+fidelity:
+  divergences: Three explicit finite examples. No classification of all unicyclic
+    graphs is claimed.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: Self-assessment with agent-assisted independent mathematical and computational
+    checks. External peer review is pending.
+alignment:
+  statements:
+  - source: https://github.com/Toolbloxindex/solved-problems/tree/v1.10.0/results/unicyclic-independence-breaks
+    lean: UnicyclicClosure.problem_6_6
+    module: Solution
+    status: proved
+acknowledgements: The authors of the original question and the Lean and Mathlib communities.
