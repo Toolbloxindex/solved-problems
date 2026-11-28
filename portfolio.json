@@ -7,7 +7,8 @@
     "summary": "In the first column of the second-kind array, strict log-concavity begins at row six.",
     "verification": "The classification was formally checked in Lean.",
     "significance": "Focused contribution",
-    "why_it_matters": "The exact threshold at rank six identifies where the proposed strict inequality begins to hold throughout the first column."
+    "why_it_matters": "The exact threshold at rank six identifies where the proposed strict inequality begins to hold throughout the first column.",
+    "what_this_settles": "In the first column of the type-B Stirling numbers of the second kind, every interior coefficient satisfies strict log-concavity exactly from rank six onward."
   },
   {
     "version": "v1.1.0",
@@ -17,7 +18,8 @@
     "summary": "A tree whose longest path has 17 vertices, one fewer than the conjecture requires.",
     "verification": "Direct proof and an exhaustive check of the 19-vertex tree.",
     "significance": "Focused contribution",
-    "why_it_matters": "The tree explains how the proposed path bound fails, and extending its spine makes the shortfall arbitrarily large."
+    "why_it_matters": "The tree explains how the proposed path bound fails, and extending its spine makes the shortfall arbitrarily large.",
+    "what_this_settles": "A 19-vertex tree has a longest induced path of 17 vertices where Graffiti.pc Conjecture 138 requires at least 18, disproving the conjecture."
   },
   {
     "version": "v1.2.0",
@@ -28,7 +30,8 @@
     "verification": "The full theorem was formally checked in Lean.",
     "doi": "10.5281/zenodo.24571980",
     "significance": "Focused contribution",
-    "why_it_matters": "The matching bound gives a guarantee for every connected graph with at least three vertices, including graphs with leaves."
+    "why_it_matters": "The matching bound gives a guarantee for every connected graph with at least three vertices, including graphs with leaves.",
+    "what_this_settles": "The matching bound in Graffiti.pc Conjecture 392b holds for every finite simple connected graph with at least three vertices."
   },
   {
     "version": "v1.3.0",
@@ -38,7 +41,8 @@
     "summary": "Proves the parity inequality on the rising side of first-kind column one at every rank, and on the second diagonal of both families. The unrestricted conjecture remains open.",
     "verification": "The formal proof was checked in Lean.",
     "significance": "Focused contribution",
-    "why_it_matters": "The result locates a whole range of coefficients where the conjectured inequality holds across ranks, even though the unrestricted case remains open."
+    "why_it_matters": "The result locates a whole range of coefficients where the conjectured inequality holds across ranks, even though the unrestricted case remains open.",
+    "what_this_settles": "The parity log-concavity inequality holds on the rising side of first-kind column one and on the second diagonal of both type-B families, leaving the other cases open."
   },
   {
     "version": "v1.4.0",
@@ -48,7 +52,8 @@
     "summary": "A combined technical note on seven Lean-verified results. Strict adjacent log-concavity in second-kind column one begins at rank six for ranks at least two. The note also proves a rising-side inequality in first-kind column one and parity log-concavity on the second diagonal of both families.",
     "verification": "The formal proof was checked in Lean.",
     "significance": "Focused contribution",
-    "why_it_matters": "The combined treatment shows which coefficient inequalities are known across the two families and where the general conjecture remains open."
+    "why_it_matters": "The combined treatment shows which coefficient inequalities are known across the two families and where the general conjecture remains open.",
+    "what_this_settles": "The combined results establish the rank-six threshold for strict log-concavity in second-kind column one and prove special cases of the parity inequalities in Sagan–Swanson Conjecture 7.5."
   },
   {
     "version": "v1.5.0",
@@ -58,7 +63,8 @@
     "summary": "On even connected bipartite graphs with no induced once-subdivided claw, Alice can secure half the weight if adjacent positive weights agree. A second result compares opposite choices of the last vertex on a path with attached leaves. The general conjecture remains open.",
     "verification": "The formal proof was checked in Lean.",
     "significance": "Focused contribution",
-    "why_it_matters": "The weight condition identifies a class of bipartite boards on which Alice can guarantee half the total weight."
+    "why_it_matters": "The weight condition identifies a class of bipartite boards on which Alice can guarantee half the total weight.",
+    "what_this_settles": "Alice can guarantee half the total weight on even connected bipartite graphs with no induced once-subdivided claw when adjacent positive weights agree."
   },
   {
     "version": "v1.6.0",
@@ -69,7 +75,8 @@
     "verification": "The formal proof was checked in Lean.",
     "doi": "10.5281/zenodo.24614057",
     "significance": "Substantial advance",
-    "why_it_matters": "Even after arbitrarily many identical branches are attached, adding two more can still change the game value, overturning the proposed long-run pattern."
+    "why_it_matters": "Even after arbitrarily many identical branches are attached, adding two more can still change the game value, overturning the proposed long-run pattern.",
+    "what_this_settles": "Adding two identical branches can change the Node-Kayles value even at arbitrarily large branch counts, disproving Songsuwan’s Conjecture 2."
   },
   {
     "version": "v1.7.0",
@@ -79,7 +86,8 @@
     "summary": "For every n ≥ 8, some permutation of length n takes at least n + 3 passes of the consecutive-231 stack map to reach a periodic point.",
     "verification": "The formal proof was checked in Lean.",
     "significance": "Focused contribution",
-    "why_it_matters": "A construction for every length from eight onward raises the known lower bound on how many passes this sorting rule can take."
+    "why_it_matters": "A construction for every length from eight onward raises the known lower bound on how many passes this sorting rule can take.",
+    "what_this_settles": "For every length n ≥ 8, some permutation takes at least n + 3 passes of the consecutive-231 stack map to reach a periodic point, leaving the maximum delay open."
   },
   {
     "version": "v1.8.0",
@@ -89,7 +97,8 @@
     "summary": "At a = 6, all nine slices of the fundamental box admit partitions into six-point saturated chains. The 1,296 ribbons cover all 7,776 points.",
     "verification": "The formal proof was checked in Lean.",
     "significance": "Focused contribution",
-    "why_it_matters": "Explicit chains cover all nine slices for the six-ribbon case, giving a complete construction that can be checked point by point."
+    "why_it_matters": "Explicit chains cover all nine slices for the six-ribbon case, giving a complete construction that can be checked point by point.",
+    "what_this_settles": "All nine slices admit the required ribbon partition at a = 6, proving that case of Armstrong’s conjecture."
   },
   {
     "version": "v1.9.0",
@@ -100,7 +109,8 @@
     "verification": "Pinned Lean replay of WordSPrimitivityReplay.exact_claim and an independent exact computation.",
     "explainer": "Pick one shorter word and try to cover every letter of abacadbabdcabcbadac with occurrences of it. Each occurrence may skip letters, and different occurrences may cover different positions. The three copies of d force an unexpectedly rigid choice: a covering word must use all three. That pins its four intervening and end pieces in place and forces the entire original word. This answers the authors’ request for a computer-free proof for this particular word.",
     "significance": "Focused contribution",
-    "why_it_matters": "The authors knew the answer by computation, and the positions of the three d’s explain by hand why every shorter word fails."
+    "why_it_matters": "The authors knew the answer by computation, and the positions of the three d’s explain by hand why every shorter word fails.",
+    "what_this_settles": "Only the full 19-letter word abacadbabdcabcbadac can cover all its positions by subsequence occurrences, answering the authors’ request for a computer-free proof."
   },
   {
     "version": "v1.10.0",
@@ -111,7 +121,8 @@
     "verification": "Pinned Lean replay of UnicyclicClosure.problem_6_6 and an independent exact computation.",
     "explainer": "Count the ways to pick k vertices of a graph with no edges between them. As k grows, those counts can go up to a single peak and then drop, yet still bend the wrong way compared with their neighbors. Can several such bends survive after one extra edge closes a tree into a cycle? Three explicit graphs show that they can. The 315-vertex example has three consecutive breaks and still has a single peak. This settles the existence question; minimal graph sizes remain open.",
     "significance": "Focused contribution",
-    "why_it_matters": "Explicit examples from both named tree constructions answer the existence question, including a graph with three consecutive failures of log-concavity."
+    "why_it_matters": "Explicit examples from both named tree constructions answer the existence question, including a graph with three consecutive failures of log-concavity.",
+    "what_this_settles": "Both tree constructions in Levit and Kadrawi’s Problem 6.6 admit a one-edge closure with consecutive failures of log-concavity."
   },
   {
     "version": "v1.11.0",
@@ -122,7 +133,8 @@
     "verification": "Lean checks the asymptotic bound for the literal Gaussian divisibility predicate.",
     "explainer": "Add the angles whose tangents are the integers from 1 to n, then take the tangent of the sum. Can the answer be an integer once n reaches five? Amdeberhan, Medina and Moll conjectured that it never is. This result limits how often an exception could occur. Among the first N indices, the count grows at most like the three-quarters power of the logarithm of N. The estimate still allows isolated exceptions.",
     "significance": "Substantial advance",
-    "why_it_matters": "The new bound improves the logarithmic estimate for how often an integer value could occur, while leaving open whether any occur after the first four terms."
+    "why_it_matters": "The new bound improves the logarithmic estimate for how often an integer value could occur, while leaving open whether any occur after the first four terms.",
+    "what_this_settles": "Among indices from 5 through N, at most O((log N)^(3/4)) yield an integer tangent, leaving open whether any such index exists."
   },
   {
     "version": "v1.12.0",
@@ -133,6 +145,7 @@
     "verification": "Four proof modules rebuilt with pinned Lean and standard axioms. An independent prime-power review and finite state checks on 168 moduli agree.",
     "explainer": "Victor Moll studied the real part of the running product $(1+i)(1+2i)\\cdots(1+ni)$ with an alternating sign. His paper gives several periods modulo primes and proposes a formula based on the prime’s residue modulo eight. The exact period depends on the multiplicative order of $-2$ instead. For example, modulo 31 that order is 10, and the least period is 310 rather than the 930 proposed by the residue-class formula.\n\nThe proof compares a handful of terms near the initial index with the same terms one period later. For odd moduli, these comparisons recover the index modulo the modulus and both coordinates of the running Gaussian product. A full block then acts by a scalar. The result gives the least eventual period modulo every positive integer, and determines exactly when the pattern repeats from the start. The conjecture that the original tangent sums are nonintegral for every $n\\ge5$ remains open.",
     "significance": "Substantial advance",
-    "why_it_matters": "The period modulo 31 overturns the proposed formula, and the replacement theorem gives the least eventual period for every positive modulus."
+    "why_it_matters": "The period modulo 31 overturns the proposed formula, and the replacement theorem gives the least eventual period for every positive modulus.",
+    "what_this_settles": "The result determines the least eventual period for every positive modulus and disproves Moll’s proposed prime-modulus formula at 31."
   }
 ]
