@@ -41,6 +41,8 @@ Moll’s preprint is dated 14 July 2012 and his publication list records the 201
 
 ## Verification
 
+Palomar’s Comparator checks two theorem declarations, `PalomarMoll.least_eventual_period` and `PalomarMoll.pure_period_iff`. Their statements use the definitions in the Challenge. The configuration’s separate list of definitions to compare is empty. [Submitted Comparator configuration](https://github.com/Toolbloxindex/solved-problems/blob/3eb9d332abe163ab7c9a1f63d434acc97315a725/comparator-moll-signed-real-periods.json)
+
 `MollRigidity.gaussProd` omits the neutral factor and `MollRigidity.moll` applies the sign as $-((-1)^n\operatorname{Re} P_n)$. `EventualPeriod` quantifies over all indices above a single cutoff. `eventualLength` takes the lcm over distinct prime divisors, each with its exact factorization exponent. Theorems `MollRigidity.least_eventual_period` and `MollRigidity.pure_period_iff` record the two assertions above. An independent mathematical check reviewed the prime-power argument. A separate exact modular recurrence detects full state cycles and measures the output’s minimal periods on 168 moduli. The computation is a check on the formula. The general proof is deductive. Codex assisted with the mathematical development, checks and Lean formalization under Tomás Correia’s direction.
 
 Run `python3 period_controls.py` to reproduce the literal recurrence comparisons. It prints period 310 modulo 31 and period 930 modulo 186, and reports agreement on 168 moduli.
