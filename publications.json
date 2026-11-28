@@ -184,5 +184,17 @@
     "subject": "Enumerative combinatorics",
     "kind": "Proof",
     "keywords": "Jacobi–Stirling numbers, diagonal generating functions, real-rootedness, cubic discriminant, Pólya frequency"
+  },
+  {
+    "id": "grid-cube-seven-perpendicular-86-v1",
+    "date": "2026-11-28",
+    "version": "v1.16.0",
+    "result": "grid-cube-seven-perpendicular-86",
+    "title": "A certificate for three full layers in the seven-cube",
+    "summary": "Every subset of the seven-cube with no three distinct points on a real line and a 14-point layer perpendicular to each coordinate axis has at most 86 points.",
+    "verification": "Computer-assisted proof · independent AI mathematical review",
+    "subject": "Discrete geometry",
+    "kind": "Partial proof",
+    "keywords": "no-three-in-line, lattice cube, caps, exact certificate, layer bounds"
   }
 ]

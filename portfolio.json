@@ -186,5 +186,18 @@
     "explainer": "The second-kind Jacobi–Stirling numbers form a triangular array that depends on a real parameter \\(u\\). Each diagonal has a generating function whose numerator is a polynomial. The question is how far below zero \\(u\\) can go while every one of those polynomials still has only real zeros.\n\nAt \\(u=-6/5\\), all the diagonal numerators have real zeros. Apart from the factor \\(x\\), the second numerator has three negative zeros, one in each of the intervals cut out by \\(-2,-1,-1/20,0\\). The odd diagonals each have one positive zero. The proof uses the first three generating-series coefficients to control where two negative zeros appear at each odd-to-even step.\n\nThere is an exact cutoff between \\(-121/100\\) and \\(-6/5\\). The cutoff is included, even though two roots of the second numerator coincide there. At every more negative parameter the second numerator has a nonreal pair.",
     "significance": "Substantial advance",
     "why_it_matters": "The result extends Lin and Zeng's nonpositive-root range to the exact negative cutoff for real zeros and shows that the second diagonal decides the question for the whole family."
+  },
+  {
+    "version": "v1.16.0",
+    "result": "grid-cube-seven-perpendicular-86",
+    "date": "2026-11-28",
+    "title": "A certificate for three full layers in the seven-cube",
+    "summary": "Every subset of the seven-cube with no three distinct points on a real line and a 14-point layer perpendicular to each coordinate axis has at most 86 points.",
+    "verification": "Computer-assisted proof · independent AI mathematical review",
+    "what_this_settles": "Every subset of the seven-cube with no three distinct real-collinear points and a 14-point layer perpendicular to each of the three coordinate axes has at most 86 points, and the unrestricted maximum remains open.",
+    "verification_method": "Computer-assisted proof",
+    "explainer": "How many points can a seven-by-seven-by-seven grid hold if no three distinct points lie on a straight line? A coordinate layer can hold at most 14 points, because its seven rows can hold at most two apiece. We check whether 87 points can fit when each coordinate direction has a layer of 14.\n\nOnce three full layers are fixed, any site on a line through two of their points is ruled out. Counting the sites that can still fit in each of the other layers usually gives an upper bound below 87. In the remaining cases the checker lists every possible pattern for one additional layer and closes each branch. For example, one triple of full layers at height zero leaves a single 13-point pattern in the layer at $z=3$ if the total is to reach 87. Fixing that pattern reduces the bound to 78 by counting along parallel lines.\n\nThe complete replay shows that a set with three full perpendicular layers has at most 86 points. The exact maximum without the layer condition remains open. [Original seven-cube problem](https://arxiv.org/html/2609.25133v1#S3)",
+    "significance": "Focused contribution",
+    "why_it_matters": "The bound adds to the known one-axis layer exclusions by showing that 87 points are impossible with three full perpendicular layers at any heights."
   }
 ]

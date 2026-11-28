@@ -1,0 +1,10 @@
+{
+  "method": "Computer-assisted proof",
+  "source": "https://arxiv.org/html/2609.25133v1#S3",
+  "independent_review": "passed",
+  "reviewed_sha256": {
+    "PROOF.md": "23a0fe5c2fa38e3e1f514d4262eedb079208ded4273ff9f6d80be6d409157d1e",
+    "verify.py": "4c68be79c596cfe5476b90924661045c00b97988b87746fb7ca80c51da80c27e",
+    "forest.json": "6e67ec746b605c88ce8a9f95ad329157c220896f31329895f78e6cce80067f22"
+  }
+}
