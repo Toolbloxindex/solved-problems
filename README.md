@@ -16,6 +16,10 @@ python3 results/songsuwan-node-kayles-counterexample/verify.py
 
 | Release | Problem and result | Verification |
 | --- | --- | --- |
+| v1.10.0 | [One-edge closures with consecutive breaks in log-concavity](results/unicyclic-independence-breaks/README.md) · Three explicit one-edge closures answer Levit and Kadrawi’s Problem 6.6 for both named tree constructions. | Pinned Lean replay of UnicyclicClosure.problem_6_6 and an independent exact computation. |
+| v1.9.0 | [A positional proof for a 19-letter subsequence cover](results/nineteen-letter-subsequence-cover/README.md) · Only the full word can cover every position of abacadbabdcabcbadac by subsequence occurrences. | Pinned Lean replay of WordSPrimitivityReplay.exact_claim and an independent exact computation. |
+| v1.8.0 | [Armstrong’s Catalan ribbon partition conjecture at a = 6](results/armstrong-six-ribbons/README.md) · At a = 6, all nine slices of the fundamental box admit partitions into six-point saturated chains. The 1,296 ribbons cover all 7,776 points. | Lean checks the integer-coordinate theorem and all slice certificates. A separate Python checker verifies coverage and cover relations. |
+| v1.7.0 | [A uniform lower bound on the transient length of the consecutive-231 stack map](results/consecutive-231-stack-delay/README.md) · For every n ≥ 8, some permutation of length n takes at least n + 3 passes of the consecutive-231 stack map to reach a periodic point. | Lean checks the construction for every n ≥ 8 and every pass before n + 3. |
 | v1.6.0 | [Songsuwan, Node-Kayles](results/songsuwan-node-kayles-counterexample/README.md) · A fixed graph disproves eventual period two in Conjecture 2. | Lean proof for all branch counts in two progressions. Independent Python certificate check. |
 | v1.5.0 | [Seacrest–Seacrest, graph grabbing](results/graph-grabbing-partial-results/README.md) · Alice secures half the weight on a restricted class of weighted bipartite graphs. A second result compares two choices of final vertex on a path with attached leaves. | Three Lean theorems with an axiom audit. The general conjecture remains open. |
 | v1.4.0 | [Type B q-Stirling coefficients](results/type-b-q-stirling-coefficients/README.md) · A combined account of the first-column and second-diagonal inequalities in the two families. | Seven final Lean declarations across eight modules. |
@@ -25,11 +29,3 @@ python3 results/songsuwan-node-kayles-counterexample/verify.py
 | v1.0.0 | [Type B q-Stirling numbers, second-kind column one](results/first-column/README.md) · Among ranks $n \geq 2$, all interior coefficient gaps are strictly positive exactly when $n \geq 6$. | Lean classification for all ranks and a Python replay through row 256. |
 
 To cite a result, use its title and DOI where available, or give the release tag and the exact theorem you used. Corrections, earlier references and independent replays are welcome. [Open an issue](https://github.com/Toolbloxindex/solved-problems/issues)
-
-- [A uniform lower bound on the transient length of the consecutive-231 stack map](results/consecutive-231-stack-delay/README.md) · v1.7.0
-
-- [Armstrong’s Catalan ribbon partition conjecture at a = 6](results/armstrong-six-ribbons/README.md) · v1.8.0
-
-- [A positional proof for a 19-letter subsequence cover](results/nineteen-letter-subsequence-cover/README.md) · v1.9.0
-
-- [One-edge closures with consecutive breaks in log-concavity](results/unicyclic-independence-breaks/README.md) · v1.10.0
