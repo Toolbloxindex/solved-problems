@@ -1,0 +1,8 @@
+{
+  "modules": [
+    "OddTwo"
+  ],
+  "theorems": [
+    "ArmstrongOddTwo.c2_ribbon_partition"
+  ]
+}

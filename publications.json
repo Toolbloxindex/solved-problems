@@ -148,5 +148,17 @@
     "subject": "Number theory",
     "kind": "Theorem",
     "keywords": "Victor Moll, Gaussian integers, modular period, arctangent sums, multiplicative order"
+  },
+  {
+    "id": "armstrong-odd-two-ribbons-v1",
+    "date": "2026-11-28",
+    "version": "v1.13.0",
+    "result": "armstrong-odd-two-ribbons",
+    "title": "Equal-length ribbons in Armstrong’s sum-two slice",
+    "summary": "Partitions the sum-two slice into saturated chains of the prescribed length for every odd parameter and gives the reflected slice by complementation.",
+    "verification": "Pinned Lean proof for the sum-two cut with standard axioms. Separate mathematical review checks the exact source statement and the written reflection.",
+    "subject": "Algebraic combinatorics",
+    "kind": "Partial proof",
+    "keywords": "Drew Armstrong, ribbon partition, rational q-Catalan, Young diagram, saturated chain"
   }
 ]

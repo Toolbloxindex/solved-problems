@@ -147,5 +147,18 @@
     "significance": "Substantial advance",
     "why_it_matters": "The period modulo 31 overturns the proposed formula, and the replacement theorem gives the least eventual period for every positive modulus.",
     "what_this_settles": "The result determines the least eventual period for every positive modulus and disproves Moll’s proposed prime-modulus formula at 31."
+  },
+  {
+    "version": "v1.13.0",
+    "result": "armstrong-odd-two-ribbons",
+    "date": "2026-11-28",
+    "title": "Equal-length ribbons in Armstrong’s sum-two slice",
+    "summary": "Partitions the sum-two slice into saturated chains of the prescribed length for every odd parameter and gives the reflected slice by complementation.",
+    "verification": "Pinned Lean proof for the sum-two cut with standard axioms. Separate mathematical review checks the exact source statement and the written reflection.",
+    "what_this_settles": "Armstrong’s Conjecture 10.2 holds at the cut $c=2$ and the reflected cut $c=(a-1)^2-2$ for every odd $a\\ge3$, with the first cut checked in Lean and the reflected cut deduced in writing, while the general all-cut conjecture remains open.",
+    "verification_method": "Lean-verified proof",
+    "explainer": "Drew Armstrong asks whether lattice points between successive coprime cuts can be partitioned into chains that visit one point at each successive rank and contain exactly $a$ points. At the cut where the coordinates sum to two, each point gives two occupied positions, with repetition allowed. Order those positions as a pair. Each chain starts by increasing the longer column and then alternates column increases. For example, when $a=7$ one seven-point chain runs from $(0,0)$ along $(0,j)$ through $(0,5)$ and then to $(1,5)$. The construction works at this cut for every odd $a\\ge3$. Complementing the coordinates gives the reflected single slice. The general conjecture over all cuts remains open. [Armstrong’s paper](https://link.springer.com/article/10.1007/s00026-026-00819-9)",
+    "significance": "Focused contribution",
+    "why_it_matters": "A single geometric rule extends Armstrong’s small-parameter sum-two examples to every odd parameter and also gives their reflected partitions."
   }
 ]
