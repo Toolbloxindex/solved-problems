@@ -1,0 +1,11 @@
+{
+  "modules": [
+    "GraphCount",
+    "GraphSource",
+    "GraphDigits",
+    "ClosureProblem"
+  ],
+  "theorems": [
+    "UnicyclicClosure.problem_6_6"
+  ]
+}

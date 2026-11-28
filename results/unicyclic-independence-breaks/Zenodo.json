@@ -1,0 +1,10 @@
+{
+  "creators": [
+    {
+      "name": "Correia, Tomás"
+    }
+  ],
+  "license": "mit",
+  "significance": "Three explicit one-edge closures answer Levit and Kadrawi’s Problem 6.6 for both named tree constructions.",
+  "prior_work": "The tree constructions are due to Bautista-Ramos and to Bautista-Ramos, Guillén-Galván and Gómez-Salgado. Levit and Kadrawi’s Theorem 5.1 already treats single-break closures for other parameters. Here the additional edge preserves multiple breaks. The search found no earlier matching resolution; priority remains undetermined. [Problem 6.6](https://arxiv.org/html/2603.17114v1#S6)"
+}

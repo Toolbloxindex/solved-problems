@@ -112,5 +112,17 @@
     "subject": "Combinatorics on words",
     "kind": "Proof",
     "keywords": "Combinatorics on words"
+  },
+  {
+    "id": "unicyclic-independence-breaks-v1",
+    "result": "unicyclic-independence-breaks",
+    "version": "v1.10.0",
+    "date": "2026-11-28",
+    "title": "One-edge closures with consecutive breaks in log-concavity",
+    "summary": "Three explicit one-edge closures answer Levit and Kadrawi’s Problem 6.6 for both named tree constructions.",
+    "verification": "Pinned Lean replay of UnicyclicClosure.problem_6_6 and an independent exact computation.",
+    "subject": "Graph theory",
+    "kind": "Proof",
+    "keywords": "Graph theory"
   }
 ]

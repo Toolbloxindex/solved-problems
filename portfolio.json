@@ -81,5 +81,14 @@
     "summary": "Only the full word can cover every position of abacadbabdcabcbadac by subsequence occurrences.",
     "verification": "Pinned Lean replay of WordSPrimitivityReplay.exact_claim and an independent exact computation.",
     "explainer": "Pick one shorter word and try to cover every letter of abacadbabdcabcbadac with occurrences of it. Each occurrence may skip letters, and different occurrences may cover different positions. The three copies of d force an unexpectedly rigid choice: a covering word must use all three. That pins its four intervening and end pieces in place and forces the entire original word. This answers the authors’ request for a computer-free proof for this particular word."
+  },
+  {
+    "version": "v1.10.0",
+    "result": "unicyclic-independence-breaks",
+    "date": "2026-11-28",
+    "title": "One-edge closures with consecutive breaks in log-concavity",
+    "summary": "Three explicit one-edge closures answer Levit and Kadrawi’s Problem 6.6 for both named tree constructions.",
+    "verification": "Pinned Lean replay of UnicyclicClosure.problem_6_6 and an independent exact computation.",
+    "explainer": "Count the ways to pick k vertices of a graph with no edges between them. As k grows, those counts can go up to a single peak and then drop, yet still bend the wrong way compared with their neighbors. Can several such bends survive after one extra edge closes a tree into a cycle? Three explicit graphs show that they can. The 315-vertex example has three consecutive breaks and still has a single peak. This settles the existence question; minimal graph sizes remain open."
   }
 ]

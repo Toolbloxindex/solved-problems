@@ -31,3 +31,5 @@ To cite a result, use its title and DOI where available, or give the release tag
 - [Armstrong’s Catalan ribbon partition conjecture at a = 6](results/armstrong-six-ribbons/README.md) · v1.8.0
 
 - [A positional proof for a 19-letter subsequence cover](results/nineteen-letter-subsequence-cover/README.md) · v1.9.0
+
+- [One-edge closures with consecutive breaks in log-concavity](results/unicyclic-independence-breaks/README.md) · v1.10.0
