@@ -6,6 +6,8 @@ Count the ways to pick k vertices of a graph with no edges between them. As k gr
 
 ## Argument
 
+The selected Lean theorem proves unimodality in the weak sense and proves a strict break at each displayed index. The independent Python check computes every coefficient, checks strict increase and decrease around each listed peak, and enumerates all the breaks. The unique peaks and exhaustive lists in this table come from that computation.
+
 | Source tree | Vertices | Independence number | Unique peak | All breaks |
 |---|---:|---:|---:|---|
 | Bautista-Ramos, TG(2,5) | 70 | 37 | 21 | 34, 36 |
