@@ -90,5 +90,14 @@
     "summary": "Three explicit one-edge closures answer Levit and Kadrawi’s Problem 6.6 for both named tree constructions.",
     "verification": "Pinned Lean replay of UnicyclicClosure.problem_6_6 and an independent exact computation.",
     "explainer": "Count the ways to pick k vertices of a graph with no edges between them. As k grows, those counts can go up to a single peak and then drop, yet still bend the wrong way compared with their neighbors. Can several such bends survive after one extra edge closes a tree into a cycle? Three explicit graphs show that they can. The 315-vertex example has three consecutive breaks and still has a single peak. This settles the existence question; minimal graph sizes remain open."
+  },
+  {
+    "version": "v1.11.0",
+    "result": "sparsity-of-integral-arctangent-sums",
+    "date": "2026-11-28",
+    "title": "A sublogarithmic bound for integral arctangent-sum values",
+    "summary": "Through N, the number of indices n ≥ 5 at which the arctangent-sum tangent is an integer is O((log N)^(3/4)).",
+    "verification": "Lean checks the asymptotic bound for the literal Gaussian divisibility predicate.",
+    "explainer": "Add the angles whose tangents are the integers from 1 to n, then take the tangent of the sum. Can the answer be an integer once n reaches five? Amdeberhan, Medina and Moll conjectured that it never is. This result limits how often an exception could occur. Among the first N indices, the count grows at most like the three-quarters power of the logarithm of N. The estimate still allows isolated exceptions."
   }
 ]

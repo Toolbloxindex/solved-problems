@@ -124,5 +124,17 @@
     "subject": "Graph theory",
     "kind": "Proof",
     "keywords": "Graph theory"
+  },
+  {
+    "id": "sparsity-of-integral-arctangent-sums-v1",
+    "result": "sparsity-of-integral-arctangent-sums",
+    "version": "v1.11.0",
+    "date": "2026-11-28",
+    "kind": "Partial proof",
+    "title": "A sublogarithmic bound for integral arctangent-sum values",
+    "subject": "Number theory",
+    "keywords": "arctangent, Amdeberhan, Medina, Moll, Gaussian integers, sparsity",
+    "verification": "Lean checks the asymptotic bound for the literal Gaussian divisibility predicate.",
+    "summary": "Through N, the number of indices n ≥ 5 at which the arctangent-sum tangent is an integer is O((log N)^(3/4))."
   }
 ]
