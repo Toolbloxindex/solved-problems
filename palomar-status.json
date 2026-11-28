@@ -54,8 +54,9 @@
     "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46100306685"
   },
   "v1.8.0/armstrong-six-ribbons": {
-    "status": "Preflight passed",
-    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099945075"
+    "id": "PALOMAR-2026-11-28-000047",
+    "status": "Registered",
+    "url": "https://palomar-registry.org/"
   },
   "v1.9.0/nineteen-letter-subsequence-cover": {
     "status": "Preflight passed",
