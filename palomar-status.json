@@ -11,8 +11,9 @@
     "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46149167293"
   },
   "v1.11.0/sparsity-of-integral-arctangent-sums": {
-    "status": "Preflight passed",
-    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46100364212"
+    "id": "PALOMAR-2026-11-28-000050",
+    "status": "Registered",
+    "url": "https://palomar-registry.org/"
   },
   "v1.12.0/moll-signed-real-periods": {
     "status": "Preflight passed",
@@ -39,8 +40,9 @@
     "status": "No public registration confirmed"
   },
   "v1.2.0/graffiti-pc-392b-two-domination": {
-    "status": "Preflight passed",
-    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099954054"
+    "id": "PALOMAR-2026-11-28-000048",
+    "status": "Registered",
+    "url": "https://palomar-registry.org/"
   },
   "v1.3.0/sagan-swanson-column-one": {
     "status": "Preflight passed",
@@ -68,7 +70,8 @@
     "url": "https://palomar-registry.org/"
   },
   "v1.9.0/nineteen-letter-subsequence-cover": {
-    "status": "Preflight passed",
-    "url": "https://github.com/Toolbloxindex/solved-problems/actions/runs/46099960127"
+    "id": "PALOMAR-2026-11-28-000049",
+    "status": "Registered",
+    "url": "https://palomar-registry.org/"
   }
 }
