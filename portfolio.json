@@ -54,6 +54,7 @@
     "date": "2026-11-28",
     "title": "A counterexample to Songsuwan’s period-two conjecture for Node-Kayles",
     "summary": "On a fixed 291-vertex graph, attach copies of the same five-vertex path at one vertex. The Node-Kayles values are 8 and 9 at arbitrarily large branch counts two apart. This disproves Songsuwan’s Conjecture 2.",
-    "verification": "The formal proof was checked in Lean."
+    "verification": "The formal proof was checked in Lean.",
+    "doi": "10.5281/zenodo.24614057"
   }
 ]
