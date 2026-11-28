@@ -64,5 +64,13 @@
     "title": "A uniform lower bound on the transient length of the consecutive-231 stack map",
     "summary": "For every n ≥ 8, some permutation of length n takes at least n + 3 passes of the consecutive-231 stack map to reach a periodic point.",
     "verification": "The formal proof was checked in Lean."
+  },
+  {
+    "version": "v1.8.0",
+    "result": "armstrong-six-ribbons",
+    "date": "2026-11-28",
+    "title": "Armstrong’s Catalan ribbon partition conjecture at a = 6",
+    "summary": "At a = 6, all nine slices of the fundamental box admit partitions into six-point saturated chains. The 1,296 ribbons cover all 7,776 points.",
+    "verification": "The formal proof was checked in Lean."
   }
 ]

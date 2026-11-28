@@ -27,3 +27,5 @@ python3 results/songsuwan-node-kayles-counterexample/verify.py
 To cite a result, use its title and DOI where available, or give the release tag and the exact theorem you used. Corrections, earlier references and independent replays are welcome. [Open an issue](https://github.com/Toolbloxindex/solved-problems/issues)
 
 - [A uniform lower bound on the transient length of the consecutive-231 stack map](results/consecutive-231-stack-delay/README.md) · v1.7.0
+
+- [Armstrong’s Catalan ribbon partition conjecture at a = 6](results/armstrong-six-ribbons/README.md) · v1.8.0

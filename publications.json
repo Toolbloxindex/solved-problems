@@ -88,5 +88,17 @@
     "subject": "Enumerative combinatorics",
     "kind": "Partial proof",
     "keywords": "stack sorting, consecutive pattern, Seidel, Sun, Yi, transient length"
+  },
+  {
+    "id": "armstrong-six-ribbons-v1",
+    "result": "armstrong-six-ribbons",
+    "version": "v1.8.0",
+    "date": "2026-11-28",
+    "kind": "Partial proof",
+    "title": "Armstrong’s Catalan ribbon partition conjecture at a = 6",
+    "summary": "At a = 6, all nine slices of the fundamental box admit partitions into six-point saturated chains. The 1,296 ribbons cover all 7,776 points.",
+    "subject": "Algebraic combinatorics",
+    "verification": "Lean checks the integer-coordinate theorem and all slice certificates. A separate Python checker verifies coverage and cover relations.",
+    "keywords": "Drew Armstrong, ribbon partition, rational q-Catalan numbers, Conjecture 10.2"
   }
 ]

@@ -1,0 +1,10 @@
+{
+  "creators": [
+    {
+      "name": "Correia, Tomás"
+    }
+  ],
+  "license": "mit",
+  "significance": "At a = 6, all nine slices of the fundamental box admit partitions into six-point saturated chains. The 1,296 ribbons cover all 7,776 points.",
+  "prior_work": "Armstrong reports constructions at a = 3 and 4 and computational confirmation at a = 5. His standard partitions through a = 20 impose a weaker condition. Germ positivity computations do not construct saturated chains. The literature review located no prior a = 6 ribbon partition; priority remains undetermined."
+}
