@@ -5,10 +5,7 @@
     "WordSPrimitivityReplay.exact_claim",
     "WordSPrimitivityReplay.no_shorter_cover"
   ],
-  "definition_names": [
-    "WordSPrimitivityReplay.target",
-    "WordSPrimitivityReplay.CoversByIndices"
-  ],
+  "definition_names": [],
   "permitted_axioms": [
     "propext",
     "Quot.sound",
